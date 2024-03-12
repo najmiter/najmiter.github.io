@@ -1,0 +1,13 @@
+@media screen and (width < 636px) {
+    #khero-main {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #khero-img {
+        position: relative;
+        rotate: 90deg;
+    }
+}
