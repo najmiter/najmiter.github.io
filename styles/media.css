@@ -1,4 +1,8 @@
 @media screen and (width < 636px) {
+    .links {
+        display: none;
+    }
+
     #khero-main {
         flex-direction: column;
         text-align: center;
@@ -9,5 +13,11 @@
     #khero-img {
         position: relative;
         rotate: 90deg;
+    }
+}
+
+@media screen and (width < 800px) {
+    .links {
+        display: none;
     }
 }
