@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: "Kode Mono", monospace;
+    --color-bg: #0e0e0e;
+    --color-bg-dhim: #171717;
+    --color-text-dhim: #4f4f4f;
+    --color-foreground: #e0e0e0;
+    --color-theme: #98398f;
+}
+
+::selection {
+    background-color: var(--color-bg-dhim);
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.3rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}

@@ -1,0 +1,69 @@
+html {
+    color-scheme: dark;
+    font-family: var(--main-font);
+    font-size: 11.25px;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-foreground);
+}
+
+#khero {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    --padding-inline: clamp(0.5rem, 18dvw, 20rem);
+    overflow: hidden;
+    position: relative;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--padding-inline);
+    padding-block: 1rem;
+    background-color: var(--color-bg-dhim);
+}
+
+.link-item {
+    font-size: 0.5em;
+    list-style: none;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    text-transform: uppercase;
+}
+
+#khero-main {
+    flex: 1;
+    padding-inline: var(--padding-inline);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#khero-greeting {
+    font-size: clamp(3rem, 8dvw, 11rem);
+    color: var(--color-theme);
+    mix-blend-mode: difference;
+}
+
+#khero-img {
+    margin-right: var(--padding-inline);
+    width: clamp(10rem, 25dvw, 30rem);
+    position: absolute;
+    right: 0;
+}
