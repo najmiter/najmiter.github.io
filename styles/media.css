@@ -3,11 +3,16 @@
         display: none;
     }
 
+    #khero {
+        --preffered-distance: 5dvw;
+    }
+
     #khero-main {
         flex-direction: column;
-        text-align: center;
         justify-content: center;
         gap: 2rem;
+        text-align: center;
+        line-height: 1.7;
     }
 
     #khero-img {
