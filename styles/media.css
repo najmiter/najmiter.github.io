@@ -3,8 +3,9 @@
         display: none;
     }
 
-    #khero {
-        --preffered-distance: 5dvw;
+    #khero,
+    section {
+        --padding-inline: clamp(0.5rem, 5dvw, 20rem);
     }
 
     #khero-main {

@@ -10,13 +10,37 @@
     --main-font: "Kode Mono", monospace;
     --color-bg: #0e0e0e;
     --color-bg-dhim: #171717;
-    --color-text-dhim: #4f4f4f;
-    --color-foreground: #e0e0e0;
+    --color-text-dark: #202124;
+    --color-text-dhim: #8a8a8a;
+    --color-foreground: #cdcdcd;
+    --color-text-light: #e0e0e0;
+    --color-btn-bg: #8ab4f8;
+    --color-btn-bg-hover: #7098cd;
     --color-theme: #98398f;
+    --color-theme-30: #983a8e49;
+    --color-bg-hover: #823079;
+    --preffered-distance: 18dvw;
+    --padding-inline: clamp(0.5rem, var(--preffered-distance), 20rem);
+
+    --main-heading-font-size: clamp(3rem, 8dvw, 11rem);
+    --section-heading-font-size: clamp(3rem, 8dvw, 5rem);
 }
 
 ::selection {
     background-color: var(--color-bg-dhim);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100dvh;
+    padding-inline: var(--padding-inline);
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-block: 4rem;
 }
 
 img {
@@ -38,4 +62,22 @@ h3 {
 a {
     text-decoration: none;
     color: currentColor;
+}
+
+button {
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-dark);
+    background-color: var(--color-btn-bg);
+    text-transform: capitalize;
+    font-weight: 500;
+
+    transition: background-color 300ms ease;
+}
+
+button:hover {
+    background-color: var(--color-btn-bg-hover);
 }

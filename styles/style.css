@@ -11,8 +11,6 @@ body {
 
 #khero {
     --preffered-distance: 18dvw;
-    --padding-inline: clamp(0.5rem, var(--preffered-distance), 20rem);
-
     height: 100dvh;
     display: flex;
     flex-direction: column;
@@ -26,8 +24,6 @@ body {
 }
 
 #navbar {
-    position: sticky;
-    top: 0;
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
@@ -59,9 +55,8 @@ body {
 }
 
 #khero-greeting {
-    font-size: clamp(3rem, 8dvw, 11rem);
+    font-size: var(--main-heading-font-size);
     color: var(--color-theme);
-    mix-blend-mode: difference;
 }
 
 #khero-img {
@@ -69,4 +64,94 @@ body {
     width: clamp(10rem, 25dvw, 30rem);
     position: absolute;
     right: 0;
+}
+
+
+#projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-heading {
+    font-size: var(--section-heading-font-size);
+    text-align: center;
+    margin-block: clamp(3rem, 10dvw, 4rem);
+    position: relative;
+    width: fit-content;
+    cursor: default;
+}
+
+.section-heading::after {
+    content: '';
+    background-color: var(--color-theme);
+    width: 30%;
+    border-radius: 0.5rem;
+    height: 0.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% -50%;
+
+    transition: width 300ms ease;
+}
+
+.section-heading:hover::after {
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    line-height: 1.5;
+    width: clamp(29rem, 25dvw, 35rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-bg-dhim);
+    color: var(--color-text-dhim);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+
+    transition: scale 300ms ease, color 300ms ease;
+}
+
+.project-card:hover {
+    scale: 1.1;
+    color: var(--color-foreground);
+}
+
+.project-title {
+    margin-block-start: 1rem;
+    height: fit-content;
+}
+
+.project-description {
+    margin-block-end: 1.5rem;
+}
+
+.project-thumbnail {
+    border-radius: 0.5rem;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-try-btn {
+    color: var(--color-text-dhim);
+    background-color: var(--color-text-dark);
+}
+
+.project-try-btn:hover {
+    background-color: var(--color-text-dhim);
+    color: var(--color-text-dark);
 }
