@@ -25,7 +25,6 @@ section {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    background: radial-gradient();
     background: var(--color-bg);
     background: radial-gradient(circle at top, #4d307656 1%, var(--color-bg) 100%);
 }
