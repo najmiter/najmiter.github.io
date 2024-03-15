@@ -12,7 +12,7 @@ body {
 section {
     min-height: 100dvh;
     padding-inline: var(--padding-inline);
-    font-family: "Inter", sans-serif;
+    font-family: var(--da-other-font);
     font-size: 1.4rem;
     font-weight: 300;
     margin-block: 4rem;
@@ -39,7 +39,8 @@ section {
     justify-content: space-between;
     align-items: center;
     padding-inline: var(--padding-inline);
-    background-color: var(--color-bg-dhim);
+    background-color: var(--color-bg-dhim-50);
+    backdrop-filter: blur(11.25rem);
     position: fixed;
     width: 100%;
     z-index: 90;
@@ -190,4 +191,8 @@ section {
 
 #story-img {
     width: 20rem;
+}
+
+#project-preview-start-date {
+    color: var(--color-text-dhim);
 }

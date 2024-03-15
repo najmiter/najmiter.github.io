@@ -18,6 +18,9 @@ function render_preview_for(id) {
         const project_preview_tags = document.getElementById(
             "project-preview-tags"
         );
+        const project_preview_start_date = document.getElementById(
+            "project-preview-start-date"
+        );
 
         project_preview_tags.innerHTML = "";
 
@@ -34,6 +37,8 @@ function render_preview_for(id) {
         title.textContent = to_be.name ?? "Title not found";
         long_description.textContent =
             to_be.long_description ?? "Description not found";
+        project_preview_start_date.textContent =
+            `Started: ${to_be.start_date}` ?? "";
 
         img.setAttribute("src", to_be.preview);
     }

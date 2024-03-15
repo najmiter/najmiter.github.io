@@ -8,8 +8,10 @@
 
 :root {
     --main-font: "Kode Mono", monospace;
+    --da-other-font: "Inter", sans-serif;
     --color-bg: #0e0e0e;
     --color-bg-dhim: #171717;
+    --color-bg-dhim-50: #1717177d;
     --color-text-dark: #202124;
     --color-text-dhim: #8a8a8a;
     --color-foreground: #cdcdcd;
