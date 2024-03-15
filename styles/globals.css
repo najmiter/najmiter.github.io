@@ -27,7 +27,7 @@
 }
 
 ::selection {
-    background-color: var(--color-bg-dhim);
+    background-color: rgb(8, 89, 121);
 }
 
 html {

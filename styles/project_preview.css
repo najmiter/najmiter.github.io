@@ -1,0 +1,40 @@
+#project-preview-window {
+    text-align: center;
+    position: fixed;
+    top: 5%;
+    width: 90dvw;
+    min-height: 90dvh;
+    max-height: 90dvh;
+    background-color: #171717c5;
+    backdrop-filter: blur(11.25rem);
+    border-radius: 0.5rem;
+    padding: clamp(1rem, 10dvw, 5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    overflow: auto;
+    border: 1px solid rgba(184, 184, 184, 0.651);
+}
+
+#project-preview-close {
+    background-color: transparent;
+    color: var(--color-text-light);
+    font-size: 2em;
+    position: absolute;
+    right: 5%;
+}
+
+#project-preview-title {
+    font-size: 3em;
+}
+
+#project-preview-description {
+    max-width: 70ch;
+    line-height: 1.7;
+}
+
+#project-preview-img {
+    border-radius: 0.5rem;
+    width: clamp(27rem, 90%, 70rem);
+}

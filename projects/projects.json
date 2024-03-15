@@ -1,0 +1,88 @@
+{
+    "projects": [
+        {
+            "name": "Chitter",
+            "thumbnail": "projects/imgs/thumbnails/chitter-thumbnail.webp",
+            "preview": "projects/imgs/previews/chitter.webp",
+            "short_description": "An assembly syntax highlighter that let's you copy rich text after highlighting.",
+            "long_description": "An assembly syntax highlighter that let's you create copyable highlighted assembly code that you can use in your documents. It supports all the common assembly languages' instructions/keywords.",
+            "try_link": "https://najmiter.github.io/Chitter/"
+        },
+        {
+            "name": "Parchi",
+            "thumbnail": "projects/imgs/thumbnails/parchi-thumbnail.webp",
+            "preview": "projects/imgs/previews/parchi.webp",
+            "short_description": "Make an item list to buy later or share the list with anyone on the internet.",
+            "long_description": "Make an item list of items that you'd like to shop. The app will store all your data (items) in the localSotrage that will remain persistent between reloads/restarts. The share feature will help you create a link with all the meta data of your list. This link can be shared with anyone on the internet.",
+            "try_link": "https://najmiter.github.io/Parchi/"
+        },
+        {
+            "name": "cwee",
+            "thumbnail": "projects/imgs/thumbnails/cwee-thumbnail.webp",
+            "preview": "projects/imgs/previews/cwee.webp",
+            "short_description": "A resume builder that gets your information and prints a pdf in the end.",
+            "long_description": "A resume builder app that lets you create your own resume based on the information that you provide. It's in extremely early stages yet and it only accepts a few number of input categories and there's only one template. Future plans involve around that fact getting changed.",
+            "try_link": "https://najmiter.github.io/cwee/"
+        },
+        {
+            "name": "neutrabize",
+            "thumbnail": "projects/imgs/thumbnails/neutrabize-thumbnail.webp",
+            "preview": "projects/imgs/previews/neutrabize.webp",
+            "short_description": "A Chrome extension that lets you customize your new tab/homepage.",
+            "long_description": "A Chrome extension that allows you to customize your new tab according to your own wantings. It's internally got a few features itself like changing the background, changing theme color, showing shortcuts on the screen (fixed), and a little meteor animation. But the idea is to allow you to have the code in your hands and be frank with it however you like.",
+            "try_link": "https://najmiter.github.io/neutrabize/"
+        },
+        {
+            "name": "Windows 11 Clone",
+            "thumbnail": "projects/imgs/thumbnails/windows-11-clone-thumbnail.webp",
+            "preview": "projects/imgs/previews/windows-11-clone.webp",
+            "short_description": "A Windows 11 clone that doesn't make the world any better. But doesn't hurt either :D",
+            "long_description": "A Windows 11 clone that doesn't do anything other than showing the start menu and real-time time. The apps in the start menu are searchable and clickable (not that the click will do anything). This project was basically done to practice CSS positioning, grids, and some other small properties.",
+            "try_link": "https://najmiter.github.io/Windows-11-Clone/"
+        },
+        {
+            "name": "The Peaceful Night",
+            "thumbnail": "projects/imgs/thumbnails/starry-night-thumbnail.webp",
+            "preview": "projects/imgs/previews/starry-night.webp",
+            "short_description": "A CSS animations & positioning practice project that depicts the dusk.",
+            "long_description": "",
+            "try_link": "https://najmiter.github.io/The-Peaceful-Night/"
+        },
+        {
+            "name": "NutNut",
+            "thumbnail": "projects/imgs/thumbnails/nutnut-thumbnail.webp",
+            "preview": "projects/imgs/previews/nutnut.webp",
+            "short_description": "A movie website that can sign up/in users and keep track of their subscriptions.",
+            "long_description": "",
+            "try_link": "https://github.com/najmiter/CodeMite/blob/main/source_codes/NutNut.zip"
+        },
+        {
+            "name": "GPA Calculator",
+            "thumbnail": "projects/imgs/thumbnails/gpa-calculator-thumbnail.webp",
+            "short_description": "GPA calculator based on the grading system of the University of Gujrat.",
+            "long_description": "",
+            "try_link": "https://najmiter.github.io/GPA-Calculator/"
+        },
+        {
+            "name": "tempo",
+            "thumbnail": "projects/imgs/thumbnails/tempo-thumbnail.webp",
+            "short_description": "A simple weather app that sometimes does more than simple.",
+            "long_description": "",
+            "try_link": "https://fazzal-dev.github.io/tempo/"
+        },
+        {
+            "name": "Matrix Spinner",
+            "thumbnail": "projects/imgs/thumbnails/rotate-matrix-thumbnail.webp",
+            "short_description": "Just a 2D array rotating algorithm but in assembly which only works for smaller inputs.",
+            "long_description": "",
+            "try_link": "https://github.com/najmiter/Rotate-a-Matrix-Clockwise-using-MASM-Assembly"
+        },
+        {
+            "name": "Noctal",
+            "thumbnail": "projects/imgs/thumbnails/noctal-thumbnail.webp",
+            "short_description": "A NASM assembly helper library that dosen't help anyone but does sort an array though.",
+            "long_description": "",
+            "try_link": "https://github.com/najmiter/Noctal"
+        }
+    ]
+}
