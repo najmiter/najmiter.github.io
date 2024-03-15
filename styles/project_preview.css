@@ -22,7 +22,8 @@
     color: var(--color-text-light);
     font-size: 2em;
     position: absolute;
-    right: 5%;
+    right: clamp(0.5rem, 5dvw, 5%);
+    top: clamp(0.5rem, 5dvw, 6%);
 }
 
 #project-preview-title {
@@ -36,5 +37,5 @@
 
 #project-preview-img {
     border-radius: 0.5rem;
-    width: clamp(27rem, 90%, 70rem);
+    width: clamp(25rem, 90%, 70rem);
 }
