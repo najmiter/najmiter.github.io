@@ -17,6 +17,7 @@ function render_preview_for(id) {
         const img = document.getElementById("project-preview-img");
 
         preview_window.style.display = "flex";
+        document.documentElement.style.overflow = "hidden";
 
         title.textContent = to_be.name ?? "Title not found";
         long_description.textContent =
@@ -28,4 +29,5 @@ function render_preview_for(id) {
 
 function handle_close_preview() {
     project_preview_window.style.display = "none";
+    document.documentElement.style.overflow = "auto";
 }
