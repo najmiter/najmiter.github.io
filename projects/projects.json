@@ -45,7 +45,7 @@
             "thumbnail": "projects/imgs/thumbnails/starry-night-thumbnail.webp",
             "preview": "projects/imgs/previews/starry-night.webp",
             "short_description": "A CSS animations & positioning practice project that depicts the dusk.",
-            "long_description": "",
+            "long_description": "Nothing special about this project that would be helpful in a real app but this project was done to practice CSS positioning, and animations. It's a dusk sky designed only with CSS - all the objects on the screen are HTML elements styled with CSS without the help of any SVGs or any other image.",
             "try_link": "https://najmiter.github.io/The-Peaceful-Night/"
         },
         {
@@ -53,35 +53,39 @@
             "thumbnail": "projects/imgs/thumbnails/nutnut-thumbnail.webp",
             "preview": "projects/imgs/previews/nutnut.webp",
             "short_description": "A movie website that can sign up/in users and keep track of their subscriptions.",
-            "long_description": "",
+            "long_description": "A movie website that can sign up and sign in users and store the data into a local MSSQL database. There's tables for movies and tv shows that were downloaded from kaggle and related but then customised to fit the required needs using a Python scripts. The app also keeps track of the subscriptions (that aren't made in real life, just a depiction) and only lets a user watch* if they have an active subscription.",
             "try_link": "https://github.com/najmiter/CodeMite/blob/main/source_codes/NutNut.zip"
         },
         {
             "name": "GPA Calculator",
             "thumbnail": "projects/imgs/thumbnails/gpa-calculator-thumbnail.webp",
+            "preview": "projects/imgs/previews/gpa-calculator.webp",
             "short_description": "GPA calculator based on the grading system of the University of Gujrat.",
-            "long_description": "",
+            "long_description": "GPA calculator based on the grading system of the University of Gujrat and there's not much else to say about this one.",
             "try_link": "https://najmiter.github.io/GPA-Calculator/"
         },
         {
             "name": "tempo",
             "thumbnail": "projects/imgs/thumbnails/tempo-thumbnail.webp",
+            "preview": "projects/imgs/previews/tempo.webp",
             "short_description": "A simple weather app that sometimes does more than simple.",
-            "long_description": "",
+            "long_description": "A weather app that the world didn't need but we did it anyway. It uses a free API to get the weather of any entered city name in the search input. Upon success, the URL is updated to the searched city and can be shared on the internet. The reciever won't have to type in the city again, it'll be parsed out of the URL on the other end automatically.",
             "try_link": "https://fazzal-dev.github.io/tempo/"
         },
         {
             "name": "Matrix Spinner",
             "thumbnail": "projects/imgs/thumbnails/rotate-matrix-thumbnail.webp",
+            "preview": "projects/imgs/previews/rotate-matrix.webp",
             "short_description": "Just a 2D array rotating algorithm but in assembly which only works for smaller inputs.",
-            "long_description": "",
+            "long_description": "Just a 2D array rotating algorithm but it was called a matrix and sounded cooler because its code is written in MASM assembly. The random array generating part of the program works for smaller sizes (about 150 x 150) because the memory is allocated on the heap in that case and that memory leak was never dared fixed and it became a feature.",
             "try_link": "https://github.com/najmiter/Rotate-a-Matrix-Clockwise-using-MASM-Assembly"
         },
         {
             "name": "Noctal",
             "thumbnail": "projects/imgs/thumbnails/noctal-thumbnail.webp",
+            "preview": "projects/imgs/previews/noctal.webp",
             "short_description": "A NASM assembly helper library that dosen't help anyone but does sort an array though.",
-            "long_description": "",
+            "long_description": "A NASM assembly helper library that can print a string to the console, sort a 64-bit array using some algorithm and convert an integer into a string (for any purpose like printing it to the console). This was done to help a beginner in assembly learn better but maybe that's not something that helps when it's assembly we're talking about.",
             "try_link": "https://github.com/najmiter/Noctal"
         }
     ]
