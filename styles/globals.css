@@ -32,15 +32,6 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    min-height: 100dvh;
-    padding-inline: var(--padding-inline);
-    font-family: "Inter", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin-block: 4rem;
-}
-
 img {
     width: 100%;
 }

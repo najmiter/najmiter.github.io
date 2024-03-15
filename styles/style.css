@@ -9,6 +9,15 @@ body {
     color: var(--color-foreground);
 }
 
+section {
+    min-height: 100dvh;
+    padding-inline: var(--padding-inline);
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-block: 4rem;
+}
+
 #khero {
     --preffered-distance: 18dvw;
     height: 100dvh;
@@ -16,6 +25,9 @@ body {
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    background: radial-gradient();
+    background: var(--color-bg);
+    background: radial-gradient(circle at top, #4d307656 1%, var(--color-bg) 100%);
 }
 
 #logo {
