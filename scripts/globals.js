@@ -15,6 +15,18 @@ function render_preview_for(id) {
             "project-preview-description"
         );
         const img = document.getElementById("project-preview-img");
+        const project_preview_tags = document.getElementById(
+            "project-preview-tags"
+        );
+
+        project_preview_tags.innerHTML = "";
+
+        for (const tag of to_be.tags) {
+            const tag_element = document.createElement("div");
+            tag_element.setAttribute("class", "preview-tag-item");
+            tag_element.textContent = tag;
+            project_preview_tags.appendChild(tag_element);
+        }
 
         preview_window.style.display = "flex";
         document.documentElement.style.overflow = "hidden";

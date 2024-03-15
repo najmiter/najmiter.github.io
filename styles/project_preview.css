@@ -30,6 +30,27 @@
     font-size: clamp(2rem, 7dvw, 4rem);
 }
 
+#project-preview-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.preview-tag-item {
+    border-radius: 1rem;
+    font-size: 0.7em;
+    border: 1px solid var(--color-btn-bg);
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.preview-tag-item:hover {
+    background-color: var(--color-btn-bg);
+    color: var(--color-text-dark);
+}
+
 #project-preview-description {
     max-width: 70ch;
     line-height: 1.7;
