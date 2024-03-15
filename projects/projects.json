@@ -2,6 +2,7 @@
     "projects": [
         {
             "name": "Chitter",
+            "tags": ["JavaScript", "HTML", "CSS"],
             "thumbnail": "projects/imgs/thumbnails/chitter-thumbnail.webp",
             "preview": "projects/imgs/previews/chitter.webp",
             "short_description": "An assembly syntax highlighter that let's you copy rich text after highlighting.",
@@ -10,6 +11,7 @@
         },
         {
             "name": "Parchi",
+            "tags": ["JavaScript", "HTML", "CSS"],
             "thumbnail": "projects/imgs/thumbnails/parchi-thumbnail.webp",
             "preview": "projects/imgs/previews/parchi.webp",
             "short_description": "Make an item list to buy later or share the list with anyone on the internet.",
@@ -18,6 +20,7 @@
         },
         {
             "name": "cwee",
+            "tags": ["JavaScript", "HTML", "CSS"],
             "thumbnail": "projects/imgs/thumbnails/cwee-thumbnail.webp",
             "preview": "projects/imgs/previews/cwee.webp",
             "short_description": "A resume builder that gets your information and prints a pdf in the end.",
@@ -26,6 +29,7 @@
         },
         {
             "name": "neutrabize",
+            "tags": ["JavaScript", "HTML", "CSS"],
             "thumbnail": "projects/imgs/thumbnails/neutrabize-thumbnail.webp",
             "preview": "projects/imgs/previews/neutrabize.webp",
             "short_description": "A Chrome extension that lets you customize your new tab/homepage.",
@@ -34,6 +38,7 @@
         },
         {
             "name": "Windows 11 Clone",
+            "tags": ["CSS", "JavaScript", "HTML"],
             "thumbnail": "projects/imgs/thumbnails/windows-11-clone-thumbnail.webp",
             "preview": "projects/imgs/previews/windows-11-clone.webp",
             "short_description": "A Windows 11 clone that doesn't make the world any better. But doesn't hurt either :D",
@@ -42,6 +47,7 @@
         },
         {
             "name": "The Peaceful Night",
+            "tags": ["CSS", "HTML"],
             "thumbnail": "projects/imgs/thumbnails/starry-night-thumbnail.webp",
             "preview": "projects/imgs/previews/starry-night.webp",
             "short_description": "A CSS animations & positioning practice project that depicts the dusk.",
@@ -50,6 +56,15 @@
         },
         {
             "name": "NutNut",
+            "tags": [
+                "C#",
+                ".NET",
+                ".NET Core",
+                "JavaScript",
+                "MSSQL",
+                "HTML",
+                "CSS"
+            ],
             "thumbnail": "projects/imgs/thumbnails/nutnut-thumbnail.webp",
             "preview": "projects/imgs/previews/nutnut.webp",
             "short_description": "A movie website that can sign up/in users and keep track of their subscriptions.",
@@ -58,6 +73,7 @@
         },
         {
             "name": "GPA Calculator",
+            "tags": ["JavaScript", "HTML", "CSS"],
             "thumbnail": "projects/imgs/thumbnails/gpa-calculator-thumbnail.webp",
             "preview": "projects/imgs/previews/gpa-calculator.webp",
             "short_description": "GPA calculator based on the grading system of the University of Gujrat.",
@@ -66,6 +82,7 @@
         },
         {
             "name": "tempo",
+            "tags": ["JavaScript", "HTML", "CSS"],
             "thumbnail": "projects/imgs/thumbnails/tempo-thumbnail.webp",
             "preview": "projects/imgs/previews/tempo.webp",
             "short_description": "A simple weather app that sometimes does more than simple.",
@@ -74,6 +91,7 @@
         },
         {
             "name": "Matrix Spinner",
+            "tags": ["Assembly", "MASM"],
             "thumbnail": "projects/imgs/thumbnails/rotate-matrix-thumbnail.webp",
             "preview": "projects/imgs/previews/rotate-matrix.webp",
             "short_description": "Just a 2D array rotating algorithm but in assembly which only works for smaller inputs.",
@@ -82,6 +100,7 @@
         },
         {
             "name": "Noctal",
+            "tags": ["Assembly", "NASM"],
             "thumbnail": "projects/imgs/thumbnails/noctal-thumbnail.webp",
             "preview": "projects/imgs/previews/noctal.webp",
             "short_description": "A NASM assembly helper library that dosen't help anyone but does sort an array though.",
