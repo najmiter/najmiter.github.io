@@ -1,0 +1,24 @@
+#poo-img {
+    width: clamp(10rem, 30vw, 30rem);
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    translate: 20% -50%;
+    opacity: 0.45;
+    z-index: 90;
+}
+
+.poop {
+    animation: poo 400ms ease forwards;
+}
+
+@keyframes poo {
+    from {
+        top: -20%;
+    }
+
+    to {
+        top: 50%;
+        translate: -50%;
+    }
+}

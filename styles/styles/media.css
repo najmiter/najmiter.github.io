@@ -1,0 +1,29 @@
+@media screen and (width < 636px) {
+    .links {
+        display: none;
+    }
+
+    #khero,
+    section {
+        --padding-inline: clamp(0.5rem, 5dvw, 20rem);
+    }
+
+    #khero-main {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+        line-height: 1.7;
+    }
+
+    #khero-img {
+        position: relative;
+        rotate: 90deg;
+    }
+}
+
+@media screen and (width < 800px) {
+    .links {
+        display: none;
+    }
+}
