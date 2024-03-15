@@ -3,6 +3,10 @@
         display: none;
     }
 
+    #navbar {
+        padding-block: 0.7rem;
+    }
+
     #khero,
     section {
         --padding-inline: clamp(0.5rem, 5dvw, 20rem);
@@ -22,7 +26,7 @@
     }
 }
 
-@media screen and (width < 800px) {
+@media screen and (width < 900px) {
     .links {
         display: none;
     }

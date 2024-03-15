@@ -15,6 +15,7 @@
     gap: 3rem;
     overflow: hidden auto;
     border: 1px solid rgba(184, 184, 184, 0.651);
+    z-index: 999;
 }
 
 #project-preview-close {
@@ -22,8 +23,8 @@
     color: var(--color-text-light);
     font-size: 2em;
     position: absolute;
-    right: clamp(0.5rem, 5dvw, 5%);
     top: clamp(0.5rem, 5dvw, 6%);
+    right: clamp(0.5rem, 5dvw, 5%);
 }
 
 #project-preview-title {

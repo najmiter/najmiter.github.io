@@ -26,6 +26,11 @@
 
 ::selection {
     background-color: rgb(8, 89, 121);
+    color: var(--color-text-light);
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 html {

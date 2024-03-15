@@ -33,12 +33,12 @@ async function bruh() {
 
         project_preview_btns.forEach((btn) =>
             btn.addEventListener("click", function (click) {
-                const id = +click.target.getAttribute("data-id");
+                const id = +click.target.dataset.id;
                 render_preview_for(id);
             })
         );
     } else {
-        projects_wrapper.textContent = "no projects found";
+        projects_wrapper.textContent = "No projects found";
     }
 }
 
