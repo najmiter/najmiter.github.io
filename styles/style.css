@@ -46,6 +46,15 @@ section {
     z-index: 90;
 }
 
+.mobile-navbar {
+    display: none;
+}
+
+#burger {
+    display: none;
+    cursor: pointer;
+}
+
 .link-item {
     font-size: 0.5em;
     list-style: none;
