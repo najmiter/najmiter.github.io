@@ -53,6 +53,7 @@ section {
 #burger {
     display: none;
     cursor: pointer;
+    font-size: 0.6em;
 }
 
 .link-item {
