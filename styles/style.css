@@ -19,7 +19,6 @@ section {
 }
 
 #khero {
-    --preffered-distance: 18dvw;
     height: 100dvh;
     display: flex;
     flex-direction: column;
