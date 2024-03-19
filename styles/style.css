@@ -10,7 +10,8 @@ body {
 }
 
 section {
-    min-height: 100dvh;
+    min-height: 100vh;
+    min-height: 100svh;
     padding-inline: var(--padding-inline);
     font-family: var(--da-other-font);
     font-size: 1.4rem;
