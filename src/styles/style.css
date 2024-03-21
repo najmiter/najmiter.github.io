@@ -18,7 +18,7 @@ section {
     margin-block: 4rem;
 }
 
-#khero {
+.khero {
     --preffered-distance: 18dvw;
     height: 100dvh;
     display: flex;
@@ -28,12 +28,12 @@ section {
     background: radial-gradient(circle at top, #4d307646 10%, var(--color-bg) 90%);
 }
 
-#logo {
+.logo {
     cursor: pointer;
     font-size: clamp(1.2rem, 5dvw, 3rem);
 }
 
-#navbar {
+.navbar {
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
@@ -50,7 +50,7 @@ section {
     display: none;
 }
 
-#burger {
+.burger {
     display: none;
     cursor: pointer;
     font-size: 0.6em;
@@ -69,7 +69,7 @@ section {
     text-transform: uppercase;
 }
 
-#khero-main {
+.khero-main {
     flex: 1;
     padding-inline: var(--padding-inline);
     display: flex;
@@ -77,13 +77,13 @@ section {
     position: relative;
 }
 
-#khero-greeting {
+.khero-greeting {
     font-size: var(--main-heading-font-size);
     color: var(--color-theme);
     line-height: 1.45;
 }
 
-#khero-img {
+.khero-img {
     margin-right: var(--padding-inline);
     width: clamp(10rem, 25dvw, 30rem);
     position: absolute;
@@ -91,7 +91,7 @@ section {
 }
 
 
-#projects-section {
+.projects-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -182,27 +182,27 @@ section {
     color: var(--color-text-dark);
 }
 
-#about-me-section {
+.about-me-section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#about-me-wrapper {
+.about-me-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#story {
+.story {
     max-width: 50ch;
     text-align: center;
 }
 
-#story-img {
+.story-img {
     width: 20rem;
 }
 
-#project-preview-start-date {
+.project-preview-start-date {
     color: var(--color-text-dhim);
 }

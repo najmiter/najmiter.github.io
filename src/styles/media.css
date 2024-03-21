@@ -3,16 +3,16 @@
         display: none;
     }
 
-    #navbar {
+    .navbar {
         padding-block: 0.7rem;
     }
 
-    #khero,
+    .khero,
     section {
         --padding-inline: clamp(0.5rem, 5dvw, 20rem);
     }
 
-    #khero-main {
+    .khero-main {
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
@@ -20,7 +20,7 @@
         line-height: 1.7;
     }
 
-    #khero-img {
+    .khero-img {
         position: relative;
         rotate: 90deg;
     }
@@ -55,7 +55,7 @@
         display: none;
     }
 
-    #burger {
+    .burger {
         display: inline;
     }
 
@@ -87,7 +87,7 @@
         border-radius: var(--radius);
     }
 
-    #navbar-close {
+    .navbar-close {
         background-color: transparent;
         color: #ff5b5b;
         font-size: 2em;

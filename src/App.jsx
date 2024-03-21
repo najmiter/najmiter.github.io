@@ -1,9 +1,14 @@
-import "./App.css";
-import "./styles/globals.css";
-import "./styles/style.css";
+import Khero from "./components/Khero";
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
 
-function App() {
-    return <main>Khello</main>;
+export default function App() {
+    return (
+        <>
+            <Khero>
+                <Navbar />
+                <Main />
+            </Khero>
+        </>
+    );
 }
-
-export default App;
