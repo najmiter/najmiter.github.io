@@ -7,7 +7,7 @@ export default function ProjectCard({ project, index }) {
                 loading="lazy"
                 src={thumbnail}
                 className="project-thumbnail"
-                alt="chitter thumbnail"
+                alt={`${name} thumbnail`}
             />
             <h2 className="project-title">{name}</h2>
             <div className="project-description">{short_description}</div>
