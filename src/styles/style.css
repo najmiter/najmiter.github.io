@@ -10,7 +10,8 @@ body {
 }
 
 section {
-    min-height: 100dvh;
+    min-height: 100vh;
+    min-height: 100svh;
     padding-inline: var(--padding-inline);
     font-family: var(--da-other-font);
     font-size: 1.4rem;
@@ -20,7 +21,8 @@ section {
 
 .khero {
     --preffered-distance: 18dvw;
-    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -42,6 +44,7 @@ section {
     background-color: var(--color-bg-dhim-50);
     backdrop-filter: blur(11.25rem);
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 90;
 }
