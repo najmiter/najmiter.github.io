@@ -11,7 +11,7 @@ export default function Navbar() {
                     </a>
                 </li>
                 <li className="link-item">
-                    <a href="#projects-section" className="nav-link">
+                    <a href="#projects" className="nav-link">
                         Projects
                     </a>
                 </li>
