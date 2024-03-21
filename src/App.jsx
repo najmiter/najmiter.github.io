@@ -1,7 +1,7 @@
 import Khero from "./components/Khero";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
-import Projects from "./components/Projects";
+import Projects from "./components/Projects/Projects";
 
 import { useEffect, useState } from "react";
 

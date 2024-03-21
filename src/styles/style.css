@@ -173,8 +173,16 @@ section {
 }
 
 .project-try-btn {
+    padding: 0;
     color: var(--color-text-dhim);
     background-color: var(--color-text-dark);
+}
+
+.project-try-btn a {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: inherit;
 }
 
 .project-try-btn:hover {
