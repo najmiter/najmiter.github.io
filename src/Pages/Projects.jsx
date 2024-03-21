@@ -20,6 +20,8 @@ export default function Projects({ showCount }) {
             }
 
             get_projects();
+
+            document.title = "Projects";
         },
         [showCount]
     );
