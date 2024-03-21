@@ -20,11 +20,6 @@ export default function Navbar() {
                         YouTube
                     </a>
                 </li>
-                <li className="link-item">
-                    <a href="" id="poo" className="nav-link">
-                        thingk
-                    </a>
-                </li>
             </ul>
             <span role="button" className="burger">
                 🍔

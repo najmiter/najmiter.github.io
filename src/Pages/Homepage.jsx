@@ -11,7 +11,7 @@ export default function Homepage() {
                 <Main />
             </Khero>
 
-            <Projects />
+            <Projects showCount={9} />
         </>
     );
 }
