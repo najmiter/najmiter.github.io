@@ -1,0 +1,23 @@
+.goaway {
+    animation: goaway 500ms ease forwards;
+}
+
+.comeback {
+    animation: comeback 500ms ease forwards;
+}
+
+@keyframes goaway {
+    to {
+        translate: 0 -100px;
+    }
+}
+
+@keyframes comeback {
+    from {
+        translate: 0 -100px;
+    }
+
+    to {
+        translate: 0;
+    }
+}
