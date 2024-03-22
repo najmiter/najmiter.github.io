@@ -10,6 +10,7 @@ export default function ProjectPreview({ project }) {
                     </span>
                 ))}
             </div>
+            <p className="project-preview-start-date">{project.start_date}</p>
             <p className="project-preview-description">
                 {project.long_description}
             </p>
