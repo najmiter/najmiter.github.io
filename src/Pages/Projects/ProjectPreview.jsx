@@ -13,7 +13,7 @@ export default function ProjectPreview({ project }) {
             <p className="project-preview-description">
                 {project.long_description}
             </p>
-            <img src={project.preview} alt="" />
+            <img className="project-thumbnail" src={project.preview} alt="" />
         </div>
     );
 }
