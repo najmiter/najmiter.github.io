@@ -36,6 +36,7 @@ section {
 }
 
 .navbar {
+    font-family: var(--main-font);
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
@@ -43,14 +44,7 @@ section {
     padding-inline: var(--padding-inline);
     background-color: var(--color-bg-dhim-50);
     backdrop-filter: blur(11.25rem);
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 90;
-}
-
-.mobile-navbar {
-    display: none;
 }
 
 .burger {
@@ -151,7 +145,8 @@ section {
     transition: scale 300ms ease, color 300ms ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.active-preview-project-card {
     scale: 1.05;
     color: var(--color-foreground);
 }

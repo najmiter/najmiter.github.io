@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import ProjectPreview from "./ProjectPreview";
 
-export default function Projects({ projects }) {
-    const [activeProject, setActiveProject] = useState(null);
+export default function Projects({ projects, currentActive }) {
+    const [activeProject, setActiveProject] = useState(currentActive);
 
     useEffect(function () {
         window.scrollTo(0, 0);
@@ -17,25 +17,28 @@ export default function Projects({ projects }) {
 
     return (
         <>
-            <Navbar />
-            <section className="projects-page">
-                <div className="projects">
-                    {projects.map((project, i) => (
-                        <ProjectCard
-                            setActiveProject={setActiveProject}
-                            project={project}
-                            key={i}
-                        />
-                    ))}
-                </div>
-                {activeProject ? (
-                    <ProjectPreview project={activeProject} />
-                ) : (
-                    <div className="preview">
-                        Please select a project to preview
+            <div className="projects-wrapper">
+                <Navbar />
+                <section className="projects-page">
+                    <div className="projects">
+                        {projects.map((project, i) => (
+                            <ProjectCard
+                                isActive={activeProject === project}
+                                setActiveProject={setActiveProject}
+                                project={project}
+                                key={i}
+                            />
+                        ))}
                     </div>
-                )}
-            </section>
+                    {activeProject ? (
+                        <ProjectPreview project={activeProject} />
+                    ) : (
+                        <div className="preview">
+                            Please select a project to preview
+                        </div>
+                    )}
+                </section>
+            </div>
         </>
     );
 }

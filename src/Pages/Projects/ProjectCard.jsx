@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-export default function ProjectCard({ project, setActiveProject }) {
+export default function ProjectCard({ project, setActiveProject, isActive }) {
     return (
         <div
-            className="project-card"
+            className={`project-card ${isActive ? "active-preview-project-card" : ""}`}
             onClick={() => {
                 setActiveProject(project);
             }}
