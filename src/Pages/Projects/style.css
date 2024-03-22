@@ -11,7 +11,7 @@
     --sidebar-width: 300px;
     margin: 0;
     padding: 0;
-    margin-block-start: 1rem;
+    padding-block: 1rem;
     display: flex;
 }
 
