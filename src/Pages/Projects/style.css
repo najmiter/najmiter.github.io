@@ -49,6 +49,12 @@
     background-color: #2a2b2c;
 }
 
+.preview-project-title {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .preview-project-tags {
     display: flex;
     flex-wrap: wrap;

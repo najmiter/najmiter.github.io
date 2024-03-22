@@ -105,7 +105,8 @@ section {
     text-transform: uppercase;
 }
 
-.section-heading::after {
+.section-heading::after,
+.preview-project-title::after {
     content: '';
     background-color: var(--color-theme);
     width: 30%;
@@ -119,7 +120,8 @@ section {
     transition: width 300ms ease;
 }
 
-.section-heading:hover::after {
+.section-heading:hover::after,
+.preview-project-title:hover::after {
     width: 100%;
 }
 
