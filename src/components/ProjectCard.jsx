@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
-export default function ProjectCard({ project, index }) {
+import { Link } from "react-router-dom";
+
+export default function ProjectCard({ project, index, setActiveProject }) {
     const { name, thumbnail, short_description, try_link } = project;
     return (
         <div className="project-card">
@@ -12,9 +14,16 @@ export default function ProjectCard({ project, index }) {
             <h2 className="project-title">{name}</h2>
             <div className="project-description">{short_description}</div>
             <div className="project-actions">
-                <button className="project-preview-btn" data-id={index}>
-                    Preview
-                </button>
+                <Link to="/projects">
+                    <button
+                        className="project-preview-btn"
+                        data-id={index}
+                        onClick={() => setActiveProject(project)}
+                    >
+                        Preview
+                    </button>
+                </Link>
+
                 <button className="project-try-btn">
                     <a href={try_link} target="_blank">
                         Try

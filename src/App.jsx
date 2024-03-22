@@ -8,6 +8,7 @@ const DEFAUL_PROJECT_SHOW_COUNT = 9;
 export default function App() {
     const [projects, setProjects] = useState([]);
     const [showCount, setShowCount] = useState(DEFAUL_PROJECT_SHOW_COUNT);
+    const [activeProject, setActiveProject] = useState(null);
 
     useEffect(function () {
         async function fetchProjects() {
@@ -27,12 +28,22 @@ export default function App() {
                 <Route
                     path="/"
                     element={
-                        <Homepage projects={projects} showCount={showCount} />
+                        <Homepage
+                            projects={projects}
+                            showCount={showCount}
+                            setActiveProject={setActiveProject}
+                        />
                     }
                 />
                 <Route
                     path="projects"
-                    element={<Projects projects={projects} />}
+                    element={
+                        <Projects
+                            projects={projects}
+                            activeProject={activeProject}
+                            setActiveProject={setActiveProject}
+                        />
+                    }
                 />
             </Routes>
         </BrowserRouter>

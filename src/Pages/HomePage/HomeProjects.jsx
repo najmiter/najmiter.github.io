@@ -3,7 +3,7 @@
 import ProjectCard from "../../components/ProjectCard";
 import { Link } from "react-router-dom";
 
-export default function Projects({ showCount, projects }) {
+export default function Projects({ showCount, projects, setActiveProject }) {
     const showCountInner = showCount ?? projects.length;
 
     return (
@@ -14,7 +14,12 @@ export default function Projects({ showCount, projects }) {
             <div className="wrapper projects-wrapper">
                 {projects?.map((project, i) =>
                     i < showCountInner ? (
-                        <ProjectCard project={project} index={i} key={i} />
+                        <ProjectCard
+                            setActiveProject={setActiveProject}
+                            project={project}
+                            index={i}
+                            key={i}
+                        />
                     ) : (
                         ""
                     )

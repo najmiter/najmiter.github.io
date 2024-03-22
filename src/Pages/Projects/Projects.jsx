@@ -7,9 +7,11 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import ProjectPreview from "./ProjectPreview";
 
-export default function Projects({ projects, currentActive }) {
-    const [activeProject, setActiveProject] = useState(currentActive);
-
+export default function Projects({
+    projects,
+    activeProject,
+    setActiveProject,
+}) {
     useEffect(function () {
         window.scrollTo(0, 0);
         document.title = "Projects";
@@ -17,13 +19,13 @@ export default function Projects({ projects, currentActive }) {
 
     return (
         <>
-            <div className="projects-wrapper">
+            <div className="projects-main-wrapper">
                 <Navbar />
                 <section className="projects-page">
                     <div className="projects">
                         {projects.map((project, i) => (
                             <ProjectCard
-                                isActive={activeProject === project}
+                                isActive={activeProject?.name === project?.name}
                                 setActiveProject={setActiveProject}
                                 project={project}
                                 key={i}
