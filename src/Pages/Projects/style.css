@@ -21,6 +21,7 @@
     flex-direction: column;
     gap: 2rem;
     max-width: 80rem;
+    max-height: 90vh;
     margin: 0 auto;
     text-align: center;
     overflow: auto;
