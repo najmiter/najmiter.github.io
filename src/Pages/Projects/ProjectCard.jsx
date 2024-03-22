@@ -7,7 +7,11 @@ export default function ProjectCard({ project, setActiveProject, isActive }) {
                 setActiveProject(project);
             }}
         >
-            <img src={project.thumbnail} className="project-thumbnail" alt="" />
+            <img
+                src={project.thumbnail}
+                className="project-smol-thumbnail"
+                alt=""
+            />
             <div>
                 <h3 className="project-name">{project.name}</h3>
                 <p className="project-short-des">

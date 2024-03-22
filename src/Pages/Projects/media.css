@@ -1,3 +1,13 @@
+@media screen and (max-width: 600px) {
+    .project-short-des {
+        display: none;
+    }
+
+    .project-smol-thumbnail {
+        min-width: 11rem;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .projects-page {
         display: grid;
@@ -17,8 +27,8 @@
         background-color: transparent;
     }
 
-    .project-thumbnail {
-        width: 50%;
+    .project-smol-thumbnail {
+        max-width: 10rem;
     }
 
     .projects-page .project-card {
