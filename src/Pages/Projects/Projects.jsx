@@ -12,10 +12,13 @@ export default function Projects({
     activeProject,
     setActiveProject,
 }) {
-    useEffect(function () {
-        window.scrollTo(0, 0);
-        document.title = "Projects";
-    }, []);
+    useEffect(
+        function () {
+            window.scrollTo(0, 0);
+            document.title = activeProject?.name ?? "Projects";
+        },
+        [activeProject]
+    );
 
     return (
         <>
