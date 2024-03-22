@@ -2,9 +2,7 @@ export default function Main() {
     return (
         <main className="khero-main">
             <h1 className="khero-greeting">
-                very, very
-                <br />
-                creative.
+                very, very creative.
                 <br />
                 anyway.
             </h1>
