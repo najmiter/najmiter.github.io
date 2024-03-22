@@ -1,6 +1,7 @@
 .projects-wrapper {
     display: flex;
     flex-direction: column;
+    max-width: 1800px;
     max-height: 100vh;
     max-height: 100svh;
     overflow: hidden;
@@ -12,7 +13,6 @@
     padding: 0;
     margin-block-start: 1rem;
     display: flex;
-    width: 100vw;
 }
 
 .preview {
@@ -21,8 +21,6 @@
     flex-direction: column;
     gap: 2rem;
     max-width: 80rem;
-    max-height: 90vh;
-    max-height: 90svh;
     margin: 0 auto;
     text-align: center;
     overflow: auto;
@@ -31,10 +29,11 @@
 .projects {
     min-width: var(--sidebar-width);
     max-width: var(--sidebar-width);
+    border-radius: 1rem;
     background-color: #26282b;
     padding-inline: 1rem;
-    max-height: inherit;
-    overflow: scroll;
+    margin-bottom: 6rem;
+    overflow: auto;
 }
 
 .projects-page .project-card {
