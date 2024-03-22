@@ -1,12 +1,14 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import ProjectCard from "../../components/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import Navbar from "../../components/Navbar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./style.css";
+import ProjectPreview from "./ProjectPreview";
 
-export default function Projects({ showCount, projects }) {
-    const showCountInner = showCount ?? projects.length;
+export default function Projects({ projects }) {
+    const [activeProject, setActiveProject] = useState(null);
 
     useEffect(function () {
         window.scrollTo(0, 0);
@@ -16,19 +18,23 @@ export default function Projects({ showCount, projects }) {
     return (
         <>
             <Navbar />
-            <section className="projects-section" id="projects">
-                <h1 className="section-heading">
-                    <Link to="/projects">Projects</Link>
-                </h1>
-                <div className="wrapper projects-wrapper">
-                    {projects?.map((project, i) =>
-                        i < showCountInner ? (
-                            <ProjectCard project={project} index={i} key={i} />
-                        ) : (
-                            ""
-                        )
-                    )}
+            <section className="projects-page">
+                <div className="projects">
+                    {projects.map((project, i) => (
+                        <ProjectCard
+                            setActiveProject={setActiveProject}
+                            project={project}
+                            key={i}
+                        />
+                    ))}
                 </div>
+                {activeProject ? (
+                    <ProjectPreview project={activeProject} />
+                ) : (
+                    <div className="preview">
+                        Please select a project to preview
+                    </div>
+                )}
             </section>
         </>
     );
