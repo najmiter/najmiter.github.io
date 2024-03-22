@@ -33,6 +33,7 @@ section {
 .logo {
     cursor: pointer;
     font-size: clamp(1.2rem, 5dvw, 3rem);
+    user-select: none;
 }
 
 .navbar {

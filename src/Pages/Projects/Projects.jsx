@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import { useEffect } from "react";
 import ProjectPreview from "./ProjectPreview";
 import "./style.css";
+import "./media.css";
 
 export default function Projects({
     projects,

@@ -1,0 +1,38 @@
+@media screen and (max-width: 950px) {
+    .projects-page {
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+        grid-template-areas: "preview" "projects";
+    }
+
+    .projects {
+        grid-area: projects;
+        display: flex;
+        min-width: 100vw;
+        border-radius: 0;
+    }
+
+
+    .active-preview-project-card {
+        background-color: transparent;
+    }
+
+    .project-thumbnail {
+        width: 50%;
+    }
+
+    .projects-page .project-card {
+        flex-direction: row;
+    }
+
+    .projects-page .project-card {
+        background-color: rgb(30, 30, 41);
+        margin-inline: 1rem;
+        min-width: 90vw;
+        border: none;
+    }
+
+    .preview {
+        grid-area: preview;
+    }
+}

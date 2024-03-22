@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// import BurgerMenu from "./BurgerMenu";
 
 export default function Navbar() {
     return (
@@ -6,6 +7,7 @@ export default function Navbar() {
             <h1 className="logo">
                 <Link to="/">najmiter</Link>
             </h1>
+
             <ul className="links">
                 <li className="link-item">
                     <Link to="/projects">Projects</Link>
@@ -21,9 +23,7 @@ export default function Navbar() {
                     </a>
                 </li>
             </ul>
-            <span role="button" className="burger">
-                🍔
-            </span>
+            {/* <BurgerMenu /> */}
         </nav>
     );
 }

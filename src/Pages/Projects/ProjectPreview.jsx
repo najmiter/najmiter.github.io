@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+
 export default function ProjectPreview({ project }) {
     return (
         <div className="preview">
@@ -14,7 +15,7 @@ export default function ProjectPreview({ project }) {
             <p className="project-preview-description">
                 {project.long_description}
             </p>
-            <img className="project-thumbnail" src={project.preview} alt="" />
+            <img className="project-preview" src={project.preview} alt="" />
         </div>
     );
 }
