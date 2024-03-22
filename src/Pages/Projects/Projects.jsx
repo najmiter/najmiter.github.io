@@ -2,10 +2,9 @@
 /* eslint-disable react/prop-types */
 import ProjectCard from "./ProjectCard";
 import Navbar from "../../components/Navbar";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./style.css";
+import { useEffect } from "react";
 import ProjectPreview from "./ProjectPreview";
+import "./style.css";
 
 export default function Projects({
     projects,
