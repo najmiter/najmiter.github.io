@@ -8,7 +8,7 @@ export default function ProjectActions({
 }) {
     return (
         <div className="project-actions">
-            {showPreviewBtn && (
+            {showPreviewBtn ? (
                 <Link to="/projects">
                     <button
                         className="project-preview-btn"
@@ -17,11 +17,12 @@ export default function ProjectActions({
                         Preview
                     </button>
                 </Link>
+            ) : (
+                <Link to={project.source_link} target="_blank">
+                    <button>Source Code</button>
+                </Link>
             )}
 
-            <Link to={project.source_link} target="_blank">
-                <button>Source Code</button>
-            </Link>
             <Link to={project.try_link} target="_blank">
                 <button className="btn">Try</button>
             </Link>
