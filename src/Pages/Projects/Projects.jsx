@@ -15,7 +15,7 @@ export default function Projects({
     useEffect(
         function () {
             window.scrollTo(0, 0);
-            document.title = activeProject?.name ?? "Projects";
+            document.title = `${activeProject?.name ?? "Projects"} - Preview`;
         },
         [activeProject]
     );
