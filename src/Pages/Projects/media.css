@@ -11,9 +11,12 @@
 @media screen and (max-width: 950px) {
     .projects-page {
         display: grid;
+        grid-template-rows: 4fr 1fr;
+        grid-template-areas: "preview" "projects";
     }
 
     .projects {
+        grid-area: projects;
         position: fixed;
         bottom: 0;
         left: 0;
@@ -23,6 +26,9 @@
         border-radius: 0;
     }
 
+    .preview {
+        grid-area: preview;
+    }
 
     .active-preview-project-card {
         background-color: transparent;

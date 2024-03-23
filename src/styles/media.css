@@ -3,14 +3,9 @@
         --preffered-distance: 5vw;
     }
 
-    /* .navbar {
-        padding-inline: var(--padding-inline);
+    .navbar {
+        padding-block: 1rem;
     }
-
-    .khero,
-    section {
-        --padding-inline: clamp(0.5rem, 5vw, 20rem);
-    } */
 
     .khero-main {
         flex-direction: column;
