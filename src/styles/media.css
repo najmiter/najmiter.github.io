@@ -9,10 +9,20 @@
 
     .khero-main {
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         gap: 2rem;
         text-align: center;
         line-height: 1.7;
+    }
+
+    .lorem12 {
+        font-size: 1em;
+    }
+
+    .lorem12::after {
+        /* top: 50%; */
+        left: 50%;
+        translate: -50% 0%;
     }
 
     .khero-img {

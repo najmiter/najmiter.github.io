@@ -71,8 +71,26 @@ section {
     flex: 1;
     padding-inline: var(--padding-inline);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
+}
+
+.lorem12 {
+    font-family: monospace;
+    position: relative;
+    color: var(--color-text-dhim);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 2em;
+    /* border: 1px solid; */
+}
+
+.lorem12::after {
+    content: attr(data-content);
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
 }
 
 .khero-greeting {
