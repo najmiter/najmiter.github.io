@@ -5,6 +5,7 @@
     max-height: 100vh;
     max-height: 100svh;
     overflow: hidden;
+    background: var(--main-gradient);
 }
 
 .projects-page {
@@ -86,4 +87,13 @@
 .project-preview-description {
     max-width: 70ch;
     margin: 0 auto;
+}
+
+.project-name {
+    line-height: 1.1;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.project-short-des {
+    margin-block-start: 1rem;
 }

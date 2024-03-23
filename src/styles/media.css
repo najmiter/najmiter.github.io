@@ -1,12 +1,16 @@
 @media screen and (width < 636px) {
-    .navbar {
-        padding-block: 0.7rem;
+    :root {
+        --preffered-distance: 5vw;
+    }
+
+    /* .navbar {
+        padding-inline: var(--padding-inline);
     }
 
     .khero,
     section {
-        --padding-inline: clamp(0.5rem, 5dvw, 20rem);
-    }
+        --padding-inline: clamp(0.5rem, 5vw, 20rem);
+    } */
 
     .khero-main {
         flex-direction: column;

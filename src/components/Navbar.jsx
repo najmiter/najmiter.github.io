@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 // import BurgerMenu from "./BurgerMenu";
+import "../styles/globals.css";
 
 export default function Navbar() {
     return (
@@ -14,13 +15,13 @@ export default function Navbar() {
                 </li>
 
                 <li className="link-item">
-                    <a
+                    <Link
                         href="https://youtube.com/najmiter"
                         target="_blank"
                         className="nav-link"
                     >
                         YouTube
-                    </a>
+                    </Link>
                 </li>
             </ul>
             {/* <BurgerMenu /> */}
