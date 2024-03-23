@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import ProjectActions from "../../components/ProjectActions";
 
 export default function ProjectPreview({ project }) {
     return (
@@ -12,6 +13,7 @@ export default function ProjectPreview({ project }) {
                 ))}
             </div>
             <p className="project-preview-start-date">{project.start_date}</p>
+            <ProjectActions try_link={project.try_link} project={project} />
             <p className="project-preview-description">
                 {project.long_description}
             </p>

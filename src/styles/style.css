@@ -192,8 +192,9 @@ section {
     gap: 1rem;
 }
 
-.project-try-btn {
-    padding: 0;
+.project-try-btn,
+.btn {
+    padding: 1rem 1.5rem;
     color: var(--color-text-dhim);
     background-color: var(--color-text-dark);
 }
@@ -201,11 +202,11 @@ section {
 .project-try-btn a {
     width: 100%;
     height: 100%;
-    padding: 1rem 1.5rem;
     border-radius: inherit;
 }
 
-.project-try-btn:hover {
+.project-try-btn:hover,
+.btn:hover {
     background-color: var(--color-text-dhim);
     color: var(--color-text-dark);
 }

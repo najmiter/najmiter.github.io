@@ -20,6 +20,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     max-width: 80rem;
     max-height: 90vh;
@@ -61,7 +62,6 @@
 .preview-project-title {
     position: relative;
     width: fit-content;
-    margin: 0 auto;
 }
 
 .preview-project-tags {
