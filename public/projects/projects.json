@@ -28,7 +28,7 @@
             "thumbnail": "projects/imgs/thumbnails/cwee-thumbnail.webp",
             "preview": "projects/imgs/previews/cwee.webp",
             "short_description": "A resume builder that gets your information and prints a pdf in the end.",
-            "long_description": "A resume builder app that lets you create your own resume based on the information that you provide. It's in extremely early stages yet and it only accepts a few number of input categories and there's only one template. Future plans involve around that fact getting changed.",
+            "long_description": "A resume builder app that lets you create your own resume based on the information that you provide. It's in extremely early stages yet and it only accepts a few number of input categories and there's only one template. Future plans revolve around that fact getting changed.",
             "try_link": "https://najmiter.github.io/cwee/",
             "source_link": "https://github.com/najmiter/cwee/",
             "start_date": "March, 2024"
