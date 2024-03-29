@@ -17,7 +17,14 @@ export default function ProjectPreview({ project }) {
             <p className="project-preview-description">
                 {project.long_description}
             </p>
-            <img className="project-thumbnail" src={project.preview} alt="" />
+            {project.previews.map((preview, i) => (
+                <img
+                    key={i}
+                    className="project-thumbnail"
+                    src={preview}
+                    alt=""
+                />
+            ))}
         </div>
     );
 }
