@@ -7,11 +7,13 @@
 .homepage>div {
     max-width: 50ch;
     font-size: 2rem;
+    font-weight: 300;
 }
 
 .homepage h1 {
     color: hsl(var(--color-orange));
     font-family: 'Yesvera', serif;
+    font-size: 2em;
     margin-block-end: 1rem;
 }
 

@@ -43,13 +43,6 @@ body::before {
     border-radius: 50%;
 }
 
-/* body::after {
-    top: 5vh;
-    right: 10vw;
-    filter: blur(5rem);
-    background: linear-gradient(to right, hsl(var(--color-blue)) 30%, hsl(var(--color-orange)));
-} */
-
 body::before {
     bottom: 30vh;
     left: -10vw;
@@ -85,10 +78,11 @@ main {
     max-height: 100vh;
     max-height: 100svh;
     min-width: 100vw;
+    overflow-y: auto;
 }
 
 section {
-    overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
     min-height: 100%;
 }
@@ -122,5 +116,10 @@ button {
 @media screen and (max-width: 1000px) {
     h1 {
         line-height: 1.1;
+    }
+
+    body::before,
+    body::after {
+        display: none;
     }
 }
