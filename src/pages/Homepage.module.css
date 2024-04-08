@@ -1,0 +1,8 @@
+.homepage {
+    display: flex;
+    align-items: flex-start;
+}
+
+.kheroImg {
+    width: 50%;
+}

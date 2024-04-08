@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
     return (
         <nav className={styles.navbar}>
-            <h1 className={styles.logo}>najmiter.</h1>
+            <Link to="/">
+                <h1 className={styles.logo}>&lt;najmiter/&gt;</h1>
+            </Link>
 
             <div className={styles.explore}>
                 <h3 className={styles.exploreHeading}>Explore</h3>

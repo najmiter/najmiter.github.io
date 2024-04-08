@@ -1,16 +1,15 @@
 .navbar {
-
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    margin-inline-end: 1rem;
 }
 
 .logo {
     font-family: "Yeseva One", serif;
-    cursor: default;
+    cursor: pointer;
     user-select: none;
     padding-inline: 2rem;
+    color: hsl(var(--color-blue));
 }
 
 .explore {
@@ -21,20 +20,20 @@
 }
 
 .exploreHeading {
-    padding: 2rem;
+    padding: 1rem 2rem;
+    cursor: default;
     font-size: 0.8em;
     text-transform: uppercase;
-    opacity: 0.5;
+    color: hsl(var(--color-light), 60%);
+    opacity: 0.7;
 }
 
 .exploreItem {
     padding: 1rem 2rem;
     border-radius: 1rem;
-    color: hsl(var(--color-dark));
-    font-family: system-ui;
 }
 
 :global(.active) {
-    background-color: hsl(var(--color-blue));
-    color: hsl(var(--color-white));
+    background-color: hsl(var(--color-dim));
+    color: hsl(var(--color-blue));
 }
