@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Yeseva+One&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: 0, 0%, 100%;
+    --color-light: 0, 0%, 93%;
+    --color-dim: 0, 0%, 88%;
+    --color-dark: 0, 0%, 12%;
+    --color-blue: 215, 98%, 62%;
+}
+
+html {
+    font-size: 11.25px;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: hsl(var(--color-light), 50%);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#root {
+    height: 100vh;
+    height: 100svh;
+}

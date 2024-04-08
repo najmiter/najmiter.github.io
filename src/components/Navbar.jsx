@@ -1,30 +1,26 @@
-import { Link } from "react-router-dom";
-// import BurgerMenu from "./BurgerMenu";
-import "../styles/globals.css";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
     return (
-        <nav className="navbar">
-            <h1 className="logo">
-                <Link to="/">najmiter</Link>
-            </h1>
+        <nav className={styles.navbar}>
+            <h1 className={styles.logo}>najmiter.</h1>
 
-            <ul className="links">
-                <li className="link-item">
-                    <Link to="/projects">Projects</Link>
-                </li>
-
-                <li className="link-item">
-                    <Link
-                        href="https://youtube.com/najmiter"
-                        target="_blank"
-                        className="nav-link"
-                    >
-                        YouTube
-                    </Link>
-                </li>
-            </ul>
-            {/* <BurgerMenu /> */}
+            <div className={styles.explore}>
+                <h3 className={styles.exploreHeading}>Explore</h3>
+                <NavLink to="/" className={styles.exploreItem}>
+                    🏠 Homepage
+                </NavLink>
+                <NavLink to="projects" className={styles.exploreItem}>
+                    👨🏻‍💻 Projects
+                </NavLink>
+                <NavLink to="contact" className={styles.exploreItem}>
+                    📩 Contact
+                </NavLink>
+                <NavLink to="links" className={styles.exploreItem}>
+                    🔗 Links
+                </NavLink>
+            </div>
         </nav>
     );
 }

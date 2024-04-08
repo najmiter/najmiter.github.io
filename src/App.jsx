@@ -1,50 +1,22 @@
-import Homepage from "./Pages/HomePage/Homepage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Projects from "./Pages/Projects/Projects";
-import { useEffect, useState } from "react";
-
-const DEFAUL_PROJECT_SHOW_COUNT = 9;
+import Homepage from "./pages/Homepage";
+import Layout from "./components/Layout";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import Links from "./pages/Links";
 
 export default function App() {
-    const [projects, setProjects] = useState([]);
-    const [showCount, setShowCount] = useState(DEFAUL_PROJECT_SHOW_COUNT);
-    const [activeProject, setActiveProject] = useState(null);
-
-    useEffect(function () {
-        async function fetchProjects() {
-            const jwb = await fetch("projects/projects.json");
-            const { projects } = await jwb.json();
-            setShowCount((p) => p ?? projects.length);
-
-            setProjects(projects);
-        }
-
-        fetchProjects();
-    }, []);
-
     return (
         <BrowserRouter>
             <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <Homepage
-                            projects={projects}
-                            showCount={showCount}
-                            setActiveProject={setActiveProject}
-                        />
-                    }
-                />
-                <Route
-                    path="projects"
-                    element={
-                        <Projects
-                            projects={projects}
-                            activeProject={activeProject}
-                            setActiveProject={setActiveProject}
-                        />
-                    }
-                />
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Homepage />} />
+                    <Route path="projects" element={<Projects />} />
+                    <Route path="contact" element={<Contact />} />
+                    <Route path="links" element={<Links />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     );

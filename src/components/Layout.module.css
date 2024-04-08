@@ -1,0 +1,13 @@
+.wrapper {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 4fr;
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.wrapper>* {
+    border-radius: 1rem;
+    background-color: hsl(var(--color-white));
+    padding: 2rem;
+}
