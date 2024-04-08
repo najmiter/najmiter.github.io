@@ -1,0 +1,16 @@
+.projectPreview {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectPreview a {
+    width: 100%;
+    text-align: left;
+    color: hsl(var(--color-orange));
+}
+
+.projectPreview p {
+    max-width: 60ch;
+}

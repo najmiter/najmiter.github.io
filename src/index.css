@@ -18,6 +18,10 @@
     --color-orange: 14, 99%, 65%;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     font-size: 11.25px;
     font-family: "Inter", sans-serif;
