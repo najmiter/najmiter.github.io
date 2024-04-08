@@ -73,7 +73,6 @@
         background-color: black;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
     }
 
     .none {
@@ -84,5 +83,9 @@
         display: block;
         cursor: pointer;
         user-select: none;
+    }
+
+    .explore button {
+        margin-block-start: 2rem;
     }
 }
