@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    height: 100vh;
+    height: 100svh;
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 
 .logo {

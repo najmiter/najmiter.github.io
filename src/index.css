@@ -21,11 +21,13 @@ html {
     font-size: 11.25px;
     font-family: "Inter", sans-serif;
     color-scheme: dark;
+    line-height: 1.7;
 }
 
 body {
-    min-height: 100vh;
-    min-height: 100svh;
+    overflow: hidden;
+    height: 100vh;
+    height: 100svh;
     background-color: hsl(var(--color-dark));
     color: hsl(var(--color-light));
 }
@@ -52,6 +54,36 @@ body::before {
     left: -10vw;
     filter: blur(10rem);
     background-color: hsl(var(--color-orange));
+}
+
+main {
+    max-height: 100vh;
+    overflow: auto;
+}
+
+main::before,
+main::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    width: 12rem;
+    z-index: -1;
+}
+
+main::before {
+    filter: blur(15rem);
+    aspect-ratio: 1/3;
+    rotate: 45deg;
+    right: 20%;
+    background-color: hsl(var(--color-orange));
+}
+
+main::after {
+    right: 30%;
+    aspect-ratio: 1;
+    rotate: 135deg;
+    filter: blur(10rem);
+    background-color: hsl(var(--color-blue));
 }
 
 li {

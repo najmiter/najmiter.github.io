@@ -1,8 +1,27 @@
 .homepage {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 3fr;
+    /* gap: 4rem; */
+}
+
+.homepage>div {
+    min-width: 30ch;
+    font-size: 2rem;
+}
+
+.homepage h1 {
+    color: hsl(var(--color-orange));
+    font-family: 'Yesvera', serif;
+    margin-block-end: 1rem;
+}
+
+.homepage a {
+    color: hsl(var(--color-orange));
 }
 
 .kheroImg {
-    width: 50%;
+    min-width: 30rem;
+    justify-self: end;
 }

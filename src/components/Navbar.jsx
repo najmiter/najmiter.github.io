@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <nav className={styles.navbar}>
             <Link to="/">
-                <h1 className={styles.logo}>&lt;najmiter/&gt;</h1>
+                <h1 className={styles.logo}>najmiter</h1>
             </Link>
 
             <div className={styles.explore}>
