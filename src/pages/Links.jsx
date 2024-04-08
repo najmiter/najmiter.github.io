@@ -1,3 +1,3 @@
 export default function Links() {
-    return <div className="">Links in da house</div>;
+    return <section className="">Links in da house</section>;
 }

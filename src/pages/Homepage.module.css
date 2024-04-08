@@ -26,6 +26,7 @@
 @media screen and (max-width: 1000px) {
     .homepage {
         flex-direction: column;
+        justify-content: flex-start;
         gap: 5rem;
     }
 

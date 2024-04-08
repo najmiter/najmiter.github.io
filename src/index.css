@@ -26,10 +26,9 @@ html {
 }
 
 body {
-
-    overflow-x: hidden;
-    height: 100vh;
-    height: 100svh;
+    overflow: hidden;
+    max-height: 100vh;
+    max-height: 100svh;
     background-color: hsl(var(--color-dark));
     color: hsl(var(--color-light));
 }
@@ -84,12 +83,14 @@ main::after {
 
 main {
     max-height: 100vh;
+    max-height: 100svh;
     min-width: 100vw;
-    overflow-y: auto;
 }
 
 section {
+    overflow-y: auto;
     width: 100%;
+    min-height: 100%;
 }
 
 li {

@@ -1,3 +1,3 @@
 export default function Contact() {
-    return <div className="">Contact someone you really want</div>;
+    return <section className="">Contact someone you really want</section>;
 }
