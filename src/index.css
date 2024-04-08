@@ -82,13 +82,12 @@ main {
     max-height: 100vh;
     max-height: 100svh;
     min-width: 100vw;
-    overflow-y: auto;
+    min-width: 100svw;
 }
 
 section {
-    overflow-x: hidden;
+    overflow: auto;
     width: 100%;
-    min-height: 100%;
 }
 
 li {
