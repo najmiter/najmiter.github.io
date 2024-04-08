@@ -6,7 +6,7 @@ export default function Navbar() {
     const [menuActive, setMenuActive] = useState(false);
 
     function handleSetMenuActive() {
-        setMenuActive(!menuActive);
+        setMenuActive(false);
     }
 
     return (
@@ -14,7 +14,7 @@ export default function Navbar() {
             <Link to="/">
                 <h1 className={styles.logo}>najmiter</h1>
             </Link>
-            <div onClick={handleSetMenuActive} className={styles.burger}>
+            <div onClick={() => setMenuActive(true)} className={styles.burger}>
                 🍔
             </div>
 
