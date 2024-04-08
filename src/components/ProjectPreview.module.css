@@ -3,14 +3,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 .projectPreview a {
     width: 100%;
     text-align: left;
     color: hsl(var(--color-orange));
+    margin-block-end: 2rem;
 }
 
 .projectPreview p {
     max-width: 60ch;
+}
+
+.projectPreview img {
+    width: 80rem;
 }

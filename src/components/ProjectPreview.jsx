@@ -12,9 +12,9 @@ export default function ProjectPreview({ projects }) {
             <Link to="..">Go back</Link>
             <h1>{clickedProject.name}</h1>
             <p>{clickedProject.long_description}</p>
-            {/* {clickedProject.previews.map((img) => (
-                <img src={img} key={img} />
-            ))} */}
+            {clickedProject.previews.map((img) => (
+                <img src={img} key={img} alt="" />
+            ))}
         </section>
     );
 }
