@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import { useState } from "react";
 
 export default function Navbar() {
-    const [menuActive, setMenuActive] = useState(window.innerWidth <= 1000);
+    const [menuActive, setMenuActive] = useState(false);
 
     return (
         <nav className={styles.navbar}>
