@@ -3,7 +3,7 @@ import styles from "./Homepage.module.css";
 
 export default function Homepage() {
     return (
-        <div className={styles.homepage}>
+        <section className={styles.homepage}>
             <div>
                 The name... is:
                 <h1>Najam ul Hassan</h1>
@@ -19,6 +19,6 @@ export default function Homepage() {
                 me as developer after looking at them.
             </div>
             <img className={styles.kheroImg} src="/imgs/khero.webp" alt="" />
-        </div>
+        </section>
     );
 }

@@ -1,7 +1,7 @@
 .wrapper {
-    display: grid;
+    display: flex;
     gap: 1rem;
-    grid-template-columns: 1fr 4fr;
+    min-width: 100vw;
     font-size: 1.5rem;
     height: 100%;
 }
@@ -11,4 +11,10 @@
     background-color: hsl(var(--color-black), 20%);
     backdrop-filter: blur(10rem);
     padding: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+    }
 }

@@ -1,13 +1,11 @@
 .homepage {
-    display: grid;
+    display: flex;
     align-items: center;
-    justify-items: center;
-    grid-template-columns: 1fr 3fr;
-    /* gap: 4rem; */
+    justify-content: space-between;
 }
 
 .homepage>div {
-    min-width: 30ch;
+    max-width: 50ch;
     font-size: 2rem;
 }
 
@@ -23,5 +21,20 @@
 
 .kheroImg {
     min-width: 30rem;
-    justify-self: end;
+}
+
+@media screen and (max-width: 1000px) {
+    .homepage {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .homepage>div {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .kheroImg {
+        max-width: 30rem;
+    }
 }

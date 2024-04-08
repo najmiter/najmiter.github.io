@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 :root {
@@ -25,7 +26,8 @@ html {
 }
 
 body {
-    overflow: hidden;
+
+    overflow-x: hidden;
     height: 100vh;
     height: 100svh;
     background-color: hsl(var(--color-dark));
@@ -56,11 +58,6 @@ body::before {
     background-color: hsl(var(--color-orange));
 }
 
-main {
-    max-height: 100vh;
-    overflow: auto;
-}
-
 main::before,
 main::after {
     content: '';
@@ -73,7 +70,6 @@ main::after {
 main::before {
     filter: blur(15rem);
     aspect-ratio: 1/3;
-    rotate: 45deg;
     right: 20%;
     background-color: hsl(var(--color-orange));
 }
@@ -84,6 +80,16 @@ main::after {
     rotate: 135deg;
     filter: blur(10rem);
     background-color: hsl(var(--color-blue));
+}
+
+main {
+    max-height: 100vh;
+    min-width: 100vw;
+    overflow-y: auto;
+}
+
+section {
+    width: 100%;
 }
 
 li {
@@ -99,7 +105,21 @@ img {
     max-width: 100%;
 }
 
+button {
+    border: none;
+    outline: none;
+    background-color: hsl(var(--color-blue));
+    padding: 1rem 2rem;
+    border-radius: 100vh;
+}
+
 #root {
     height: 100vh;
     height: 100svh;
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        line-height: 1.1;
+    }
 }

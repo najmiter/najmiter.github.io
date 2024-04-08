@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
+    min-width: 25rem;
     height: 100vh;
     height: 100svh;
     position: sticky;
@@ -41,4 +42,45 @@
 :global(.active) {
     background-color: hsl(var(--color-dim));
     color: hsl(var(--color-blue));
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        position: relative;
+        z-index: 90;
+
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .explore {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
 }
