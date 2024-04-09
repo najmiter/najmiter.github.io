@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Layout from "./components/Layout";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Links from "./pages/Links";
 import ProjectPreview from "./components/ProjectPreview";
 import { useEffect, useState } from "react";
+import Courses from "./pages/Courses";
 
 export default function App() {
     const [projects, setProjects] = useState(null);
@@ -24,7 +24,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Homepage />} />
-                    <Route path="contact" element={<Contact />} />
+                    <Route path="courses" element={<Courses />} />
                     <Route path="links" element={<Links />} />
                     <Route path="*" element={<NotFound />} />
 

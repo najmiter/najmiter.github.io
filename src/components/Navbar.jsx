@@ -27,7 +27,7 @@ export default function Navbar() {
                     to="/"
                     className={styles.exploreItem}
                 >
-                    🏠 Homepage
+                    🏠 Home
                 </NavLink>
                 <NavLink
                     onClick={handleSetMenuActive}
@@ -38,10 +38,10 @@ export default function Navbar() {
                 </NavLink>
                 <NavLink
                     onClick={handleSetMenuActive}
-                    to="contact"
+                    to="courses"
                     className={styles.exploreItem}
                 >
-                    📩 Contact
+                    👨‍🏫 Courses
                 </NavLink>
                 <NavLink
                     onClick={handleSetMenuActive}
