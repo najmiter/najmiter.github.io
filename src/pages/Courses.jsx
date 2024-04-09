@@ -31,6 +31,12 @@ const courses = [
         title: "C++ STL Mastery",
         description: "Mastering Modern C++ Standard Template Library.",
     },
+    {
+        link: "https://www.youtube.com/playlist?list=PLt4rWC_3rBbVB_pIGODq3Gx2zAnXVHq8s",
+        img: "https://i.ytimg.com/vi/TG_C9F8homk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg",
+        title: "WebDev // Projects",
+        description: "Original ideas implementation for learning purposes.",
+    },
 ];
 
 export default function Courses() {
