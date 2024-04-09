@@ -11,6 +11,15 @@ export default function ProjectPreview({ projects }) {
         <section className={styles.projectPreview}>
             <Link to="..">Go back</Link>
             <h1>{clickedProject.name}</h1>
+            <div className={styles.projectPreviewTags}>
+                {clickedProject.tags.map((tag) => (
+                    <div key={tag}>{tag}</div>
+                ))}
+            </div>
+            <div className={styles.projectPreviewStartDate}>
+                {clickedProject.start_date}
+            </div>
+
             <p>{clickedProject.long_description}</p>
             {clickedProject.previews.map((img) => (
                 <img src={img} key={img} alt="" />
