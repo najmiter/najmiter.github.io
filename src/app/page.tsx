@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <div>
             <Wrapper className="">
-                <div className="py-5 max-h-dvh min-h-dvh">
+                <div className="py-5 min-h-dvh">
                     <header className="grid gap-20">
                         <div className="mt-20 flex gap-10">
                             <div className="relative min-w-[300px]">
@@ -36,9 +36,9 @@ export default function Home() {
                                 <h3 className="font-light text-3xl">
                                     A developer who
                                 </h3>
-                                <h1 className="text-5xl font-bold leading-[1.5]">
+                                <h1 className="text-5xl font-bold leading-[1.3]">
                                     Cant&apos;t come up with a catchy and an{" "}
-                                    <span className="text-purple-500 inline-block relative after:absolute after:w-[110%] after:h-16 after:-rotate-[8deg] after:rounded-[50%] after:border-white after:border after:top-3 after:-left-[5%]">
+                                    <span className="text-purple-500 inline-block relative after:absolute after:pointer-events-none after:-z-10 after:w-[110%] after:h-16 after:-rotate-[8deg] after:rounded-[50%] after:border-white after:border after:top-3 after:-left-[5%]">
                                         impressive
                                     </span>{" "}
                                     heading...
@@ -72,10 +72,9 @@ export default function Home() {
                 </div>
 
                 {/* EXPERIENCE */}
-
                 <div className="relative">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-square bg-[radial-gradient(circle,#763CAC_0%,transparent_100%)] rounded-full blur-[7rem]" />
-                    <section className="">
+                    <section className="relative">
+                        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-square bg-[radial-gradient(circle,#763CAC_0%,transparent_100%)] rounded-full blur-[7rem]" />
                         <h1
                             className={cn(
                                 "text-4xl font-semibold",
@@ -84,14 +83,15 @@ export default function Home() {
                         >
                             Projects
                         </h1>
-                        <div className="grid grid-cols-2 gap-5 my-5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
                             <ExperienceCard>
-                                <div className="flex gap-5 basis-full px-10">
+                                <div className="flex items-start gap-2 sm:gap-5 basis-full px-10">
                                     <Image
                                         src="/icons/javascript.png"
                                         alt="javascript logo"
                                         width={120}
                                         height={120}
+                                        objectFit="contain"
                                     />
 
                                     <div className="">
@@ -110,12 +110,13 @@ export default function Home() {
                                 </div>
                             </ExperienceCard>
                             <ExperienceCard>
-                                <div className="flex gap-5 basis-full px-10">
+                                <div className="flex gap-2 sm:gap-5 basis-full items-start px-10">
                                     <Image
                                         src="/icons/c-sharp.png"
                                         alt="c sharp logo"
                                         width={120}
                                         height={120}
+                                        objectFit="contain"
                                     />
 
                                     <div className="">
@@ -136,12 +137,13 @@ export default function Home() {
                             </ExperienceCard>
 
                             <ExperienceCard>
-                                <div className="flex gap-5 basis-full px-10">
+                                <div className="flex gap-2 items-start sm:gap-5 basis-full px-10">
                                     <Image
                                         src="/icons/react.png"
                                         alt="react logo"
                                         width={120}
                                         height={120}
+                                        objectFit="contain"
                                     />
 
                                     <div className="">
@@ -164,12 +166,13 @@ export default function Home() {
                             </ExperienceCard>
 
                             <ExperienceCard>
-                                <div className="flex gap-5 basis-full px-10">
+                                <div className="flex items-start gap-2 sm:gap-5 basis-full px-10">
                                     <Image
                                         src="/icons/css.png"
                                         alt="css logo"
                                         width={120}
                                         height={120}
+                                        objectFit="contain"
                                     />
 
                                     <div className="">
@@ -190,8 +193,54 @@ export default function Home() {
                             </ExperienceCard>
                         </div>
                     </section>
+                    <div className="mt-20">
+                        <div className="text-center">
+                            <h5 className="text-2xl font-semibold">
+                                the above mentioned{" "}
+                                <span className="text-purple-400">techs</span>{" "}
+                                are the most involved in my projects
+                            </h5>
+                            <p className="text-md">
+                                but these are some other related libraries,
+                                frameworks, programming languages as well
+                            </p>
+                        </div>
+
+                        <div className="grid gap-3 mt-5">
+                            <div className="flex gap-2 justify-center">
+                                <Icon name="python" />
+                                <Icon name="rust" />
+                                <Icon name="cpp" />
+                                <Icon name="sql" />
+                                <Icon name="typescript" />
+                                <Icon name="git" />
+                                <Icon name="nodejs" />
+                            </div>
+                            <div className="flex gap-2 justify-center">
+                                <Icon name="tailwind" />
+                                <Icon name="nextjs" />
+                                <Icon name="react" />
+                                <Icon name="javascript" />
+                                <Icon name="c-sharp" />
+                                <Icon name="mongo-db" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </Wrapper>
+        </div>
+    );
+}
+
+function Icon({ name }: { name: string }) {
+    return (
+        <div className="p-3 rounded-full bg-stone-800">
+            <Image
+                src={`/icons/${name}.png`}
+                alt={`${name} logo`}
+                width={40}
+                height={40}
+            />
         </div>
     );
 }
@@ -210,7 +259,7 @@ function ExploreButton({ children }: { children: React.ReactNode }) {
 function ExperienceCard({ children }: { children: React.ReactNode }) {
     return (
         <div className="bg-[linear-gradient(90deg,#130428_7%,#251043_34%,#38126D_57%,#261045_85%,#190634_100%)] h-48 rounded-lg overflow-hidden border-t-4 border-[#4F228D] shadow-lg">
-            <div className="w-full h-full bg-stone-950/20 backdrop-blur-3xl flex justify-center items-center">
+            <div className="w-full h-full bg-black/10 hover:bg-black/30 backdrop-blur-3xl flex justify-center items-center cursor-default">
                 {children}
             </div>
         </div>
