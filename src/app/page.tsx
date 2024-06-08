@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -74,7 +75,7 @@ export default function Home() {
                 {/* EXPERIENCE */}
                 <div className="relative">
                     <section className="relative">
-                        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-square bg-[radial-gradient(circle,#763CAC_0%,transparent_100%)] rounded-full blur-[7rem]" />
+                        <div className="hidden sm:block absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] aspect-square bg-[radial-gradient(circle,#763CAC_0%,transparent_100%)] rounded-full blur-[7rem]" />
                         <h1
                             className={cn(
                                 "text-4xl font-semibold",
@@ -206,24 +207,53 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div className="grid gap-3 mt-5">
-                            <div className="flex gap-2 justify-center">
-                                <Icon name="python" />
-                                <Icon name="rust" />
-                                <Icon name="cpp" />
-                                <Icon name="sql" />
-                                <Icon name="typescript" />
-                                <Icon name="git" />
-                                <Icon name="nodejs" />
-                            </div>
-                            <div className="flex gap-2 justify-center">
-                                <Icon name="tailwind" />
-                                <Icon name="nextjs" />
-                                <Icon name="react" />
-                                <Icon name="javascript" />
-                                <Icon name="c-sharp" />
-                                <Icon name="mongo-db" />
-                            </div>
+                        <div className="flex flex-wrap max-w-prose justify-center gap-3 mx-auto mt-5">
+                            <Icon name="python" />
+                            <Icon name="rust" />
+                            <Icon name="cpp" />
+                            <Icon name="sql" />
+                            <Icon name="typescript" />
+                            <Icon name="git" />
+                            <Icon name="nodejs" />
+                            <Icon name="tailwind" />
+                            <Icon name="nextjs" />
+                            <Icon name="react" />
+                            <Icon name="javascript" />
+                            <Icon name="swift" />
+                            <Icon name="c-sharp" />
+                            <Icon name="mongo-db" />
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col items-center mt-52 -space-y-52">
+                        <div className="relative w-[230px] aspect-square grid place-content-center bg-[linear-gradient(to_bottom,rgba(48,16,128,0.6),rgba(120,64,173,0.36))] rounded-full">
+                            <div className="hidden sm:block absolute w-[300px] h-[200px] bg-[radial-gradient(circle,#763CAC_100%,#320F85_0%)] top-[50%] -translate-y-1/2 left-[50%] -translate-x-1/2 -z-10 rounded-full blur-3xl" />
+                            <Image
+                                src="/logo.svg"
+                                width={150}
+                                height={150}
+                                alt="najmiter logo"
+                            />
+                        </div>
+                        <div className="hidden sm:flex -space-y-60 flex-col items-center">
+                            <Image
+                                src="/eclipses/3.png"
+                                width={695}
+                                height={269}
+                                alt=""
+                            />
+                            <Image
+                                src="/eclipses/1.png"
+                                width={764}
+                                height={269}
+                                alt=""
+                            />
+                            <Image
+                                src="/eclipses/2.png"
+                                width={881}
+                                height={269}
+                                alt=""
+                            />
                         </div>
                     </div>
                 </div>
