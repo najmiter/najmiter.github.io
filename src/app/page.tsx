@@ -225,9 +225,9 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col items-center mt-52 -space-y-52">
+                    <div className="flex flex-col items-center mt-52 -space-y-52 relative">
                         <div className="relative w-[230px] aspect-square grid place-content-center bg-[linear-gradient(to_bottom,rgba(48,16,128,0.6),rgba(120,64,173,0.36))] rounded-full">
-                            <div className="hidden sm:block absolute w-[300px] h-[200px] bg-[radial-gradient(circle,#763CAC_100%,#320F85_0%)] top-[50%] -translate-y-1/2 left-[50%] -translate-x-1/2 -z-10 rounded-full blur-3xl" />
+                            <div className="hidden sm:block absolute w-[300px] h-[200px] bg-[radial-gradient(circle,#763CAC_100%,#320F85_0%)] top-[70%] -translate-y-1/2 left-[50%] -translate-x-1/2 -z-10 rounded-full blur-[6rem]" />
                             <Image
                                 src="/logo.svg"
                                 width={150}
@@ -253,6 +253,51 @@ export default function Home() {
                                 width={881}
                                 height={269}
                                 alt=""
+                            />
+                        </div>
+
+                        <div className="absolute right-40 bottom-40">
+                            <Image
+                                src="/vicons/js.svg"
+                                width={20}
+                                height={20}
+                                alt="js icon"
+                            />
+                        </div>
+
+                        <div className="absolute left-40 bottom-40">
+                            <Image
+                                src="/vicons/nodejs.svg"
+                                width={20}
+                                height={20}
+                                alt="js icon"
+                            />
+                        </div>
+
+                        <div className="absolute right-60 bottom-48">
+                            <Image
+                                src="/vicons/react.svg"
+                                width={20}
+                                height={20}
+                                alt="js icon"
+                            />
+                        </div>
+
+                        <div className="absolute left-60 bottom-60">
+                            <Image
+                                src="/vicons/code.svg"
+                                width={20}
+                                height={20}
+                                alt="js icon"
+                            />
+                        </div>
+
+                        <div className="absolute left-60 bottom-20">
+                            <Image
+                                src="/vicons/css.svg"
+                                width={20}
+                                height={20}
+                                alt="js icon"
                             />
                         </div>
                     </div>
@@ -288,8 +333,11 @@ function ExploreButton({ children }: { children: React.ReactNode }) {
 
 function ExperienceCard({ children }: { children: React.ReactNode }) {
     return (
-        <div className="bg-[linear-gradient(90deg,#130428_7%,#251043_34%,#38126D_57%,#261045_85%,#190634_100%)] h-48 rounded-lg overflow-hidden border-t-4 border-[#4F228D] shadow-lg">
+        <div className="relative bg-[linear-gradient(90deg,#130428_7%,#251043_34%,#38126D_57%,#261045_85%,#190634_100%)] h-48 rounded-lg overflow-hidden border-t-4 border-[#4F228D] shadow-lg">
             <div className="w-full h-full bg-black/10 hover:bg-black/30 backdrop-blur-3xl flex justify-center items-center cursor-default">
+                <div className="absolute top-8 left-8 bg-purple-600/50 w-3 aspect-square rounded-full" />
+                <div className="absolute top-36 left-36 bg-blue-400/50 w-2 aspect-square rounded-full" />
+                <div className="absolute top-7 left-40 bg-slate-100/50 w-1 aspect-square rounded-full" />
                 {children}
             </div>
         </div>
