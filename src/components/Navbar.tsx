@@ -2,6 +2,7 @@ import Image from "next/image";
 import Wrapper from "./Wrapper";
 import { cn } from "@/lib/utils";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Link from "next/link";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
     subsets: ["latin"],
@@ -25,9 +26,15 @@ export default function Navbar() {
                             plusJakartaSans.className
                         )}
                     >
-                        <li>Home</li>
-                        <li>Projects</li>
-                        <li>Contact</li>
+                        <li>
+                            <Link href="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link href="#projects">Projects</Link>
+                        </li>
+                        <li>
+                            <Link href="#contact">Contact</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
