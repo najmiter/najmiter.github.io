@@ -53,7 +53,7 @@ export default function Home() {
     return (
         <div>
             <Wrapper className="">
-                <div className="min-h-[calc(100vh-61px)] py-20">
+                <div className="min-h-[calc(100vh-49.3984px)] py-20">
                     <header className="flex flex-col items-center justify-between gap-5">
                         <div className="relative">
                             <div className="grid place-content-center overflow-hidden w-[200px] aspect-square rounded-full bg-[linear-gradient(137.59deg,#FF8660_9.86%,#8000FF_104.95%)]">
