@@ -91,11 +91,11 @@ export default function Home() {
                             and talk about it
                         </h1>
                         <p className="max-w-prose text-center text-[#C5C5C5] text-sm sm:text-lg font-light">
-                            A self taught programmer with over 4 years of
-                            experience (working on personal projects only).
-                            Don&apos;t like talking about me much. Please check
-                            out my projects for more insights on my skills and
-                            what to expect.
+                            A self taught programmer with over{" "}
+                            <em>4 years of experience</em> (working on personal
+                            projects only). Don&apos;t like talking about me
+                            much. Please <em>check out my projects</em> for more
+                            insights on my skills and what to expect.
                         </p>
                         <div className="flex justify-center gap-2 sm:gap-5 flex-wrap">
                             <Button asChild className="capitalize" size="lg">
