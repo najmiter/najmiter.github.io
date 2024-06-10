@@ -35,6 +35,14 @@ import {
     RiSupabaseFill,
     RiTailwindCssFill,
 } from "react-icons/ri";
+import Link from "next/link";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const poppins = Poppins({
     subsets: ["latin"],
@@ -65,7 +73,7 @@ export default function Home() {
                                         height={10}
                                     />
                                 </div>
-                                <h3 className="sm:-translate-y-2 translate-y-0 text-lg sm:text-xl mb-10 text-center ml-5 min-w-fit bg-[linear-gradient(180deg,#5BADFF_0,#1373D1_100%)] text-transparent bg-clip-text font-bold">
+                                <h3 className="sm:-translate-y-2 translate-y-0 text-lg sm:text-xl mb-5 text-center ml-5 min-w-fit bg-[linear-gradient(180deg,#5BADFF_0,#1373D1_100%)] text-transparent bg-clip-text font-bold">
                                     Najam ul Hassan
                                 </h3>
                             </div>
@@ -90,8 +98,8 @@ export default function Home() {
                             what to expect.
                         </p>
                         <div className="flex justify-center gap-2 sm:gap-5 flex-wrap">
-                            <Button className="capitalize" size="lg">
-                                get in touch
+                            <Button asChild className="capitalize" size="lg">
+                                <Link href="#contact">get in touch</Link>
                             </Button>
                             <Button
                                 className="capitalize"
@@ -103,8 +111,7 @@ export default function Home() {
                         </div>
                     </header>
                 </div>
-
-                <section className="grid gap-20">
+                <section className="mb-20 grid gap-20">
                     <div className="flex flex-col items-center gap-5">
                         <h1 className="bg-[linear-gradient(180deg,#5BADFF_0,#1373D1_100%)] text-transparent bg-clip-text uppercase text-xl text-center font-semibold">
                             experienced with
@@ -132,6 +139,68 @@ export default function Home() {
                         </div>
                     </div>
 
+                    <div className="flex justify-center">
+                        <Carousel
+                            opts={{
+                                align: "start",
+                            }}
+                            className="w-full max-w-60 sm:max-w-[35rem] md:max-w-[45rem]"
+                        >
+                            <CarouselContent>
+                                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                                    <div className="p-3 bg-stone-700/30 w-60 aspect-square rounded-md text-stone-300">
+                                        <h1 className="font-semibold mb-4">
+                                            Teaching Programming
+                                        </h1>
+                                        <p className="text-sm">
+                                            I&apos;ve been teaching programming
+                                            on YouTube since 2020 and offline{" "}
+                                            <strong>since 2022</strong>.
+                                        </p>
+                                    </div>
+                                </CarouselItem>
+                                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                                    <div className="p-3 bg-stone-700/30 w-60 aspect-square rounded-md text-stone-300">
+                                        <h1 className="font-semibold mb-4">
+                                            Freelance
+                                        </h1>
+                                        <p className="text-sm">
+                                            I&apos;ve been doing freelance
+                                            projects since 2022 including
+                                            university assignments and projects
+                                            and other{" "}
+                                            <strong>
+                                                professional projects
+                                            </strong>
+                                            .
+                                        </p>
+                                    </div>
+                                </CarouselItem>
+                                <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+                                    <div className="p-3 bg-stone-700/30 w-60 aspect-square rounded-md text-stone-300">
+                                        <h1 className="font-semibold mb-4">
+                                            Personal Projects
+                                        </h1>
+                                        <p className="text-sm">
+                                            I&apos;ve been doing my own personal
+                                            projects since 2019 that are based{" "}
+                                            <strong>
+                                                entirely on my own ideas
+                                            </strong>{" "}
+                                            or are done completely without
+                                            looking at someone else do and then
+                                            copying them.
+                                        </p>
+                                    </div>
+                                </CarouselItem>
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
+                    </div>
+                </section>
+
+                <section className="grid gap-20">
                     <div
                         className="flex flex-col items-center gap-5"
                         id="projects"
@@ -201,12 +270,15 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className="mt-20" id="contact">
+                <section className="my-20" id="contact">
                     <div>
                         <h1 className="text-2xl font-semibold bg-[linear-gradient(180deg,#5BADFF_0,#1373D1_100%)] text-transparent bg-clip-text py-5">
                             Contact
                         </h1>
-                        <p>Feel free to contact me at any of the following</p>
+                        <p>
+                            Feel free to contact/follow me at any of the
+                            following
+                        </p>
                         <div className="flex gap-5 items-center mt-5">
                             <div className="flex items-center gap-1">
                                 <a href="mailto:realnajmiter@gmail.com">

@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "700"] });
 
@@ -19,8 +20,11 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body className={cn(poppins.className, "bg-[#161513]")}>
-                <Navbar />
+                <div className="sticky top-0 z-50">
+                    <Navbar />
+                </div>
                 {children}
+                <Footer />
             </body>
         </html>
     );

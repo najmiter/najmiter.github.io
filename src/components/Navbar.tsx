@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Wrapper from "./Wrapper";
 import { cn } from "@/lib/utils";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
     subsets: ["latin"],
@@ -10,19 +13,33 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export default function Navbar() {
+    const [padding, setPadding] = useState("py-4");
+
+    useEffect(function () {
+        document.addEventListener("scroll", function () {
+            if (window.scrollY > 20) {
+                setPadding("py-2");
+            } else setPadding("py-4");
+        });
+    }, []);
+
     return (
         <Wrapper className="max-w-full p-0">
-            <nav className="sticky top-0 left-0 bg-[#222222] px-3">
-                <div className="flex items-center justify-between max-w-[70rem] mx-auto py-4">
+            <nav
+                className={`sticky top-0 bg-[#222222b3] px-5 backdrop-blur-3xl ${padding !== "py-4" && "text-stone-300"}`}
+            >
+                <div
+                    className={`flex items-center justify-between max-w-[70rem] mx-auto transition-all duration-300 ${padding}`}
+                >
                     <Image
                         src="/logo.svg"
-                        width={40}
-                        height={40}
+                        width={padding === "py-4" ? 40 : 35}
+                        height={padding === "py-4" ? 40 : 35}
                         alt="najmiter logo"
                     />
                     <ul
                         className={cn(
-                            "flex gap-2 sm:gap-20 font-light cursor-pointer",
+                            "flex gap-3 sm:gap-20 font-light cursor-pointer text-sm sm:text-base",
                             plusJakartaSans.className
                         )}
                     >
