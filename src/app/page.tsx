@@ -123,8 +123,8 @@ export default function Home() {
                                     </p>
                                 </ProjectDescription>
                                 <ProjectCta
-                                    sourceCode="https://github.com/najmiter/neutrabize"
-                                    preview="https://chromewebstore.google.com/detail/neutrabize/ppknddihdfnhmdfloaeamelpinalhppe"
+                                    sourceCode="https://github.com/najmiter/NutNut"
+                                    preview="https://youtu.be/0rrFsoqRJmY"
                                 />
                             </ProjectCard>
 
