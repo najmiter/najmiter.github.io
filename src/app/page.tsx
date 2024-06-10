@@ -333,17 +333,6 @@ export default function Home() {
     );
 }
 
-function ExperienceImage({ name }: { name: string }) {
-    return (
-        <Image
-            src={`/vicons/${name}.svg`}
-            width={40}
-            height={40}
-            alt={`${name} logo`}
-        />
-    );
-}
-
 function ProjectCta({
     sourceCode,
     preview,
