@@ -10,8 +10,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export default function Navbar() {
     return (
-        <Wrapper className="max-w-full">
-            <nav className="sticky top-0 left-0 bg-[#1A0B2E]">
+        <Wrapper className="max-w-full p-0">
+            <nav className="sticky top-0 left-0 bg-[#222222] px-3">
                 <div className="flex items-center justify-between max-w-[70rem] mx-auto py-4">
                     <Image
                         src="/logo.svg"
@@ -21,7 +21,7 @@ export default function Navbar() {
                     />
                     <ul
                         className={cn(
-                            "flex gap-20 font-light cursor-pointer",
+                            "flex gap-2 sm:gap-20 font-light cursor-pointer",
                             plusJakartaSans.className
                         )}
                     >

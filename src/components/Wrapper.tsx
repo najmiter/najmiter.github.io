@@ -8,7 +8,7 @@ export default function Wrapper({
     className?: string;
 }) {
     return (
-        <div className={cn("max-w-[70rem] mx-auto px-5 sm:p-0", className)}>
+        <div className={cn("max-w-[50rem] mx-auto px-5 sm:p-0", className)}>
             {children}
         </div>
     );
