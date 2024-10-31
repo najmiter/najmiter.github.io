@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { PropsWithChildren } from 'react';
-import { Tabs, Tab, Card, CardBody, Switch } from '@nextui-org/react';
+import { Tabs, Tab } from '@nextui-org/react';
 
 export default function Explorer({ children }: PropsWithChildren) {
   return (
