@@ -199,3 +199,136 @@ const projects = {
     },
   ],
 };
+
+export const resumeData = {
+  personalInfo: {
+    name: 'Najam ul Hassan',
+    email: 'realnajmiter@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/najmiter',
+    phone: '+92-340-5962392',
+  },
+  professionalSummary:
+    'Highly skilled Full Stack Developer with a strong background in building scalable, high-performance web and mobile applications using modern technologies. Proven expertise in React.js, Next.js, TypeScript, and Node.js, with extensive experience in UI/UX design, AI-driven development, and browser extensions. Adept at leading projects from concept to deployment, including AI-powered recruiting platforms, inventory management systems, and productivity tools. Passionate about performance optimization, interactive animations (Framer Motion, GSAP, Three.js), and integrating AI models to enhance user experiences. Strong problem-solving skills, a deep understanding of software architecture, and a track record of delivering innovative solutions. Looking for a challenging role where I can leverage my technical expertise to contribute to impactful projects.',
+  workExperience: [
+    {
+      company: 'IntelliQuarck',
+      position: 'Full Stack Developer',
+      period: 'Jul 2024 - Present',
+      location: 'Remote',
+      description: [
+        {
+          projectName: 'Strivio (web app)',
+          details:
+            'A recruiting platform with cutting-edge technology aimed to help companies find and recruit talent using AI and manage employees.',
+          technologies:
+            'Nextjs with Typescript, OpenAi, ElevenLabs, NextUi (HeroUi), Tailwind, Shadcn',
+          contributions: [
+            'Led development as the lead developer for the entire web app',
+            'Built unique features including resume parsing using AI, skill assessment using AI (verbal interview & coding questions with built-in code editor)',
+            'Implemented AI-conducted interviews with automatic assessment upon candidate submission',
+            'Integrated recording of camera, audio streams, and screen during assessment to monitor candidates',
+            'Ensured cross-device compatibility (desktop, mobile, tablets) for integration with the mobile app',
+          ],
+        },
+        {
+          projectName: 'Strivio (mobile app)',
+          details: 'Interview Prepping module',
+          contributions: [
+            'Implemented UI and APIs for the interview preparation feature',
+          ],
+        },
+        {
+          projectName: 'Company Website',
+          details:
+            'Developed the entire redesigned company website with animations using framer motion in Nextjs',
+        },
+      ],
+    },
+    {
+      company: 'Knoctal',
+      position: 'Full Stack Developer (Founder)',
+      period: 'Apr 2021 - Present',
+      description: [
+        {
+          projectName: 'DoBurji Welfare Society (web app)',
+          details: 'A town welfare society web app using Nextjs',
+          features: [
+            'Built-in social platform (share posts with images, react to them, comment on them, share to other platforms)',
+            'Role-based donation system (for admins, editors) with automatic image creation and posting',
+            'Admin controls for managing users, posts, comments and more',
+            'Fully animated landing page using framer motion',
+          ],
+        },
+        {
+          projectName: 'Beutron',
+          details: 'An inventory management system using Next.js',
+          features: [
+            'Role-based dashboard with subscription plans allowing multiple employees to manage inventory',
+            'Online store launching feature for premium subscribers to take and track orders',
+          ],
+        },
+        {
+          projectName: 'FontIt',
+          details:
+            'A VS Code extension that allows users to change the editor font family using the command palette',
+        },
+        {
+          projectName: 'Turboin',
+          details:
+            'A Chrome extension that allows users to switch tabs similar to IDEs using a command palette, with special commands like calendar viewing',
+        },
+        {
+          projectName: 'Neutrabize',
+          details:
+            "A Chrome extension for a customized homepage with integrated weather API based on user's geolocation",
+        },
+        {
+          projectName: 'Chitter',
+          details:
+            'An assembly language syntax highlighter written in Rust, compiled into WASM for web',
+        },
+        {
+          projectName: 'UOG LMS Beauty Parlor',
+          details: "A Chrome extension for custom dark mode on UOG's LMS",
+          features: [
+            'Integrated Gemini API for suggesting potentially correct answers on quiz pages',
+            'Added button functionality to copy quiz questions due to limited Google API usage',
+          ],
+        },
+        {
+          projectName: 'NutNut',
+          details:
+            'A subscription-based streaming service app built with ASP.NET and Razor Pages using MSSQL for database',
+        },
+      ],
+    },
+  ],
+  skills: [
+    'React.js',
+    'React Native',
+    'Next.js',
+    'TypeScript',
+    'Tailwind',
+    'Git',
+    'Framer Motion',
+    'GSAP',
+    'Three.js',
+    'ASP.NET',
+    'Blazor',
+    'Razor',
+    'Go',
+    'Rust',
+    'Node.js',
+    'Express',
+    'NestJS',
+  ],
+  education: [
+    {
+      degree: 'BSCS',
+      institution: '',
+      year: '',
+    },
+  ],
+};
+
+export default projects;
