@@ -3,7 +3,6 @@ import { Poppins } from 'next/font/google';
 
 import './globals.css';
 import { cn } from '@/lib/utils';
-import NextUIProvider from '@/components/NextUIProvider';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
@@ -19,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(poppins.className, 'overflow-hidden')}>
-        <NextUIProvider>{children}</NextUIProvider>
-      </body>
+      <body className={cn(poppins.className)}>{children}</body>
     </html>
   );
 }

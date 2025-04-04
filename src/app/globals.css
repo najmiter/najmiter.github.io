@@ -77,23 +77,69 @@
   }
 }
 
-html.lenis,
-html.lenis body {
-  height: auto;
-}
+@layer utilities {
+  .come-into-view {
+    animation-timeline: view(70vh 0%);
+    animation-name: grow;
+    animation-timing-function: linear;
+  }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
+  .slide-in-animation {
+    animation-timeline: view(70vh 0%);
+    animation-name: slide-in;
+    animation-delay: var(--slide-in-delay, 0ms);
+    animation-timing-function: linear;
+  }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+  .animate-underline {
+    animation-timeline: view(70vh 0%);
+    animation-name: underline;
+    animation-timing-function: linear;
+    @apply w-full bg-blue-500 h-0.5 origin-left
+  }
 
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
 
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+  }
+
+  @keyframes underline {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes grow {
+    from {
+      opacity: 0;
+      transform: scale(0.5), translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1), translateY(0px);
+    }
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  li {
+    @apply ml-3 list-none;
+  }
 }
