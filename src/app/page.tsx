@@ -3,7 +3,7 @@ import { resumeData } from '@/lib/data';
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 
-export const revalidate = false;
+export const revalidate = 86_400;
 
 interface AnimateInViewProps {
   children: ReactNode;
@@ -42,7 +42,7 @@ const Tag = ({
   </div>
 );
 
-export default function MainPage() {
+export default async function MainPage() {
   const {
     personalInfo,
     professionalSummary,
