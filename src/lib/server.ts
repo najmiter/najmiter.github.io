@@ -1,6 +1,5 @@
 'use server';
 
-import fetch from 'node-fetch';
 import { unstable_cache } from 'next/cache';
 import { GetGithubActivity, IGitHubActivity } from '@/types';
 
