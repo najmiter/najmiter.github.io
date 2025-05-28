@@ -94,6 +94,28 @@ export default async function RootLayout({
 }: React.PropsWithChildren) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Najam ul Hassan',
+              url: 'https://najmiter.vercel.app',
+              logo: 'https://najmiter.vercel.app/logo.png',
+              sameAs: [
+                'https://www.linkedin.com/in/najmiter',
+                'https://x.com/najmiterer',
+                'https://www.facebook.com/najmiter',
+                'https://www.instagram.com/najmiter',
+                'https://github.com/najmiter',
+                'https://www.youtube.com/@najmiter',
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className={cn(poppins.className)}>{children}</body>
     </html>
   );
