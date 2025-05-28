@@ -7,7 +7,6 @@ import { AnimateInViewProps, Contribution, WorkExperience } from '@/types';
 
 export const revalidate = 86_400;
 
-// Animation component using CSS animations
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
 };
@@ -33,7 +32,6 @@ export default async function MainPage() {
     education,
   } = resumeData;
 
-  // Modified skills section to use AnimateInView for each skill
   const renderSkills = () => {
     return skills.map((skill: string, index: number) => (
       <div key={index}>
@@ -45,7 +43,6 @@ export default async function MainPage() {
   return (
     <main className="relative min-h-screen py-16 px-4 sm:px-8 md:px-16 lg:px-24 bg-[#111] text-white">
       <div className="max-w-5xl mx-auto">
-        {/* Hero Section */}
         <AnimateInView>
           <div className="mb-4 border-b border-gray-800 pb-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
@@ -85,7 +82,6 @@ export default async function MainPage() {
           <GithubActivity />
         </div>
 
-        {/* Professional Summary */}
         <AnimateInView>
           <section className="mb-16">
             <div className="w-fit mb-8">
@@ -100,7 +96,6 @@ export default async function MainPage() {
           </section>
         </AnimateInView>
 
-        {/* Work Experience */}
         <section className="mb-16">
           <div className="w-fit mb-8">
             <h2 className="text-2xl font-semibold inline-block pb-1">
@@ -196,7 +191,6 @@ export default async function MainPage() {
           </div>
         </section>
 
-        {/* Skills */}
         <section className="mb-16">
           <div className="w-fit mb-8">
             <h2 className="text-2xl font-semibold inline-block pb-1">Skills</h2>
@@ -205,7 +199,6 @@ export default async function MainPage() {
           <div className="flex flex-wrap gap-2">{renderSkills()}</div>
         </section>
 
-        {/* Education */}
         <AnimateInView>
           <section className="mb-16">
             <div className="w-fit mb-8">
@@ -227,7 +220,6 @@ export default async function MainPage() {
           </section>
         </AnimateInView>
 
-        {/* Footer */}
         <Footer />
       </div>
     </main>
