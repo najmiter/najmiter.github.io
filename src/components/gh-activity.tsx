@@ -78,7 +78,7 @@ export default function GithubActivity() {
           </div>
         </CardHeader>
         <CardContent className="px-2 sm:p-6">
-          <div className="aspect-auto h-[350px] w-full flex items-end space-x-2 p-4 border border-dashed rounded-lg">
+          <div className="aspect-auto h-[250px] sm:h-[350px] w-full flex items-end space-x-2 p-4 border border-dashed rounded-lg">
             {Array.from({ length: 20 }).map((_, i) => (
               <div
                 key={i}
@@ -140,7 +140,7 @@ export default function GithubActivity() {
       <CardContent className="px-2 sm:p-6">
         <ChartContainer
           config={chartConfig}
-          className="aspect-auto h-[350px] w-full"
+          className="aspect-auto h-[250px] sm:h-[350px] w-full"
         >
           <BarChart
             accessibilityLayer
