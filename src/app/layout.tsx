@@ -19,10 +19,17 @@ export const metadata: Metadata = {
   creator: 'Najam ul Hassan',
   publisher: 'Najam ul Hassan',
   formatDetection: {
-    email: false,
+    email: true,
     address: false,
-    telephone: false,
+    telephone: true,
   },
+  icons: [
+    {
+      rel: 'icon',
+      url: '/logo.png',
+      type: 'image/png',
+    },
+  ],
   openGraph: {
     title: 'Najam ul Hassan',
     description: "Najam ul Hassan software developer's portfolio",
@@ -31,6 +38,14 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
     countryName: 'Pakistan',
+    images: [
+      {
+        url: 'https://najmiter.vercel.app/logo.png',
+        width: 800,
+        height: 800,
+        alt: "Najam ul Hassan software developer's portfolio",
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

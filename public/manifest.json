@@ -2,7 +2,13 @@
   "name": "Najam ul Hassan Portfolio",
   "short_name": "najmiter",
   "description": "Najam ul Hassan software developer portfolio.",
-  "icons": [],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
   "start_url": "/",
   "display": "standalone",
   "background_color": "#181818",
