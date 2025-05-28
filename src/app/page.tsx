@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { resumeData } from '@/lib/data';
 import Footer from '@/components/footer';
+import GithubActivity from '@/components/gh-activity';
 
 export const revalidate = false;
 
@@ -35,13 +36,13 @@ const Tag = ({
 }: React.PropsWithChildren<{ index: number }>) => (
   <div
     style={{ '--slide-in-delay': `${index * 0.1}ms` } as any}
-    className="inline-block slide-in-animation bg-gray-800 text-white text-xs px-2 py-1 rounded-md mr-2 mb-2"
+    className="inline-block slide-in-animation bg-[#232323] text-white text-xs px-2 py-1 rounded-md mr-2 mb-2"
   >
     {children}
   </div>
 );
 
-export default function MainPage(): React.JSX.Element {
+export default function MainPage() {
   const {
     personalInfo,
     professionalSummary,
@@ -60,11 +61,11 @@ export default function MainPage(): React.JSX.Element {
   };
 
   return (
-    <main className="relative min-h-screen py-16 px-4 sm:px-8 md:px-16 lg:px-24 bg-zinc-900 text-white">
+    <main className="relative min-h-screen py-16 px-4 sm:px-8 md:px-16 lg:px-24 bg-[#111] text-white">
       <div className="max-w-5xl mx-auto">
         {/* Hero Section */}
         <AnimateInView>
-          <div className="mb-16 border-b border-gray-800 pb-8">
+          <div className="mb-4 border-b border-gray-800 pb-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
               {personalInfo.name}
             </h1>
@@ -87,6 +88,15 @@ export default function MainPage(): React.JSX.Element {
               <span className="hidden md:inline">|</span>
               <span>{personalInfo.phone}</span>
             </div>
+          </div>
+        </AnimateInView>
+
+        <AnimateInView>
+          <div className="mb-16">
+            <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+              GitHub Activity
+            </h2>
+            <GithubActivity />
           </div>
         </AnimateInView>
 
@@ -132,7 +142,7 @@ export default function MainPage(): React.JSX.Element {
                     {job.description.map(
                       (project: Contribution, pIndex: number) => (
                         <AnimateInView key={pIndex}>
-                          <div className="bg-zinc-800 p-5 rounded-lg">
+                          <div className="bg-[#232323] p-5 rounded-lg">
                             <h4 className="text-lg font-medium text-white mb-2">
                               {project.projectName}
                             </h4>
