@@ -1,0 +1,13 @@
+{
+  "name": "Najam ul Hassan Portfolio",
+  "short_name": "najmiter",
+  "description": "Najam ul Hassan software developer portfolio.",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#181818",
+  "theme_color": "#181818",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

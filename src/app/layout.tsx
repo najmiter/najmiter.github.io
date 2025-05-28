@@ -8,11 +8,21 @@ import React from 'react';
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://najmiter.vercel.app'),
   title: 'Najam ul Hassan',
   description: 'Najam ul Hassan software developer portfolio',
   robots: 'index, follow',
   authors: [{ name: 'Najam ul Hassan', url: 'https://github.com/najmiter' }],
   category: 'portfolio',
+  applicationName: 'Najam ul Hassan Portfolio',
+  referrer: 'origin-when-cross-origin',
+  creator: 'Najam ul Hassan',
+  publisher: 'Najam ul Hassan',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: 'Najam ul Hassan',
     description: "Najam ul Hassan software developer's portfolio",
@@ -22,6 +32,21 @@ export const metadata: Metadata = {
     type: 'website',
     countryName: 'Pakistan',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Najam ul Hassan',
+    description: "Najam ul Hassan software developer's portfolio",
+    creator: '@najmiter',
+  },
+  alternates: {
+    canonical: 'https://najmiter.vercel.app',
+  },
+  appleWebApp: {
+    title: 'Najam ul Hassan',
+    statusBarStyle: 'default',
+    capable: true,
+  },
+  manifest: '/manifest.json',
   keywords: [
     'Najam ul Hassan',
     'Najam',
