@@ -86,6 +86,9 @@ export const metadata: Metadata = {
     'software engineer portfolio',
     'software engineer resume',
     'software engineer CV',
+    'full stack web developer',
+    'full stack developer in Pakistan',
+    'frontend developer in Pakistan',
   ],
 };
 
