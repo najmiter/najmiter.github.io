@@ -1,29 +1,11 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { resumeData } from '@/lib/data';
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
+import { LucideExternalLink } from 'lucide-react';
+import { AnimateInViewProps, Contribution, WorkExperience } from '@/types';
 
 export const revalidate = 86_400;
-
-interface AnimateInViewProps {
-  children: ReactNode;
-}
-
-interface Contribution {
-  projectName: string;
-  details: string;
-  technologies?: string;
-  contributions?: string[];
-  features?: string[];
-}
-
-interface WorkExperience {
-  company: string;
-  position: string;
-  period: string;
-  location?: string;
-  description: Contribution[];
-}
 
 // Animation component using CSS animations
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
@@ -86,7 +68,12 @@ export default async function MainPage() {
                 LinkedIn
               </a>
               <span className="hidden md:inline">|</span>
-              <span>{personalInfo.phone}</span>
+              <a
+                href={`tel:${personalInfo.phone}`}
+                className="hover:text-blue-400 transition-colors"
+              >
+                {personalInfo.phone}
+              </a>
             </div>
           </div>
         </AnimateInView>
@@ -144,7 +131,17 @@ export default async function MainPage() {
                         <AnimateInView key={pIndex}>
                           <div className="bg-[#232323] p-5 rounded-lg">
                             <h4 className="text-lg font-medium text-white mb-2">
-                              {project.projectName}
+                              <a
+                                target="_blank"
+                                href={project.link}
+                                className="underline-offset-2 hover:underline group flex items-center gap-1.5 hover:text-blue-300 transition-colors"
+                              >
+                                {project.projectName}{' '}
+                                <LucideExternalLink
+                                  size={16}
+                                  className="opacity-0 -translate-x-4 transition-transform group-hover:opacity-100 group-hover:translate-x-0"
+                                />
+                              </a>
                             </h4>
                             <p className="text-gray-300 mb-3">
                               {project.details}

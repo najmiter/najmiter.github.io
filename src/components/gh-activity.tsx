@@ -35,14 +35,17 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
+const CURRENT_YEAR = new Date().getFullYear();
 const CACHE = {
-  [new Date().getFullYear()]: null as IGitHubActivity[] | null,
+  [CURRENT_YEAR]: null as IGitHubActivity[] | null,
 };
+const YEARS = [] as number[];
+for (let i = 2021; i <= CURRENT_YEAR; i++) YEARS.unshift(i);
 
 export default function GithubActivity() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [data, setData] = React.useState<IGitHubActivity[] | null>(null);
-  const [year, setYear] = React.useState(new Date().getFullYear());
+  const [year, setYear] = React.useState(CURRENT_YEAR);
 
   const contributions = React.useMemo(
     () => data?.map((week) => week.contributionDays).flat() ?? [],
@@ -104,7 +107,6 @@ export default function GithubActivity() {
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-2 px-6 py-4 sm:py-5">
           <CardTitle>
-            GitHub Activity{' '}
             <a
               target="_blank"
               href="https://github.com/najmiter"
@@ -126,11 +128,11 @@ export default function GithubActivity() {
               <SelectValue placeholder="Year" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="2025">2025</SelectItem>
-              <SelectItem value="2024">2024</SelectItem>
-              <SelectItem value="2023">2023</SelectItem>
-              <SelectItem value="2022">2022</SelectItem>
-              <SelectItem value="2021">2021</SelectItem>
+              {YEARS.map((y) => (
+                <SelectItem key={y} value={y.toString()}>
+                  {y}
+                </SelectItem>
+              ))}
             </SelectContent>
           </Select>
         </div>

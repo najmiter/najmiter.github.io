@@ -218,6 +218,7 @@ export const resumeData = {
       description: [
         {
           projectName: 'Strivio (web app)',
+          link: 'https://strivio.ai/',
           details:
             'A recruiting platform with cutting-edge technology aimed to help companies find and recruit talent using AI and manage employees.',
           technologies:
@@ -232,6 +233,7 @@ export const resumeData = {
         },
         {
           projectName: 'Strivio (mobile app)',
+          link: 'https://play.google.com/store/apps/details?id=com.strivio.app',
           details: 'Interview Prepping module',
           contributions: [
             'Implemented UI and APIs for the interview preparation feature',
@@ -239,6 +241,7 @@ export const resumeData = {
         },
         {
           projectName: 'Company Website',
+          link: 'https://intelliquarck.com/',
           details:
             'Developed the entire redesigned company website with animations using framer motion in Nextjs',
         },
@@ -250,7 +253,21 @@ export const resumeData = {
       period: 'Apr 2021 - Present',
       description: [
         {
+          projectName: 'Quvik',
+          link: 'https://play.google.com/store/apps/details?id=com.najmiter.quvik',
+          details: 'A study app built for matric & intermediate students',
+          features: [
+            'Annual past papers',
+            'Chapter wise past papers',
+            'AI generated quizzes for practice',
+            "Track student's progress with modern looking charts and graphs",
+            'Engage students by keeping a streak count',
+            'Daily reminder alerts for study',
+          ],
+        },
+        {
           projectName: 'DoBurji Welfare Society (web app)',
+          link: 'https://www.doburji.com/',
           details: 'A town welfare society web app using Nextjs',
           features: [
             'Built-in social platform (share posts with images, react to them, comment on them, share to other platforms)',
@@ -261,6 +278,7 @@ export const resumeData = {
         },
         {
           projectName: 'Beutron',
+          link: 'https://beutron.vercel.app/',
           details: 'An inventory management system using Next.js',
           features: [
             'Role-based dashboard with subscription plans allowing multiple employees to manage inventory',
@@ -269,26 +287,31 @@ export const resumeData = {
         },
         {
           projectName: 'FontIt',
+          link: 'https://marketplace.visualstudio.com/items?itemName=najmiter.fontit',
           details:
             'A VS Code extension that allows users to change the editor font family using the command palette',
         },
         {
           projectName: 'Turboin',
+          link: 'https://chromewebstore.google.com/detail/turboin/gnonhllejnghekflninibgaohfbbmekc?authuser=0&hl=en',
           details:
             'A Chrome extension that allows users to switch tabs similar to IDEs using a command palette, with special commands like calendar viewing',
         },
         {
           projectName: 'Neutrabize',
+          link: 'https://chromewebstore.google.com/detail/neutrabize/ppknddihdfnhmdfloaeamelpinalhppe',
           details:
             "A Chrome extension for a customized homepage with integrated weather API based on user's geolocation",
         },
         {
           projectName: 'Chitter',
+          link: 'https://najmiter.github.io/Chitter/',
           details:
             'An assembly language syntax highlighter written in Rust, compiled into WASM for web',
         },
         {
           projectName: 'UOG LMS Beauty Parlor',
+          link: 'https://github.com/najmiter/darkcircles',
           details: "A Chrome extension for custom dark mode on UOG's LMS",
           features: [
             'Integrated Gemini API for suggesting potentially correct answers on quiz pages',
@@ -297,6 +320,7 @@ export const resumeData = {
         },
         {
           projectName: 'NutNut',
+          link: 'https://github.com/najmiter/nutnut',
           details:
             'A subscription-based streaming service app built with ASP.NET and Razor Pages using MSSQL for database',
         },
