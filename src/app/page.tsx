@@ -78,14 +78,12 @@ export default async function MainPage() {
           </div>
         </AnimateInView>
 
-        <AnimateInView>
-          <div className="mb-16">
-            <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-              GitHub Activity
-            </h2>
-            <GithubActivity />
-          </div>
-        </AnimateInView>
+        <div className="mb-16">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
+            GitHub Activity
+          </h2>
+          <GithubActivity />
+        </div>
 
         {/* Professional Summary */}
         <AnimateInView>
