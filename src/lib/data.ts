@@ -266,6 +266,19 @@ export const resumeData = {
           ],
         },
         {
+          projectName: 'Clipmac',
+          link: 'https://github.com/najmiter/clipmac',
+          details: 'A small app for MacOS to keep track of the clipboard',
+          features: [
+            'Clipboard History: Stores a history of copied text items',
+            'Quick Access: Open the clipboard history popup using a global shortcut (Control+Shift+Space)',
+            'Copy to Clipboard: Easily copy any item from the history back to your clipboard',
+            'Simple Interface: Clean and straightforward user interface',
+            'Dockless Application: Runs in the background without a dock icon',
+            'Auto-launch at startup: Automatically starts when you log in to your Mac (production build only)',
+          ],
+        },
+        {
           projectName: 'DoBurji Welfare Society (web app)',
           link: 'https://www.doburji.com/',
           details: 'A town welfare society web app using Nextjs',
