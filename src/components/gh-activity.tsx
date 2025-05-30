@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Line, LineChart, XAxis } from 'recharts';
 import {
   Select,
   SelectContent,
@@ -70,7 +70,7 @@ export default function GithubActivity() {
 
   if (isLoading) {
     return (
-      <Card>
+      <Card aria-hidden role="presentation">
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
             <div className="h-6 w-3/4 rounded bg-muted animate-pulse"></div>
@@ -142,7 +142,7 @@ export default function GithubActivity() {
           config={chartConfig}
           className="aspect-auto h-[250px] sm:h-[350px] w-full"
         >
-          <BarChart
+          <LineChart
             accessibilityLayer
             data={contributions ?? []}
             margin={{
@@ -180,12 +180,19 @@ export default function GithubActivity() {
                 />
               }
             />
+            <Line
+              dataKey="contributionCount"
+              type="linear"
+              stroke={`var(--color-contributionCount)`}
+              strokeWidth={2}
+              dot={false}
+            />
             <Bar
               dataKey="contributionCount"
               fill={chartConfig.contributionCount.color}
               radius={4}
             />
-          </BarChart>
+          </LineChart>
         </ChartContainer>
       </CardContent>
       <footer className="py-5 sm:px-6 px-2 bg-gradient-to-t from-[#181818] to-[#222]">

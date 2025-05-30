@@ -76,9 +76,10 @@ export default async function MainPage() {
         </AnimateInView>
 
         <div className="mb-16">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4">
-            GitHub Activity
-          </h2>
+          <div className="w-fit mb-4">
+            <h2 className="text-2xl font-semibold">GitHub Activity</h2>
+            <div aria-hidden className="animate-underline" />
+          </div>
           <GithubActivity />
         </div>
 
