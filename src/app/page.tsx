@@ -71,6 +71,14 @@ export default async function MainPage() {
               >
                 {personalInfo.phone}
               </a>
+              <span className="hidden md:inline">|</span>
+              <a
+                href={`/api/me`}
+                target="_blank"
+                className="hover:text-blue-400 transition-colors"
+              >
+                View My Picture
+              </a>
             </div>
           </div>
         </AnimateInView>
