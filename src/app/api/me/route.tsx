@@ -1,10 +1,10 @@
 import { ImageResponse } from 'next/og';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-const FACTOR = 3;
+const FACTOR = 2;
 
 export async function GET() {
   try {
