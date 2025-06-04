@@ -73,7 +73,7 @@ export default async function MainPage() {
               </a>
               <span className="hidden md:inline">|</span>
               <a
-                href={`/api/me`}
+                href={`/api/me?timezone=${Intl.DateTimeFormat().resolvedOptions().timeZone}`}
                 target="_blank"
                 className="hover:text-blue-400 transition-colors"
               >

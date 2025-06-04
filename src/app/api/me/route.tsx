@@ -6,8 +6,10 @@ export const revalidate = 0;
 
 const FACTOR = 2;
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
+    const timezone = req.nextUrl.searchParams.get('timezone') || 'Asia/Karachi';
+
     return new ImageResponse(
       (
         <div
@@ -59,7 +61,7 @@ export async function GET() {
               hour: '2-digit',
               minute: '2-digit',
               hour12: true,
-              timeZone: 'Asia/Karachi',
+              timeZone: timezone,
             })}
           </div>
         </div>
