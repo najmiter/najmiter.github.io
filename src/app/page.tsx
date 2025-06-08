@@ -4,7 +4,9 @@ import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import { LucideExternalLink } from 'lucide-react';
 import { AnimateInViewProps, Contribution, WorkExperience } from '@/types';
-import ViewProfile from '@/components/view-profile';
+import dynamic from 'next/dynamic';
+
+const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
 export const revalidate = 86_400;
 
