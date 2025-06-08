@@ -8,7 +8,7 @@ import React from 'react';
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://najmiter.vercel.app'),
+  metadataBase: new URL('https://www.najmiter.dev/'),
   title: 'Najam ul Hassan',
   description: 'Najam ul Hassan software developer portfolio',
   robots: 'index, follow',
@@ -33,14 +33,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Najam ul Hassan',
     description: "Najam ul Hassan software developer's portfolio",
-    url: 'https://najmiter.vercel.app',
+    url: 'https://www.najmiter.dev/',
     siteName: 'Najam ul Hassan',
     locale: 'en_US',
     type: 'website',
     countryName: 'Pakistan',
     images: [
       {
-        url: 'https://najmiter.vercel.app/logo.png',
+        url: 'https://www.najmiter.dev/logo.png',
         width: 800,
         height: 800,
         alt: "Najam ul Hassan software developer's portfolio",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     creator: '@najmiter',
   },
   alternates: {
-    canonical: 'https://najmiter.vercel.app',
+    canonical: 'https://www.najmiter.dev/',
   },
   appleWebApp: {
     title: 'Najam ul Hassan',
@@ -105,8 +105,8 @@ export default async function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Najam ul Hassan',
-              url: 'https://najmiter.vercel.app',
-              logo: 'https://najmiter.vercel.app/logo.png',
+              url: 'https://www.najmiter.dev/',
+              logo: 'https://www.najmiter.dev/logo.png',
               sameAs: [
                 'https://www.linkedin.com/in/najmiter',
                 'https://x.com/najmiterer',
