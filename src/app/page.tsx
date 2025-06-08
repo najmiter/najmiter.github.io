@@ -4,6 +4,7 @@ import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import { LucideExternalLink } from 'lucide-react';
 import { AnimateInViewProps, Contribution, WorkExperience } from '@/types';
+import ViewProfile from '@/components/view-profile';
 
 export const revalidate = 86_400;
 
@@ -72,13 +73,7 @@ export default async function MainPage() {
                 {personalInfo.phone}
               </a>
               <span className="hidden md:inline">|</span>
-              <a
-                href={`/api/me?timezone=${Intl.DateTimeFormat().resolvedOptions().timeZone}`}
-                target="_blank"
-                className="hover:text-blue-400 transition-colors"
-              >
-                View My Picture
-              </a>
+              <ViewProfile />
             </div>
           </div>
         </AnimateInView>
