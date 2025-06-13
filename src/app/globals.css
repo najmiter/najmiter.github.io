@@ -43,6 +43,8 @@
     --chart-4: 43 74% 66%;
 
     --chart-5: 27 87% 67%;
+
+    --stop: 0px;
   }
 
   .dark {
@@ -94,10 +96,13 @@
 
 @layer utilities {
   .come-into-view {
+    animation-timeline: view(100vh -150%);
+    animation-name: grow;
+    animation-timing-function: linear;
+
     @media (width > 640px) {
-      animation-timeline: view(70vh 0%);
-      animation-name: grow;
-      animation-timing-function: linear;
+      animation-timeline: view(90vh -100%);
+
     }
   }
 
@@ -141,12 +146,12 @@
   @keyframes grow {
     from {
       opacity: 0;
-      transform: scale(0.5), translateY(20px);
+      transform: scale(0.8) translateY(20px);
     }
 
     to {
       opacity: 1;
-      transform: scale(1), translateY(0px);
+      transform: scale(1) translateY(0px);
     }
   }
 

@@ -112,10 +112,9 @@ export default async function MainPage() {
           <div className="flex flex-col gap-12">
             {workExperience.map((job: WorkExperience, index: number) => (
               <div key={index}>
-                <div className="border-l-2 border-gray-800 pl-6 relative">
-                  <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
+                <div className="relative">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                    <h3 className="text-xl font-semibold text-blue-400">
+                    <h3 className="text-xl company-name font-semibold relative overflow-hidden">
                       {job.company}
                     </h3>
                     <div className="text-gray-400">{job.period}</div>
@@ -128,7 +127,7 @@ export default async function MainPage() {
                     {job.description.map(
                       (project: Contribution, pIndex: number) => (
                         <AnimateInView key={pIndex}>
-                          <div className="bg-[#232323] p-5 rounded-lg">
+                          <div className="bg-[#181818] p-5 rounded-lg">
                             <h4 className="text-lg font-medium text-white mb-2">
                               <a
                                 target="_blank"
