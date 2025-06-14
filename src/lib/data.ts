@@ -200,7 +200,43 @@ const projects = {
   ],
 };
 
-export const resumeData = {
+export interface ProjectDescription {
+  projectName: string;
+  link: string;
+  details: string;
+  technologies?: string;
+  contributions?: string[];
+  features?: string[];
+}
+
+export interface WorkExperience {
+  company: string;
+  position: string;
+  period: string;
+  location?: string;
+  description: ProjectDescription[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  year: string;
+}
+
+export interface ResumeData {
+  personalInfo: {
+    name: string;
+    email: string;
+    linkedin: string;
+    phone: string;
+  };
+  professionalSummary: string;
+  workExperience: WorkExperience[];
+  skills: string[];
+  education: Education[];
+}
+
+export const resumeData: ResumeData = {
   personalInfo: {
     name: 'Najam ul Hassan',
     email: 'realnajmiter@gmail.com',
@@ -208,7 +244,7 @@ export const resumeData = {
     phone: '+92-340-5962392',
   },
   professionalSummary:
-    'Highly skilled Full Stack Developer with a strong background in building scalable, high-performance web and mobile applications using modern technologies. Proven expertise in React.js, Next.js, TypeScript, and Node.js, with extensive experience in UI/UX design, AI-driven development, and browser extensions. Adept at leading projects from concept to deployment, including AI-powered recruiting platforms, inventory management systems, and productivity tools. Passionate about performance optimization, interactive animations (Framer Motion, GSAP, Three.js), and integrating AI models to enhance user experiences. Strong problem-solving skills, a deep understanding of software architecture, and a track record of delivering innovative solutions. Looking for a challenging role where I can leverage my technical expertise to contribute to impactful projects.',
+    'A skilled Full Stack Developer with a strong background in building scalable, high-performance web and mobile applications using modern technologies. Proven expertise in React.js, Next.js, TypeScript, and Node.js, with extensive experience in UI/UX design, AI-driven development, and browser extensions. Adept at leading projects from concept to deployment, including AI-powered recruiting platforms, inventory management systems, and productivity tools. Passionate about performance optimization, interactive animations (Framer Motion, GSAP, Three.js), and integrating AI models to enhance user experiences. Strong problem-solving skills, a deep understanding of software architecture, and a track record of delivering innovative solutions. Looking for a challenging role where I can leverage my technical expertise to contribute to impactful projects.',
   workExperience: [
     {
       company: 'IntelliQuarck',
