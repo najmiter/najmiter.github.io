@@ -20,7 +20,7 @@ const Tag = ({
 }: React.PropsWithChildren<{ index: number }>) => (
   <div
     style={{ '--slide-in-delay': `${index * 0.1}ms` } as any}
-    className="inline-block slide-in-animation bg-[#232323] text-white text-xs px-2 py-1 rounded-md mr-2 mb-2"
+    className="inline-block slide-in-animation cursor-default bg-[#232323] hover:bg-[#181818] transition-colors text-white text-xs px-2 py-1 rounded-md mr-2 mb-2"
   >
     {children}
   </div>

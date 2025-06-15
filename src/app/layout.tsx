@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import WhatsHot from '@/components/whats-hot';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
@@ -119,7 +120,10 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className={cn(poppins.className)}>{children}</body>
+      <body className={cn(poppins.className)}>
+        <WhatsHot />
+        {children}
+      </body>
     </html>
   );
 }

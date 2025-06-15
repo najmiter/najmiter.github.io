@@ -120,6 +120,60 @@
     @apply w-full bg-blue-500 h-0.5 origin-left
   }
 
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .come-in {
+    animation: comeIn 300ms ease-in-out forwards;
+  }
+
+  .go-out {
+    animation: goOut 300ms ease-in-out forwards;
+  }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      translate: 100px 0;
+    }
+
+    60% {
+      opacity: 1;
+      translate: 0;
+    }
+  }
+
+  @keyframes goOut {
+    to {
+      translate: 0 100px;
+      opacity: 0;
+    }
+
+    from {
+      translate: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes comeIn {
+    from {
+      translate: 0 100px;
+      opacity: 0;
+    }
+
+    to {
+      translate: 0;
+      opacity: 1;
+    }
+  }
+
   @keyframes slide-in {
     from {
       transform: translateX(-100px);
@@ -155,11 +209,6 @@
     }
   }
 
-  .text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 
   li {
     @apply ml-3 list-none;
