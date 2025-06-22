@@ -302,7 +302,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
-          projectName: 'Clipmac',
+          projectName: 'ClipMac',
           link: 'https://github.com/najmiter/clipmac',
           details: 'A small app for MacOS to keep track of the clipboard',
           features: [
@@ -312,6 +312,17 @@ export const resumeData: ResumeData = {
             'Simple Interface: Clean and straightforward user interface',
             'Dockless Application: Runs in the background without a dock icon',
             'Auto-launch at startup: Automatically starts when you log in to your Mac (production build only)',
+          ],
+        },
+        {
+          projectName: 'Lootie',
+          link: 'https://lottie.knoctal.com/',
+          details: 'Free online lottie json editor',
+          features: [
+            'File Upload: Users can upload Lottie JSON files, which are validated and parsed for editing.',
+            'Editor: A dedicated editor interface allows users to modify the JSON structure of the Lottie files.',
+            'Visual Editor: Users can visually edit properties like colors, shapes, and animations in a user-friendly interface.',
+            'Live Preview: Changes made in the editor are reflected in a live preview of the animation, enabling immediate feedback.',
           ],
         },
         {
