@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
-export const revalidate = 86_400;
+export const revalidate = false;
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
