@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: 'https://www.najmiter.dev/',
     siteName: 'Najam ul Hassan',
     locale: 'en_US',
-    type: 'website',
+    type: 'profile',
     countryName: 'Pakistan',
     images: [
       {
@@ -104,7 +104,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Person',
+              '@type': 'Profile',
               name: 'Najam ul Hassan',
               url: 'https://www.najmiter.dev/',
               logo: 'https://www.najmiter.dev/logo.png',
