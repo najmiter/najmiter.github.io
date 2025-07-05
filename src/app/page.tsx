@@ -9,7 +9,7 @@ import { getGitHubActivity } from '@/lib/server';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
-export const revalidate = 24 * 60 * 60; // 1 day
+export const revalidate = 86_400; // 1 day
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
