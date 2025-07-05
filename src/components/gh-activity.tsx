@@ -23,7 +23,8 @@ import {
   ChartTooltipContent,
 } from '@/components/ui/chart';
 import { getGitHubActivity } from '@/lib/server';
-import { IGitHubActivity } from '@/types';
+import { IGitHubActivity, IGitHubActivityProps } from '@/types';
+import { CURRENT_YEAR } from '@/lib/data';
 
 const chartConfig = {
   views: {
@@ -35,16 +36,21 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-const CURRENT_YEAR = new Date().getFullYear();
 const CACHE = {
   [CURRENT_YEAR]: null as IGitHubActivity[] | null,
 };
 const YEARS = [] as number[];
-for (let i = 2021; i <= CURRENT_YEAR; i++) YEARS.unshift(i);
+for (let i = 2020; i <= CURRENT_YEAR; i++) YEARS.unshift(i);
 
-export default function GithubActivity() {
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [data, setData] = React.useState<IGitHubActivity[] | null>(null);
+export default function GithubActivity({ initialData }: IGitHubActivityProps) {
+  const [isLoading, setIsLoading] = React.useState(!initialData);
+  const [data, setData] = React.useState<IGitHubActivity[] | null>(() => {
+    if (initialData) {
+      CACHE[CURRENT_YEAR] = initialData;
+      return initialData;
+    }
+    return null;
+  });
   const [year, setYear] = React.useState(CURRENT_YEAR);
 
   const contributions = React.useMemo(

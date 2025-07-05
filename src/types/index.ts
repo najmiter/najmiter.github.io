@@ -33,3 +33,7 @@ export interface WorkExperience {
   location?: string;
   description: Contribution[];
 }
+
+export interface IGitHubActivityProps {
+  initialData: IGitHubActivity[] | null;
+}

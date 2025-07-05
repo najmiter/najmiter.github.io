@@ -3,8 +3,9 @@ import { Poppins } from 'next/font/google';
 
 import './globals.css';
 import { cn } from '@/lib/utils';
-import React from 'react';
+import React, { Suspense } from 'react';
 import WhatsHot from '@/components/whats-hot';
+import LoadingContent from '@/components/loading-content';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   description: 'Najam ul Hassan software developer portfolio',
   robots: 'index, follow',
   authors: [{ name: 'Najam ul Hassan', url: 'https://github.com/najmiter' }],
-  category: 'portfolio',
+  category: 'profile',
   applicationName: 'Najam ul Hassan Portfolio',
   referrer: 'origin-when-cross-origin',
   creator: 'Najam ul Hassan',
@@ -97,7 +98,7 @@ export default async function RootLayout({
   children,
 }: React.PropsWithChildren) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" dir="ltr">
       <head>
         <script
           type="application/ld+json"
@@ -120,9 +121,16 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className={cn(poppins.className)}>
-        <WhatsHot />
-        {children}
+      <body
+        className={cn(
+          poppins.className,
+          'selection:bg-indigo-500 selection:text-white'
+        )}
+      >
+        <Suspense fallback={<LoadingContent />}>
+          <WhatsHot />
+          {children}
+        </Suspense>
       </body>
     </html>
   );

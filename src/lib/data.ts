@@ -212,3 +212,5 @@ export const resumeData: ResumeData = {
     },
   ],
 };
+
+export const CURRENT_YEAR = new Date().getFullYear();

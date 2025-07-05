@@ -9,11 +9,9 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/",
-  "display": "standalone",
   "background_color": "#181818",
   "theme_color": "#181818",
-  "scope": "/",
-  "orientation": "portrait-primary",
-  "prefer_related_applications": false
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
 }

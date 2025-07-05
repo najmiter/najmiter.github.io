@@ -1,14 +1,15 @@
 import React from 'react';
-import { resumeData } from '@/lib/data';
+import { CURRENT_YEAR, resumeData } from '@/lib/data';
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import { LucideExternalLink } from 'lucide-react';
 import { AnimateInViewProps, Contribution, WorkExperience } from '@/types';
 import dynamic from 'next/dynamic';
+import { getGitHubActivity } from '@/lib/server';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
-export const revalidate = false;
+export const revalidate = 24 * 60 * 60; // 1 day
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
@@ -27,6 +28,7 @@ const Tag = ({
 );
 
 export default async function MainPage() {
+  const res = await getGitHubActivity(CURRENT_YEAR);
   const {
     personalInfo,
     professionalSummary,
@@ -85,7 +87,7 @@ export default async function MainPage() {
             <h2 className="text-2xl font-semibold">GitHub Activity</h2>
             <div aria-hidden className="animate-underline" />
           </div>
-          <GithubActivity />
+          <GithubActivity initialData={res?.data} />
         </div>
 
         <AnimateInView>
