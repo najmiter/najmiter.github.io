@@ -130,7 +130,10 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
             defaultValue={year.toString()}
             onValueChange={(y) => setYear(+y)}
           >
-            <SelectTrigger className="w-40 bg-gradient-to-b to-[#171717] from-[#242424]">
+            <SelectTrigger
+              aria-label="Select year"
+              className="w-40 bg-gradient-to-b to-[#171717] from-[#242424]"
+            >
               <SelectValue placeholder="Year" />
             </SelectTrigger>
             <SelectContent>

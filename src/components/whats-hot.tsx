@@ -35,7 +35,7 @@ export default function WhatsHot() {
   }, []);
 
   return (
-    <div ref={ref} aria-hidden className="fixed fade-in right-4 bottom-4 z-50">
+    <div ref={ref} className="fixed fade-in right-4 bottom-4 z-50">
       <div className="relative">
         <button
           type="button"

@@ -25,6 +25,7 @@ export default function LoadingContent() {
           height={100}
           alt="loading"
           priority
+          unoptimized
           className="rounded-xl overflow-hidden"
         />
         <div className="text-center">
