@@ -96,7 +96,6 @@
 
     @media (width > 640px) {
       animation-timeline: view(90vh -100%);
-
     }
   }
 
@@ -130,6 +129,24 @@
 
   .fade-in {
     animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  .fade-in-char {
+    --factor: if(style(--is-long: true): 0.5; else: 1);
+    --start: calc(100vh - var(--nth) * var(--factor) * 30px);
+    animation-timeline: view(var(--start) -5%);
+    animation-name: fadeInChar;
+    animation-timing-function: linear;
+  }
+
+  @keyframes fadeInChar {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   @keyframes fadeIn {

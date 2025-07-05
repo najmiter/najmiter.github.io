@@ -3,7 +3,12 @@ import { CURRENT_YEAR, resumeData } from '@/lib/data';
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import { LucideExternalLink } from 'lucide-react';
-import { AnimateInViewProps, Contribution, WorkExperience } from '@/types';
+import {
+  AnimateInViewProps,
+  Contribution,
+  FadeInCharsProps,
+  WorkExperience,
+} from '@/types';
 import dynamic from 'next/dynamic';
 import { getGitHubActivity } from '@/lib/server';
 
@@ -13,6 +18,24 @@ export const revalidate = 86_400; // 1 day
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
+};
+
+const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong }) => {
+  return title.split('').map((char, index) => (
+    <span
+      key={index}
+      data-nth={index + 1}
+      style={
+        {
+          '--nth': index + 1,
+          '--is-long': String(!!isLong),
+        } as React.CSSProperties
+      }
+      className="fade-in-char inline-block"
+    >
+      {char}
+    </span>
+  ));
 };
 
 const Tag = ({
@@ -84,7 +107,10 @@ export default async function MainPage() {
 
         <div className="mb-16">
           <div className="w-fit mb-4">
-            <h2 className="text-2xl font-semibold">GitHub Activity</h2>
+            <h2 className="sr-only">GitHub Activity</h2>
+            <h2 aria-hidden className="text-2xl font-semibold">
+              <FadeInChars title="GitHub Activity" />
+            </h2>
             <div aria-hidden className="animate-underline" />
           </div>
           <GithubActivity initialData={res?.data} />
@@ -93,8 +119,12 @@ export default async function MainPage() {
         <AnimateInView>
           <section className="mb-16">
             <div className="w-fit mb-8">
-              <h2 className="text-2xl font-semibold inline-block pb-1">
-                Professional Summary
+              <h2 className="sr-only">Professional Summary</h2>
+              <h2
+                aria-hidden
+                className="text-2xl font-semibold inline-block pb-1"
+              >
+                <FadeInChars title="Professional Summary" />
               </h2>
               <div aria-hidden className="animate-underline" />
             </div>
@@ -106,8 +136,12 @@ export default async function MainPage() {
 
         <section className="mb-16">
           <div className="w-fit mb-8">
-            <h2 className="text-2xl font-semibold inline-block pb-1">
-              Work Experience
+            <h2 className="sr-only">Work Experience</h2>
+            <h2
+              aria-hidden
+              className="text-2xl font-semibold inline-block pb-1"
+            >
+              <FadeInChars title="Work Experience" />
             </h2>
             <div aria-hidden className="animate-underline" />
           </div>
@@ -116,20 +150,27 @@ export default async function MainPage() {
               <div key={index}>
                 <div className="relative">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
-                    <h3 className="text-xl company-name font-semibold relative overflow-hidden">
-                      {job.company}
+                    <h3 className="sr-only">{job.company}</h3>
+                    <h3 aria-hidden className="text-xl font-semibold relative">
+                      <FadeInChars title={job.company} />
                     </h3>
                     <div className="text-gray-400">{job.period}</div>
                   </div>
-                  <div className="text-lg text-gray-300 mb-3">
+                  <div className="sr-only">
                     {job.position} {job.location && `• ${job.location}`}
+                  </div>
+                  <div aria-hidden className="text-lg text-gray-300 mb-3">
+                    <FadeInChars
+                      isLong
+                      title={`${job.position} • ${job.location}`}
+                    />
                   </div>
 
                   <div className="space-y-6 mt-4">
                     {job.description.map(
                       (project: Contribution, pIndex: number) => (
                         <AnimateInView key={pIndex}>
-                          <div className="bg-[#181818] p-5 rounded-lg">
+                          <article className="bg-[#181818] p-5 rounded-lg">
                             <h4 className="text-lg font-medium text-white mb-2">
                               <a
                                 target="_blank"
@@ -187,7 +228,7 @@ export default async function MainPage() {
                                 </ul>
                               </div>
                             )}
-                          </div>
+                          </article>
                         </AnimateInView>
                       )
                     )}
@@ -200,7 +241,13 @@ export default async function MainPage() {
 
         <section className="mb-16">
           <div className="w-fit mb-8">
-            <h2 className="text-2xl font-semibold inline-block pb-1">Skills</h2>
+            <h2 className="sr-only">Skills</h2>
+            <h2
+              aria-hidden
+              className="text-2xl font-semibold inline-block pb-1"
+            >
+              <FadeInChars title="Skills" />
+            </h2>
             <div aria-hidden className="animate-underline" />
           </div>
           <div className="flex flex-wrap gap-2">{renderSkills()}</div>
@@ -209,8 +256,12 @@ export default async function MainPage() {
         <AnimateInView>
           <section className="mb-16">
             <div className="w-fit mb-8">
-              <h2 className="text-2xl font-semibold inline-block pb-1">
-                Education
+              <h2 className="sr-only">Education</h2>
+              <h2
+                aria-hidden
+                className="text-2xl font-semibold inline-block pb-1"
+              >
+                <FadeInChars title="Education" />
               </h2>
               <div aria-hidden className="animate-underline" />
             </div>

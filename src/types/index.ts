@@ -17,6 +17,11 @@ export interface AnimateInViewProps {
   children: ReactNode;
 }
 
+export interface FadeInCharsProps {
+  title: string;
+  isLong?: boolean;
+}
+
 export interface Contribution {
   projectName: string;
   details: string;

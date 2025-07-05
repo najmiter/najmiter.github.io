@@ -11,7 +11,7 @@ export interface WorkExperience {
   company: string;
   position: string;
   period: string;
-  location?: string;
+  location: string;
   description: ProjectDescription[];
 }
 
@@ -85,6 +85,7 @@ export const resumeData: ResumeData = {
       company: 'Knoctal',
       position: 'Full Stack Developer (Founder)',
       period: 'Apr 2021 - Present',
+      location: 'Hybrid',
       description: [
         {
           projectName: 'Quvik',
