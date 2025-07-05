@@ -39,6 +39,7 @@ export default function WhatsHot() {
       <div className="relative">
         <button
           type="button"
+          aria-label="Toggle whats hot"
           onClick={() => setIsOpen((b) => !b)}
           className="p-2 w-12 h-12 text-xl active:scale-95 bg-yellow-800/40 rounded-full shadow-lg hover:bg-yellow-800/70 transition-all active:opacity-90"
         >
@@ -46,7 +47,7 @@ export default function WhatsHot() {
         </button>
         <div
           className={cn(
-            'bg-gradient-to-tr from-stone-800 to-stone-950 z-40 absolute bottom-14 right-2 min-w-96 max-w-full text-white p-4 rounded-lg shadow-md',
+            'bg-gradient-to-tr from-stone-800 to-stone-950 z-40 absolute bottom-14 right-2 min-w-[85vw] md:min-w-96 max-w-full text-white p-4 rounded-lg shadow-md',
             { 'come-in': isOpen },
             { 'go-out pointer-events-none': !isOpen }
           )}
