@@ -11,7 +11,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.najmiter.dev/'),
-  title: 'Najam ul Hassan',
+  title: 'Najam ul Hassan - Software Developer Portfolio',
   description: 'Najam ul Hassan software developer portfolio',
   robots: 'index, follow',
   authors: [{ name: 'Najam ul Hassan', url: 'https://github.com/najmiter' }],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: 'Najam ul Hassan',
+    title: 'Najam ul Hassan - Software Developer Portfolio',
     description: "Najam ul Hassan software developer's portfolio",
     url: 'https://www.najmiter.dev/',
     siteName: 'Najam ul Hassan',
