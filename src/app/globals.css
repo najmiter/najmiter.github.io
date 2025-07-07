@@ -132,20 +132,25 @@
   }
 
   .fade-in-char {
-    --factor: if(style(--is-long: true): 0.5; else: 1);
+    --factor: if(style(--is-long: true): 0.3; else: 0.4);
     --start: calc(100vh - var(--nth) * var(--factor) * 30px);
     animation-timeline: view(var(--start) -5%);
     animation-name: fadeInChar;
     animation-timing-function: linear;
+    transform-origin: left;
   }
 
   @keyframes fadeInChar {
     from {
       opacity: 0;
+      scale: 0;
+      transform: translateY(50px);
     }
 
     to {
       opacity: 1;
+      scale: 1;
+      transform: translateY(0px);
     }
   }
 

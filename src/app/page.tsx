@@ -33,7 +33,7 @@ const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong }) => {
       }
       className="fade-in-char inline-block"
     >
-      {char}
+      {char === ' ' ? <span>&nbsp;</span> : char}
     </span>
   ));
 };
