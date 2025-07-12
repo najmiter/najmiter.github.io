@@ -11,6 +11,7 @@ import {
 } from '@/types';
 import dynamic from 'next/dynamic';
 import { getGitHubActivity } from '@/lib/server';
+import { cn } from '@/lib/utils';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
@@ -20,7 +21,7 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
 };
 
-const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong }) => {
+const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr }) => {
   return title.split('').map((char, index) => (
     <span
       key={index}
@@ -31,7 +32,7 @@ const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong }) => {
           '--is-long': String(!!isLong),
         } as React.CSSProperties
       }
-      className="fade-in-char inline-block"
+      className={cn('fade-in-char inline-block', { ltr: ltr })}
     >
       {char === ' ' ? <span>&nbsp;</span> : char}
     </span>
@@ -154,7 +155,9 @@ export default async function MainPage() {
                     <h3 aria-hidden className="text-xl font-semibold relative">
                       <FadeInChars title={job.company} />
                     </h3>
-                    <div className="text-gray-400">{job.period}</div>
+                    <div className="text-gray-400">
+                      <FadeInChars title={job.period} ltr />
+                    </div>
                   </div>
                   <div className="sr-only">
                     {job.position} {job.location && `• ${job.location}`}

@@ -20,6 +20,7 @@ export interface AnimateInViewProps {
 export interface FadeInCharsProps {
   title: string;
   isLong?: boolean;
+  ltr?: boolean;
 }
 
 export interface Contribution {

@@ -77,9 +77,14 @@
   }
 }
 
+
 @layer base {
   * {
     @apply border-border;
+  }
+
+  html {
+    scrollbar-color: #6366f1 #212121;
   }
 
   body {
@@ -131,7 +136,12 @@
     animation: fadeIn 2s ease-in-out forwards;
   }
 
+  .fade-in-char.ltr {
+    --direction: -1;
+  }
+
   .fade-in-char {
+    /* could have done with the class here as well but just wanted to use the `if` thing */
     --factor: if(style(--is-long: true): 0.3; else: 0.4);
     --start: calc(100vh - var(--nth) * var(--factor) * 30px);
     animation-timeline: view(var(--start) -5%);
@@ -141,16 +151,20 @@
   }
 
   @keyframes fadeInChar {
-    from {
+    0% {
       opacity: 0;
       scale: 0;
-      transform: translateY(50px);
+      transform: translateY(calc(var(--direction)*50px)) translateX(calc(var(--direction)*-50px));
     }
 
-    to {
+    70% {
+      opacity: 0;
+    }
+
+    100% {
       opacity: 1;
       scale: 1;
-      transform: translateY(0px);
+      transform: translateY(0px) translateX(0px);
     }
   }
 
