@@ -22,17 +22,17 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
 };
 
 const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr }) => {
-  return title.split('').map((char, index) => (
+  return title.split('').map((char, index, self) => (
     <span
       key={index}
       data-nth={index + 1}
       style={
         {
-          '--nth': index + 1,
+          '--nth': Math.abs(index + 1 - (ltr ? self.length : 0)),
           '--is-long': String(!!isLong),
         } as React.CSSProperties
       }
-      className={cn('fade-in-char inline-block', { ltr: ltr })}
+      className={cn('fade-in-char inline-block', { ltr })}
     >
       {char === ' ' ? <span>&nbsp;</span> : char}
     </span>

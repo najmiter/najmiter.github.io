@@ -136,9 +136,6 @@
     animation: fadeIn 2s ease-in-out forwards;
   }
 
-  .fade-in-char.ltr {
-    --direction: -1;
-  }
 
   .fade-in-char {
     /* could have done with the class here as well but just wanted to use the `if` thing */
@@ -150,11 +147,15 @@
     transform-origin: left;
   }
 
+  .fade-in-char.ltr {
+    --direction: -1px;
+  }
+
   @keyframes fadeInChar {
     0% {
       opacity: 0;
       scale: 0;
-      transform: translateY(calc(var(--direction)*50px)) translateX(calc(var(--direction)*-50px));
+      transform: translateY(calc(var(--direction, 1)*50px)) translateX(calc(var(--direction, 1)*-50px));
     }
 
     70% {
