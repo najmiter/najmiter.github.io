@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode, SVGElementType } from 'react';
 
 export interface IGitHubActivity {
   contributionDays: Array<{
@@ -42,4 +42,8 @@ export interface WorkExperience {
 
 export interface IGitHubActivityProps {
   initialData: IGitHubActivity[] | null;
+}
+
+export interface SvgProps extends React.SVGProps<SVGSVGElement> {
+  size?: number;
 }

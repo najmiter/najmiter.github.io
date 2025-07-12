@@ -133,7 +133,12 @@
   }
 
   .fade-in {
+    --direction: x;
     animation: fadeIn 2s ease-in-out forwards;
+  }
+
+  .fade-in.y {
+    --direction: y;
   }
 
 
@@ -173,7 +178,8 @@
   @keyframes fadeIn {
     0% {
       opacity: 0;
-      translate: 100px 0;
+      translate: 0 100px;
+      translate: if(style(--direction: y): 0 100px; else: 100px 0);
     }
 
     60% {

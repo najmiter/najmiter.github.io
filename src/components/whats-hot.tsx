@@ -2,6 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { Icons } from './ui/icons';
 
 const whatsHot = {
   text: 'This portfolio has a rust (Leptos) version as well',
@@ -36,19 +37,19 @@ export default function WhatsHot() {
   }, []);
 
   return (
-    <div ref={ref} className="fixed fade-in right-4 bottom-4 z-50">
+    <div ref={ref} className="fade-in">
       <div className="relative">
         <button
           type="button"
           aria-label="Toggle whats hot"
           onClick={() => setIsOpen((b) => !b)}
-          className="p-2 w-12 h-12 text-xl active:scale-95 bg-yellow-800/40 rounded-full shadow-lg hover:bg-yellow-800/70 transition-all active:opacity-90"
+          className="text-xl active:scale-95 text-gray-400 hover:opacity-90 transition-all active:opacity-90"
         >
-          🔥
+          <Icons.Bell size={14} />
         </button>
         <div
           className={cn(
-            'bg-gradient-to-tr from-stone-800 to-stone-950 z-40 absolute bottom-14 right-2 min-w-[85vw] md:min-w-96 max-w-full text-white p-4 rounded-lg shadow-md',
+            'bg-gradient-to-tr from-stone-800 to-stone-950 z-40 absolute bottom-8 right-2 min-w-[85vw] md:min-w-96 max-w-full text-white p-4 rounded-lg shadow-md',
             { 'come-in': isOpen },
             { 'go-out pointer-events-none': !isOpen }
           )}

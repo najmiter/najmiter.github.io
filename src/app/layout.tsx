@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import React, { Suspense } from 'react';
 import WhatsHot from '@/components/whats-hot';
 import LoadingContent from '@/components/loading-content';
+import StatusBar from '@/components/status-bar';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
@@ -128,8 +129,8 @@ export default async function RootLayout({
         )}
       >
         <Suspense fallback={<LoadingContent />}>
-          <WhatsHot />
           {children}
+          <StatusBar />
         </Suspense>
       </body>
     </html>
