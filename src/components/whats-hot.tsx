@@ -9,6 +9,7 @@ const whatsHot = {
     text: 'Check it out',
     href: 'https://najmiter.netlify.app/',
   },
+  date: new Date('2025-06-10'),
 };
 
 export default function WhatsHot() {
@@ -52,7 +53,12 @@ export default function WhatsHot() {
             { 'go-out pointer-events-none': !isOpen }
           )}
         >
-          <p className="text-sm">{whatsHot.text}</p>
+          <div className="grid gap-1">
+            <p className="text-sm">{whatsHot.text}</p>
+            <span className="text-xs text-muted-foreground">
+              Updated: {whatsHot.date.toLocaleDateString()}
+            </span>
+          </div>
           <a
             target="_blank"
             rel="noopener noreferrer"

@@ -149,6 +149,7 @@
 
   .fade-in-char.ltr {
     --direction: -1px;
+    transform-origin: right;
   }
 
   @keyframes fadeInChar {
