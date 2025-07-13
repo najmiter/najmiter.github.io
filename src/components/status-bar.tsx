@@ -6,7 +6,11 @@ const itemClasses =
 
 export default async function StatusBar() {
   return (
-    <div className="fixed fade-in y px-10 hidden sm:flex justify-between bottom-0 h-6 w-full border border-t-[#303030] bg-[#212121]">
+    <div
+      aria-label="status bar"
+      aria-roledescription="status bar at the bottom"
+      className="fixed fade-in y px-10 hidden sm:flex justify-between bottom-0 h-6 w-full border border-t-[#303030] bg-[#212121]"
+    >
       <section>
         <a
           type="button"
