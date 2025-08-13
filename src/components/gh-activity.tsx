@@ -2,26 +2,9 @@
 
 import * as React from 'react';
 import { Bar, CartesianGrid, Line, LineChart, XAxis } from 'recharts';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from '@/components/ui/chart';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { getGitHubActivity } from '@/lib/server';
 import { IGitHubActivity, IGitHubActivityProps } from '@/types';
 import { CURRENT_YEAR } from '@/lib/data';
@@ -53,15 +36,8 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
   });
   const [year, setYear] = React.useState(CURRENT_YEAR);
 
-  const contributions = React.useMemo(
-    () => data?.map((week) => week.contributionDays).flat() ?? [],
-    [data]
-  );
-
-  const total = React.useMemo(
-    () => contributions.reduce((a, c) => a + c.contributionCount, 0),
-    [contributions]
-  );
+  const contributions = React.useMemo(() => data?.map((week) => week.contributionDays).flat() ?? [], [data]);
+  const total = React.useMemo(() => contributions.reduce((a, c) => a + c.contributionCount, 0), [contributions]);
 
   React.useEffect(() => {
     (async () => {
@@ -76,7 +52,7 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
 
   if (isLoading) {
     return (
-      <Card aria-hidden role="presentation">
+      <Card aria-busy role="presentation">
         <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
           <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
             <div className="h-6 w-3/4 rounded bg-muted animate-pulse"></div>
@@ -121,19 +97,11 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
               @najmiter
             </a>
           </CardTitle>
-          <CardDescription>
-            GitHub contributions in the year {year}
-          </CardDescription>
+          <CardDescription>GitHub contributions in the year {year}</CardDescription>
         </div>
         <div className="flex items-center sm:justify-center pb-2 px-6">
-          <Select
-            defaultValue={year.toString()}
-            onValueChange={(y) => setYear(+y)}
-          >
-            <SelectTrigger
-              aria-label="Select year"
-              className="w-40 bg-gradient-to-b to-[#171717] from-[#242424]"
-            >
+          <Select defaultValue={year.toString()} onValueChange={(y) => setYear(+y)}>
+            <SelectTrigger aria-label="Select year" className="w-40 bg-gradient-to-b to-[#171717] from-[#242424]">
               <SelectValue placeholder="Year" />
             </SelectTrigger>
             <SelectContent>
@@ -147,10 +115,7 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
         </div>
       </CardHeader>
       <CardContent className="px-2 sm:p-6">
-        <ChartContainer
-          config={chartConfig}
-          className="aspect-auto h-[250px] sm:h-[350px] w-full"
-        >
+        <ChartContainer config={chartConfig} className="aspect-auto h-[250px] sm:h-[350px] w-full">
           <LineChart
             accessibilityLayer
             data={contributions ?? []}
@@ -196,20 +161,14 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
               strokeWidth={2}
               dot={false}
             />
-            <Bar
-              dataKey="contributionCount"
-              fill={chartConfig.contributionCount.color}
-              radius={4}
-            />
+            <Bar dataKey="contributionCount" fill={chartConfig.contributionCount.color} radius={4} />
           </LineChart>
         </ChartContainer>
       </CardContent>
       <footer className="py-5 sm:px-6 px-2 bg-gradient-to-t from-[#181818] to-[#222]">
         <div className="relative z-30 flex flex-1 flex-col items-center justify-center gap-1">
           <span className="text-xs text-muted-foreground">Total in {year}</span>
-          <span className="text-lg font-bold leading-none sm:text-3xl">
-            {Intl.NumberFormat('en-us').format(total)}
-          </span>
+          <span className="text-lg font-bold leading-none sm:text-3xl">{Intl.NumberFormat('en-us').format(total)}</span>
         </div>
       </footer>
     </Card>

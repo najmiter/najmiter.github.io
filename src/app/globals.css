@@ -161,7 +161,7 @@
     0% {
       opacity: 0;
       scale: 0;
-      transform: translateY(calc(var(--direction, 1)*50px)) translateX(calc(var(--direction, 1)*-50px));
+      transform: translateY(calc(var(--direction, 1)*50px)) translateX(calc(var(--direction, 1)*50px));
     }
 
     70% {

@@ -21,6 +21,7 @@ export interface FadeInCharsProps {
   title: string;
   isLong?: boolean;
   ltr?: boolean;
+  className?: string;
 }
 
 export interface Contribution {

@@ -56,9 +56,7 @@ export default function WhatsHot() {
         >
           <div className="grid gap-1">
             <p className="text-sm">{whatsHot.text}</p>
-            <span className="text-xs text-muted-foreground">
-              Updated: {whatsHot.date.toLocaleDateString()}
-            </span>
+            <span className="text-xs text-muted-foreground">Updated: {whatsHot.date.toLocaleDateString()}</span>
           </div>
           <a
             target="_blank"

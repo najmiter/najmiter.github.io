@@ -16,7 +16,7 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
 };
 
-const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr }) => {
+const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr, className }) => {
   return title.split('').map((char, index, self) => (
     <span
       key={index}
@@ -27,7 +27,7 @@ const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr }) => {
           '--is-long': String(!!isLong),
         } as React.CSSProperties
       }
-      className={cn('fade-in-char inline-block', { ltr })}
+      className={cn('fade-in-char inline-block', className, { ltr })}
     >
       {char === ' ' ? <span>&nbsp;</span> : char}
     </span>
@@ -122,20 +122,20 @@ export default async function MainPage() {
             {workExperience.map((job: WorkExperience, index: number) => (
               <div key={index}>
                 <div className="relative">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-1">
                     <h3 className="sr-only">{job.company}</h3>
                     <h3 aria-hidden className="text-xl font-semibold relative">
                       <FadeInChars title={job.company} />
                     </h3>
                     <div className="text-gray-400">
-                      <FadeInChars title={job.period} ltr />
+                      <FadeInChars title={job.period} ltr className="text-sm" />
                     </div>
                   </div>
                   <div className="sr-only">
                     {job.position} {job.location && `• ${job.location}`}
                   </div>
-                  <div aria-hidden className="text-lg text-gray-300 mb-3">
-                    <FadeInChars isLong title={`${job.position} • ${job.location}`} />
+                  <div aria-hidden className="text-gray-400 mb-3">
+                    <FadeInChars className="text-sm" isLong title={`${job.position} • ${job.location}`} />
                   </div>
 
                   <div className="space-y-6 mt-4">
