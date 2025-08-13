@@ -4,7 +4,6 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import React, { Suspense } from 'react';
-import WhatsHot from '@/components/whats-hot';
 import LoadingContent from '@/components/loading-content';
 import StatusBar from '@/components/status-bar';
 
@@ -95,9 +94,7 @@ export const metadata: Metadata = {
   ],
 };
 
-export default async function RootLayout({
-  children,
-}: React.PropsWithChildren) {
+export default async function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className="dark" dir="ltr">
       <head>
@@ -122,12 +119,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body
-        className={cn(
-          poppins.className,
-          'selection:bg-indigo-500 selection:text-white'
-        )}
-      >
+      <body className={cn(poppins.className, 'selection:bg-indigo-500 selection:text-white')}>
         <Suspense fallback={<LoadingContent />}>
           {children}
           <StatusBar />

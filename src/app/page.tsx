@@ -3,19 +3,14 @@ import { CURRENT_YEAR, resumeData } from '@/lib/data';
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import { LucideExternalLink } from 'lucide-react';
-import {
-  AnimateInViewProps,
-  Contribution,
-  FadeInCharsProps,
-  WorkExperience,
-} from '@/types';
+import { AnimateInViewProps, Contribution, FadeInCharsProps, WorkExperience } from '@/types';
 import dynamic from 'next/dynamic';
 import { getGitHubActivity } from '@/lib/server';
 import { cn } from '@/lib/utils';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
-export const revalidate = 86_400; // 1 day
+export const revalidate = false;
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
@@ -39,10 +34,7 @@ const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr }) => {
   ));
 };
 
-const Tag = ({
-  children,
-  index,
-}: React.PropsWithChildren<{ index: number }>) => (
+const Tag = ({ children, index }: React.PropsWithChildren<{ index: number }>) => (
   <div
     style={{ '--slide-in-delay': `${index * 0.1}ms` } as any}
     className="inline-block slide-in-animation cursor-default bg-[#232323] hover:bg-[#181818] transition-colors text-white text-xs px-2 py-1 rounded-md mr-2 mb-2"
@@ -53,13 +45,7 @@ const Tag = ({
 
 export default async function MainPage() {
   const res = await getGitHubActivity(CURRENT_YEAR);
-  const {
-    personalInfo,
-    professionalSummary,
-    workExperience,
-    skills,
-    education,
-  } = resumeData;
+  const { personalInfo, professionalSummary, workExperience, skills, education } = resumeData;
 
   const renderSkills = () => {
     return skills.map((skill: string, index: number) => (
@@ -78,10 +64,7 @@ export default async function MainPage() {
               {personalInfo.name}
             </h1>
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-400 mb-8">
-              <a
-                href={`mailto:${personalInfo.email}`}
-                className="hover:text-blue-400 transition-colors"
-              >
+              <a href={`mailto:${personalInfo.email}`} className="hover:text-blue-400 transition-colors">
                 {personalInfo.email}
               </a>
               <span className="hidden md:inline">|</span>
@@ -94,10 +77,7 @@ export default async function MainPage() {
                 LinkedIn
               </a>
               <span className="hidden md:inline">|</span>
-              <a
-                href={`tel:${personalInfo.phone}`}
-                className="hover:text-blue-400 transition-colors"
-              >
+              <a href={`tel:${personalInfo.phone}`} className="hover:text-blue-400 transition-colors">
                 {personalInfo.phone}
               </a>
               <span className="hidden md:inline">|</span>
@@ -121,27 +101,19 @@ export default async function MainPage() {
           <section className="mb-16">
             <div className="w-fit mb-8">
               <h2 className="sr-only">Professional Summary</h2>
-              <h2
-                aria-hidden
-                className="text-2xl font-semibold inline-block pb-1"
-              >
+              <h2 aria-hidden className="text-2xl font-semibold inline-block pb-1">
                 <FadeInChars title="Professional Summary" />
               </h2>
               <div aria-hidden className="animate-underline" />
             </div>
-            <p className="text-gray-300 leading-relaxed">
-              {professionalSummary}
-            </p>
+            <p className="text-gray-300 leading-relaxed">{professionalSummary}</p>
           </section>
         </AnimateInView>
 
         <section className="mb-16">
           <div className="w-fit mb-8">
             <h2 className="sr-only">Work Experience</h2>
-            <h2
-              aria-hidden
-              className="text-2xl font-semibold inline-block pb-1"
-            >
+            <h2 aria-hidden className="text-2xl font-semibold inline-block pb-1">
               <FadeInChars title="Work Experience" />
             </h2>
             <div aria-hidden className="animate-underline" />
@@ -163,78 +135,59 @@ export default async function MainPage() {
                     {job.position} {job.location && `• ${job.location}`}
                   </div>
                   <div aria-hidden className="text-lg text-gray-300 mb-3">
-                    <FadeInChars
-                      isLong
-                      title={`${job.position} • ${job.location}`}
-                    />
+                    <FadeInChars isLong title={`${job.position} • ${job.location}`} />
                   </div>
 
                   <div className="space-y-6 mt-4">
-                    {job.description.map(
-                      (project: Contribution, pIndex: number) => (
-                        <AnimateInView key={pIndex}>
-                          <article className="bg-[#181818] p-5 rounded-lg">
-                            <h4 className="text-lg font-medium text-white mb-2">
-                              <a
-                                target="_blank"
-                                href={project.link}
-                                className="underline-offset-2 hover:underline group flex items-center gap-1.5 hover:text-blue-300 transition-colors"
-                              >
-                                {project.projectName}{' '}
-                                <LucideExternalLink
-                                  size={16}
-                                  className="opacity-0 -translate-x-4 transition-transform group-hover:opacity-100 group-hover:translate-x-0"
-                                />
-                              </a>
-                            </h4>
-                            <p className="text-gray-300 mb-3">
-                              {project.details}
-                            </p>
+                    {job.description.map((project: Contribution, pIndex: number) => (
+                      <AnimateInView key={pIndex}>
+                        <article className="bg-[#181818] p-5 rounded-lg">
+                          <h4 className="text-lg font-medium text-white mb-2">
+                            <a
+                              target="_blank"
+                              href={project.link}
+                              className="underline-offset-2 hover:underline group flex items-center gap-1.5 hover:text-blue-300 transition-colors"
+                            >
+                              {project.projectName}{' '}
+                              <LucideExternalLink
+                                size={16}
+                                className="opacity-0 -translate-x-4 transition-transform group-hover:opacity-100 group-hover:translate-x-0"
+                              />
+                            </a>
+                          </h4>
+                          <p className="text-gray-300 mb-3">{project.details}</p>
 
-                            {project.technologies && (
-                              <div className="mb-3">
-                                <span className="text-gray-400 text-sm mb-1 block">
-                                  Technologies:
-                                </span>
-                                <p className="text-gray-300">
-                                  {project.technologies}
-                                </p>
-                              </div>
-                            )}
+                          {project.technologies && (
+                            <div className="mb-3">
+                              <span className="text-gray-400 text-sm mb-1 block">Technologies:</span>
+                              <p className="text-gray-300">{project.technologies}</p>
+                            </div>
+                          )}
 
-                            {project.features && (
-                              <div className="mb-3">
-                                <span className="text-gray-400 text-sm mb-1 block">
-                                  Features:
-                                </span>
-                                <ul className="list-disc list-inside text-gray-300 space-y-1">
-                                  {project.features.map(
-                                    (feature: string, fIndex: number) => (
-                                      <Li key={fIndex}>{feature}</Li>
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                            )}
+                          {project.features && (
+                            <div className="mb-3">
+                              <span className="text-gray-400 text-sm mb-1 block">Features:</span>
+                              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                                {project.features.map((feature: string, fIndex: number) => (
+                                  <Li key={fIndex}>{feature}</Li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
 
-                            {project.contributions && (
-                              <div>
-                                <span className="text-gray-400 text-sm mb-1 block">
-                                  Contributions:
-                                </span>
-                                <ul className="list-disc list-inside text-gray-300 space-y-1">
-                                  {project.contributions.map(
-                                    (contribution: string, cIndex: number) => (
-                                      <Li key={cIndex}>{contribution}</Li>
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                            )}
-                          </article>
-                        </AnimateInView>
-                      )
-                    )}
+                          {project.contributions && (
+                            <div>
+                              <span className="text-gray-400 text-sm mb-1 block">Contributions:</span>
+                              <ul className="list-disc list-inside text-gray-300 space-y-1">
+                                {project.contributions.map((contribution: string, cIndex: number) => (
+                                  <Li key={cIndex}>{contribution}</Li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </article>
+                      </AnimateInView>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -245,10 +198,7 @@ export default async function MainPage() {
         <section className="mb-16">
           <div className="w-fit mb-8">
             <h2 className="sr-only">Skills</h2>
-            <h2
-              aria-hidden
-              className="text-2xl font-semibold inline-block pb-1"
-            >
+            <h2 aria-hidden className="text-2xl font-semibold inline-block pb-1">
               <FadeInChars title="Skills" />
             </h2>
             <div aria-hidden className="animate-underline" />
@@ -260,10 +210,7 @@ export default async function MainPage() {
           <section className="mb-16">
             <div className="w-fit mb-8">
               <h2 className="sr-only">Education</h2>
-              <h2
-                aria-hidden
-                className="text-2xl font-semibold inline-block pb-1"
-              >
+              <h2 aria-hidden className="text-2xl font-semibold inline-block pb-1">
                 <FadeInChars title="Education" />
               </h2>
               <div aria-hidden className="animate-underline" />
@@ -271,12 +218,8 @@ export default async function MainPage() {
             <div className="border-l-2 border-gray-800 pl-6 relative">
               <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
               <div className="text-lg font-medium">{education[0].degree}</div>
-              {education[0].institution && (
-                <div className="text-gray-300">{education[0].institution}</div>
-              )}
-              {education[0].year && (
-                <div className="text-gray-400">{education[0].year}</div>
-              )}
+              {education[0].institution && <div className="text-gray-300">{education[0].institution}</div>}
+              {education[0].year && <div className="text-gray-400">{education[0].year}</div>}
             </div>
           </section>
         </AnimateInView>
