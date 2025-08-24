@@ -11,12 +11,12 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.najmiter.dev/'),
-  title: 'Najam ul Hassan - Software Developer Portfolio',
+  title: 'Najam ul Hassan - Full Stack Software Developer Portfolio',
   description: 'Najam ul Hassan software developer portfolio',
   robots: 'index, follow',
   authors: [{ name: 'Najam ul Hassan', url: 'https://github.com/najmiter' }],
   category: 'profile',
-  applicationName: 'Najam ul Hassan Portfolio',
+  applicationName: 'Najam ul Hassan – Full Stack Software Developer',
   referrer: 'origin-when-cross-origin',
   creator: 'Najam ul Hassan',
   publisher: 'Najam ul Hassan',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: 'Najam ul Hassan - Software Developer Portfolio',
-    description: "Najam ul Hassan software developer's portfolio",
+    title: 'Najam ul Hassan - Full Stack Software Developer Portfolio',
+    description: "Najam ul Hassan Full Stack Software Developer's portfolio",
     url: 'https://www.najmiter.dev/',
     siteName: 'Najam ul Hassan',
     locale: 'en_US',
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
         url: 'https://www.najmiter.dev/logo.png',
         width: 800,
         height: 800,
-        alt: "Najam ul Hassan software developer's portfolio",
+        alt: "Najam ul Hassan Full Stack Software Developer's portfolio",
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Najam ul Hassan',
-    description: "Najam ul Hassan software developer's portfolio",
+    description: "Najam ul Hassan Full Stack Software Developer's portfolio",
     creator: '@najmiter',
   },
   alternates: {
@@ -70,6 +70,7 @@ export const metadata: Metadata = {
     'najmiter',
     'Najam ul Hassan portfolio',
     'Najam ul Hassan software developer',
+    'Najam ul Hassan Full Stack Software Developer',
     'Najam ul Hassan developer',
     'Najam ul Hassan web developer',
     'Najam ul Hassan frontend developer',
@@ -93,6 +94,8 @@ export const metadata: Metadata = {
     'frontend developer in Pakistan',
   ],
 };
+
+export const revalidate = false;
 
 export default async function RootLayout({ children }: React.PropsWithChildren) {
   return (

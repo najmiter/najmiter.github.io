@@ -26,12 +26,15 @@ export interface ResumeData {
     name: string;
     email: string;
     linkedin: string;
-    phone: string;
   };
   professionalSummary: string;
   workExperience: WorkExperience[];
   skills: string[];
   education: Education[];
+  links: Array<{
+    href: string;
+    label: string;
+  }>;
 }
 
 export const resumeData: ResumeData = {
@@ -39,10 +42,9 @@ export const resumeData: ResumeData = {
     name: 'Najam ul Hassan',
     email: 'realnajmiter@gmail.com',
     linkedin: 'https://www.linkedin.com/in/najmiter',
-    phone: '+92-340-5962392',
   },
   professionalSummary:
-    'A skilled Full Stack Developer with a strong background in building scalable, high-performance web and mobile applications using modern technologies. Proven expertise in React.js, Next.js, TypeScript, and Node.js, with extensive experience in UI/UX design, AI-driven development, and browser extensions. Adept at leading projects from concept to deployment, including AI-powered recruiting platforms, inventory management systems, and productivity tools. Passionate about performance optimization, interactive animations (Framer Motion, GSAP, Three.js), and integrating AI models to enhance user experiences. Strong problem-solving skills, a deep understanding of software architecture, and a track record of delivering innovative solutions. Looking for a challenging role where I can leverage my technical expertise to contribute to impactful projects.',
+    'I work as a full stack developer professionally & love learning math and making games in my free time.',
   workExperience: [
     {
       company: 'IntelliQuarck',
@@ -55,8 +57,7 @@ export const resumeData: ResumeData = {
           link: 'https://strivio.ai/',
           details:
             'A recruiting platform with cutting-edge technology aimed to help companies find and recruit talent using AI and manage employees.',
-          technologies:
-            'Nextjs with Typescript, OpenAi, ElevenLabs, NextUi (HeroUi), Tailwind, Shadcn',
+          technologies: 'Nextjs with Typescript, OpenAi, ElevenLabs, NextUi (HeroUi), Tailwind, Shadcn',
           contributions: [
             'Led development as the lead developer for the entire web app',
             'Built unique features including resume parsing using AI, skill assessment using AI (verbal interview & coding questions with built-in code editor)',
@@ -69,15 +70,12 @@ export const resumeData: ResumeData = {
           projectName: 'Strivio (mobile app)',
           link: 'https://play.google.com/store/apps/details?id=com.strivio.app',
           details: 'Interview Prepping module',
-          contributions: [
-            'Implemented UI and APIs for the interview preparation feature',
-          ],
+          contributions: ['Implemented UI and APIs for the interview preparation feature'],
         },
         {
           projectName: 'Company Website',
           link: 'https://intelliquarck.com/',
-          details:
-            'Developed the entire redesigned company website with animations using framer motion in Nextjs',
+          details: 'Developed the entire redesigned company website with animations using framer motion in Nextjs',
         },
       ],
     },
@@ -147,8 +145,7 @@ export const resumeData: ResumeData = {
         {
           projectName: 'FontIt',
           link: 'https://marketplace.visualstudio.com/items?itemName=najmiter.fontit',
-          details:
-            'A VS Code extension that allows users to change the editor font family using the command palette',
+          details: 'A VS Code extension that allows users to change the editor font family using the command palette',
         },
         {
           projectName: 'Turboin',
@@ -165,8 +162,7 @@ export const resumeData: ResumeData = {
         {
           projectName: 'Chitter',
           link: 'https://najmiter.github.io/Chitter/',
-          details:
-            'An assembly language syntax highlighter written in Rust, compiled into WASM for web',
+          details: 'An assembly language syntax highlighter written in Rust, compiled into WASM for web',
         },
         {
           projectName: 'UOG LMS Beauty Parlor',
@@ -211,6 +207,11 @@ export const resumeData: ResumeData = {
       institution: '',
       year: '',
     },
+  ],
+  links: [
+    { href: 'https://github.com/najmiter', label: 'GitHub' },
+    { href: 'https://blog.najmiter.dev/', label: 'Blog' },
+    { href: 'https://www.youtube.com/najmiter', label: 'YouTube' },
   ],
 };
 
