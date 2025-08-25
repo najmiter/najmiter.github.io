@@ -12,7 +12,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.najmiter.dev/'),
   title: 'Najam ul Hassan - Full Stack Software Developer Portfolio',
-  description: 'Najam ul Hassan software developer portfolio',
+  description: 'Najam ul Hassan full stack software developer portfolio',
   robots: 'index, follow',
   authors: [{ name: 'Najam ul Hassan', url: 'https://github.com/najmiter' }],
   category: 'profile',
@@ -80,18 +80,6 @@ export const metadata: Metadata = {
     'Najam ul Hassan software engineer resume',
     'Najam ul Hassan resume',
     'Najam ul Hassan CV',
-    'software developer portfolio',
-    'software developer',
-    'web developer',
-    'frontend developer',
-    'full stack developer',
-    'software engineer',
-    'software engineer portfolio',
-    'software engineer resume',
-    'software engineer CV',
-    'full stack web developer',
-    'full stack developer in Pakistan',
-    'frontend developer in Pakistan',
   ],
 };
 

@@ -93,9 +93,9 @@ export default async function MainPage() {
         <AnimateInView>
           <section className="mb-16">
             <div className="w-fit mb-8">
-              <h2 className="sr-only">Professional Summary</h2>
+              <h2 className="sr-only">Summary</h2>
               <h2 aria-hidden className="text-2xl font-semibold inline-block pb-1">
-                <FadeInChars title="Professional Summary" />
+                <FadeInChars title="Summary" />
               </h2>
               <div aria-hidden className="animate-underline" />
             </div>
