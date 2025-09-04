@@ -94,7 +94,24 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'profile',
+              '@type': 'website',
+              name: 'Najam ul Hassan',
+              url: 'https://www.najmiter.dev/',
+              potentialAction: [
+                {
+                  '@type': 'ViewAction',
+                  target: 'https://www.najmiter.dev/api/me',
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'website',
               name: 'Najam ul Hassan',
               url: 'https://www.najmiter.dev/',
               logo: 'https://www.najmiter.dev/logo.png',
