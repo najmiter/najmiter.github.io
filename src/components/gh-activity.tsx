@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { Bar, CartesianGrid, Line, LineChart, XAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
@@ -92,8 +92,7 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
             <a
               target="_blank"
               href="https://github.com/najmiter"
-              className="text-blue-500 hover:text-blue-600 font-semibold transition-colors underline underline-offset-1"
-            >
+              className="text-blue-500 hover:text-blue-600 font-semibold transition-colors underline underline-offset-1">
               @najmiter
             </a>
           </CardTitle>
@@ -116,14 +115,13 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
       </CardHeader>
       <CardContent className="px-2 sm:p-6">
         <ChartContainer config={chartConfig} className="aspect-auto h-[250px] sm:h-[350px] w-full">
-          <LineChart
+          <BarChart
             accessibilityLayer
             data={contributions ?? []}
             margin={{
               left: 12,
               right: 12,
-            }}
-          >
+            }}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="date"
@@ -154,15 +152,8 @@ export default function GithubActivity({ initialData }: IGitHubActivityProps) {
                 />
               }
             />
-            <Line
-              dataKey="contributionCount"
-              type="linear"
-              stroke={`var(--color-contributionCount)`}
-              strokeWidth={2}
-              dot={false}
-            />
-            <Bar dataKey="contributionCount" fill={chartConfig.contributionCount.color} radius={4} />
-          </LineChart>
+            <Bar dataKey={'contributionCount'} fill={chartConfig.contributionCount.color} />
+          </BarChart>
         </ChartContainer>
       </CardContent>
       <footer className="py-5 sm:px-6 px-2 bg-gradient-to-t from-[#181818] to-[#222]">
