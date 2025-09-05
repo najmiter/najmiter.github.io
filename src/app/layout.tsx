@@ -111,10 +111,8 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
         />
       </head>
       <body className={cn(poppins.className, 'selection:bg-indigo-500 selection:text-white')}>
-        <Suspense fallback={<LoadingContent />}>
-          {children}
-          <StatusBar />
-        </Suspense>
+        <Suspense fallback={<LoadingContent />}>{children}</Suspense>
+        <StatusBar />
       </body>
     </html>
   );
