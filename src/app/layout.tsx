@@ -7,7 +7,7 @@ import React, { Suspense } from 'react';
 import LoadingContent from '@/components/loading-content';
 import StatusBar from '@/components/status-bar';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700', '800', '900'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.najmiter.dev/'),
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   authors: [{ name: 'Najam ul Hassan', url: 'https://github.com/najmiter' }],
   category: 'profile',
-  applicationName: 'Najam ul Hassan – Full Stack Software Developer',
+  applicationName: 'Najam ul Hassan – Full Stack Software Developer Portfolio',
   referrer: 'origin-when-cross-origin',
   creator: 'Najam ul Hassan',
   publisher: 'Najam ul Hassan',
@@ -87,7 +87,7 @@ export const revalidate = false;
 
 export default async function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en" className="dark" dir="ltr">
+    <html lang="en" className="dark" dir="ltr" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

@@ -1,6 +1,5 @@
 'use server';
 
-import { unstable_cache } from 'next/cache';
 import { GetGithubActivity, IGitHubActivity } from '@/types';
 
 const GITHUB_USERNAME = process.env.GITHUB_USERNAME;
@@ -40,11 +39,10 @@ const fetchContributions = async (year: number) => {
   }
 
   const result = (await response.json()) as any;
-  return result?.data?.user?.contributionsCollection?.contributionCalendar
-    ?.weeks as IGitHubActivity[];
+  return result?.data?.user?.contributionsCollection?.contributionCalendar?.weeks as IGitHubActivity[];
 };
 
-async function _getGitHubActivity(year: number): GetGithubActivity {
+export async function getGitHubActivity(year: number): GetGithubActivity {
   try {
     const events = await fetchContributions(year);
     return { length: events?.length ?? 0, data: events ?? null, error: null };
@@ -52,15 +50,3 @@ async function _getGitHubActivity(year: number): GetGithubActivity {
     return { error: 'Failed to fetch GitHub activity', data: null, length: 0 };
   }
 }
-
-export const getGitHubActivity = async (year = YEAR) => {
-  const fetcher = unstable_cache(
-    () => _getGitHubActivity(year),
-    ['github-activity', year.toString()],
-    {
-      revalidate: 60 * 60 * 24,
-      tags: ['github-activity', year.toString()],
-    }
-  );
-  return await fetcher();
-};

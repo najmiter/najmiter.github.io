@@ -5,8 +5,7 @@ export default function ViewProfile() {
     <a
       href={`/api/me?timezone=${Intl.DateTimeFormat().resolvedOptions().timeZone}`}
       target="_blank"
-      className="hover:text-blue-400 transition-colors"
-    >
+      className="hover:text-indigo-400 transition-colors">
       View My Picture
     </a>
   );

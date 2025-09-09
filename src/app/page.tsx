@@ -58,11 +58,11 @@ export default async function MainPage() {
       <div className="max-w-5xl mx-auto">
         <AnimateInView>
           <div className="mb-4 border-b border-gray-800 pb-8">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gradient bg-clip-text text-transparent bg-gradient-to-br from-emerald-500 to-blue-600">
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-gradient bg-clip-text text-transparent bg-gradient-to-b pb-5 from-indigo-500 to-indigo-700">
               {personalInfo.name}
             </h1>
             <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-gray-400 mb-8">
-              <a href={`mailto:${personalInfo.email}`} className="hover:text-blue-400 transition-colors">
+              <a href={`mailto:${personalInfo.email}`} className="hover:text-indigo-400 transition-colors">
                 {personalInfo.email}
               </a>
               <span className="hidden md:inline">|</span>
@@ -70,7 +70,7 @@ export default async function MainPage() {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition-colors">
+                className="hover:text-indigo-400 transition-colors">
                 LinkedIn
               </a>
               <span className="hidden md:inline">|</span>
@@ -139,7 +139,7 @@ export default async function MainPage() {
                             <a
                               target="_blank"
                               href={project.link}
-                              className="underline-offset-2 hover:underline group flex items-center gap-1.5 hover:text-blue-300 transition-colors">
+                              className="underline-offset-2 hover:underline group flex items-center gap-1.5 hover:text-indigo-300 transition-colors">
                               {project.projectName}{' '}
                               <LucideExternalLink
                                 size={16}
@@ -208,7 +208,7 @@ export default async function MainPage() {
               <div aria-hidden className="animate-underline" />
             </div>
             <div className="border-l-2 border-gray-800 pl-6 relative">
-              <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-2"></div>
+              <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[7px] top-2"></div>
               <div className="text-lg font-medium">{education[0].degree}</div>
               {education[0].institution && <div className="text-gray-300">{education[0].institution}</div>}
               {education[0].year && <div className="text-gray-400">{education[0].year}</div>}
@@ -228,11 +228,11 @@ export default async function MainPage() {
             <div className="border-l-2 border-gray-800 relative space-y-2">
               {links.map((link, i) => (
                 <div key={i} className="relative pl-6 ">
-                  <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1.5"></div>
+                  <div className="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[7px] top-1.5"></div>
                   <a
                     href={link.href}
                     target="_blank"
-                    className="text-base font-mono transition-opacity text-blue-500 hover:opacity-80">
+                    className="text-base font-mono transition-opacity text-indigo-500 hover:opacity-80">
                     {link.label}
                   </a>
                 </div>
@@ -257,10 +257,10 @@ function Li({ children }: React.PropsWithChildren) {
         fill="none"
         className="min-w-7 min-h-7">
         <path
-          fill="#3b82f6"
+          className="fill-indigo-500"
           d="M6 9.33v5.34c0 3.32 2.35 4.67 5.22 3.02l1.28-.74c.31-.18.5-.51.5-.87V7.92c0-.36-.19-.69-.5-.87l-1.28-.74C8.35 4.66 6 6.01 6 9.33z"></path>
         <path
-          fill="#3b82f6"
+          className="fill-indigo-500"
           d="M14 8.79v6.43c0 .39.42.63.75.43l1.1-.64c2.87-1.65 2.87-4.37 0-6.02l-1.1-.64a.503.503 0 00-.75.44z"
           opacity=".4"></path>
       </svg>
