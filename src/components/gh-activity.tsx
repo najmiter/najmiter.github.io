@@ -63,7 +63,7 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
     return (
       <TooltipProvider>
         {data?.map((c, i) => (
-          <div key={i} className={cn('grid gap-1', { 'self-start': i > 0 })}>
+          <div key={i} className={cn('grid gap-2', { 'self-start': i > 0 })}>
             {c.contributionDays.map(
               (day, j) =>
                 new Date() >= new Date(day.date) && (
@@ -72,7 +72,7 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
                       <div
                         data-contributions={day.contributionCount}
                         aria-label={`Contributions on ${day.date}`}
-                        className={cn('h-3 w-3 rounded bg-green-500 border border-green-200/10', {
+                        className={cn('h-2.5 w-2.5 rounded bg-green-500 border border-green-200/10', {
                           'bg-opacity-100': !day.contributionCount,
                           'border-none': new Date() < new Date(day.date),
                           'bg-[#303030]/90 border-[#303030]/10':
@@ -90,7 +90,7 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>
-                        {day.contributionCount} contributions on{' '}
+                        {day.contributionCount ?? 0} contributions on{' '}
                         {new Date(day.date).toLocaleString('en-us', {
                           month: 'short',
                           day: '2-digit',
@@ -124,11 +124,11 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
             <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
             <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
           </div>
-          <div className="flex items-end gap-2 overflow-auto pb-5">
+          <div className="flex justify-between items-end gap-2 overflow-auto pb-5">
             {Array.from({ length: 52 }).map((_, weekIndex) => (
-              <div key={weekIndex} className="grid gap-1">
+              <div key={weekIndex} className="grid gap-2">
                 {Array.from({ length: 7 }).map((_, dayIndex) => (
-                  <div key={dayIndex} className="h-3 w-3 rounded bg-muted animate-pulse" />
+                  <div key={dayIndex} className="h-2.5 w-2.5 rounded bg-muted animate-pulse" />
                 ))}
               </div>
             ))}
@@ -187,7 +187,7 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
           <span aria-label="September">Sep</span>
           <span aria-label="December">Dec</span>
         </div>
-        <div ref={stuff} className="flex items-end gap-2 pb-5">
+        <div ref={stuff} className="flex justify-between items-end gap-2 pb-5">
           {content}
         </div>
       </CardContent>
