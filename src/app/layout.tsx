@@ -5,7 +5,8 @@ import './globals.css';
 import { cn } from '@/lib/utils';
 import React, { Suspense } from 'react';
 import LoadingContent from '@/components/loading-content';
-import StatusBar from '@/components/status-bar';
+import { Icons } from '@/components/ui/icons';
+import WhatsHot from '@/components/whats-hot';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '700', '800', '900'] });
 
@@ -85,6 +86,8 @@ export const metadata: Metadata = {
 
 export const revalidate = false;
 
+const itemClasses = 'flex items-center gap-1 px-2 h-full text-xs text-gray-400 hover:opacity-90 transition-all';
+
 export default async function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang="en" className="dark" dir="ltr" suppressHydrationWarning>
@@ -128,8 +131,37 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
         />
       </head>
       <body className={cn(poppins.className, 'selection:bg-indigo-500 selection:text-white')}>
+        {/* kids */}
         <Suspense fallback={<LoadingContent />}>{children}</Suspense>
-        <StatusBar />
+        {/* grown ups? */}
+        <div
+          aria-label="status bar"
+          aria-roledescription="status bar at the bottom"
+          className="fixed fade-in y px-10 hidden sm:flex justify-between bottom-0 h-6 w-full border border-t-[#303030] bg-[#212121]">
+          <section>
+            <a
+              type="button"
+              href="https://github.com/najmiter/najmiter.github.io"
+              target="_blank"
+              className={itemClasses}>
+              <Icons.Git size={14} />
+              <span className="text-xs">main</span>
+            </a>
+          </section>
+          <section className="flex items-center gap-3">
+            <a role="button" href="https://nextjs.org/" target="_blank" className={itemClasses}>
+              <Icons.Code size={14} />
+              <span className="text-xs">Next.js</span>
+            </a>
+            <div className={itemClasses} title="Last updated">
+              <Icons.Sync size={14} />
+              <span className="text-xs">
+                <time dateTime={new Date().toLocaleDateString('en-us')}>{new Date().toLocaleDateString('en-us')}</time>
+              </span>
+            </div>
+            <WhatsHot />
+          </section>
+        </div>
       </body>
     </html>
   );

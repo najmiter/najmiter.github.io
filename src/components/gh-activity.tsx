@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { getGitHubActivity } from '@/lib/server';
-import { IGitHubActivity, IGitHubActivityProps } from '@/types';
+import type { IGitHubActivity } from '@/types';
 import { CURRENT_YEAR } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
 import { cn } from '@/lib/utils';
@@ -15,15 +15,9 @@ const CACHE: Record<number, IGitHubActivity[] | null> = {
 const YEARS = [] as number[];
 for (let i = 2020; i <= CURRENT_YEAR; i++) YEARS.unshift(i);
 
-function GithubActivity({ initialData }: IGitHubActivityProps) {
-  const [isLoading, setIsLoading] = React.useState(!initialData);
-  const [data, setData] = React.useState<IGitHubActivity[] | null>(() => {
-    if (initialData) {
-      CACHE[CURRENT_YEAR] = initialData;
-      return initialData;
-    }
-    return null;
-  });
+function GithubActivity() {
+  const [isLoading, setIsLoading] = React.useState(true);
+  const [data, setData] = React.useState<IGitHubActivity[] | null>(null);
   const [year, setYear] = React.useState(CURRENT_YEAR);
   const stuff = React.useRef<HTMLDivElement>(null);
   const [brosWidth, setBrosWidth] = React.useState('100%');
@@ -71,7 +65,6 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
                     <TooltipTrigger asChild>
                       <div
                         data-contributions={day.contributionCount}
-                        aria-label={`Contributions on ${day.date}`}
                         className={cn('h-2.5 w-2.5 rounded bg-green-500 border border-green-200/10', {
                           'bg-opacity-100': !day.contributionCount,
                           'border-none': new Date() < new Date(day.date),
@@ -117,7 +110,7 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
           </div>
         </CardHeader>
         <CardContent className="px-2 p-3 space-y-3 h-[180px]">
-          <div role="row" className="flex items-center justify-between w-full">
+          <div className="flex items-center justify-between w-full">
             <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
             <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
             <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
@@ -178,7 +171,6 @@ function GithubActivity({ initialData }: IGitHubActivityProps) {
       </CardHeader>
       <CardContent className="px-2 p-3 space-y-3 overflow-auto">
         <div
-          role="row"
           style={{ width: brosWidth }}
           className="flex items-center text-muted-foreground text-xs justify-between w-full">
           <span aria-label="January">Jan</span>

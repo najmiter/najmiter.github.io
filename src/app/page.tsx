@@ -1,11 +1,11 @@
 import React from 'react';
-import { CURRENT_YEAR, resumeData } from '@/lib/data';
+import dynamic from 'next/dynamic';
+import { resumeData } from '@/lib/data';
+import { LucideExternalLink } from 'lucide-react';
+
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
-import { LucideExternalLink } from 'lucide-react';
-import { AnimateInViewProps, Contribution, FadeInCharsProps, WorkExperience } from '@/types';
-import dynamic from 'next/dynamic';
-import { getGitHubActivity } from '@/lib/server';
+import type { AnimateInViewProps, Contribution, FadeInCharsProps, WorkExperience } from '@/types';
 import { cn } from '@/lib/utils';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
@@ -42,7 +42,6 @@ const Tag = ({ children, index }: React.PropsWithChildren<{ index: number }>) =>
 );
 
 export default async function MainPage() {
-  const res = await getGitHubActivity(CURRENT_YEAR);
   const { personalInfo, professionalSummary, workExperience, skills, education, links } = resumeData;
 
   const renderSkills = () => {
@@ -87,7 +86,7 @@ export default async function MainPage() {
             </h2>
             <div aria-hidden className="animate-underline" />
           </div>
-          <GithubActivity initialData={res?.data} />
+          <GithubActivity />
         </div>
 
         <AnimateInView>
