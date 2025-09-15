@@ -138,7 +138,7 @@ export default async function MainPage() {
                             <a
                               target="_blank"
                               href={project.link}
-                              className="underline-offset-2 hover:underline group flex items-center gap-1.5 hover:text-indigo-300 transition-colors">
+                              className="underline-offset-2 font-bold text-indigo-300 hover:underline group flex items-center gap-1.5 hover:text-indigo-400 transition-colors">
                               {project.projectName}{' '}
                               <LucideExternalLink
                                 size={16}
