@@ -98,7 +98,7 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'website',
-              name: 'Najam ul Hassan',
+              name: 'Najam',
               url: 'https://www.najmiter.dev/',
               potentialAction: [
                 {
@@ -115,7 +115,7 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'website',
-              name: 'Najam ul Hassan',
+              name: 'Najam',
               url: 'https://www.najmiter.dev/',
               logo: 'https://www.najmiter.dev/logo.png',
               sameAs: [
