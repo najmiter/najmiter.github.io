@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://www.najmiter.dev/logo.png',
-        width: 800,
-        height: 800,
+        width: 350,
+        height: 350,
         alt: "Najam ul Hassan Full Stack Software Developer's portfolio",
       },
     ],
