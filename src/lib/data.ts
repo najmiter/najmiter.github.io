@@ -86,6 +86,19 @@ export const resumeData: ResumeData = {
       location: 'Hybrid',
       description: [
         {
+          projectName: 'PdfRizz',
+          details:
+            'PdfRizz is a web app designed to simplify working with PDF files. Users can insert PDFs, convert them to PNG or JPEG images, merge multiple PDF files into a single document, split PDFs into separate pages or sections, and remove specific pages from PDF files.',
+          link: 'https://pdfrizz.knoctal.com/',
+          features: [
+            'Merge PDFs: Combine multiple PDF files into a single document for easier management.',
+            'Split PDFs: Divide a PDF into separate pages or sections as needed.',
+            'Remove Pages: Delete specific pages from a PDF file quickly and easily.',
+            'Insert Pages: Add new pages to an existing PDF document seamlessly.',
+            'PDF to Image Conversion: Convert PDF files to high-quality PNG or JPEG images.',
+          ],
+        },
+        {
           projectName: 'Quvik',
           link: 'https://play.google.com/store/apps/details?id=com.najmiter.quvik',
           details: 'A study app built for matric & intermediate students',
