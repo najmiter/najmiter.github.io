@@ -53,6 +53,12 @@ export const resumeData: ResumeData = {
       location: 'Remote',
       description: [
         {
+          projectName: 'FltrLnk (mobile app)',
+          link: 'https://play.google.com/store/apps/details?id=com.strivio.app',
+          details: 'Interview Prepping module',
+          contributions: ['Implemented UI and APIs for the interview preparation feature'],
+        },
+        {
           projectName: 'Strivio (web app)',
           link: 'https://strivio.ai/',
           details:
