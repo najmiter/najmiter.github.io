@@ -53,6 +53,16 @@ export const resumeData: ResumeData = {
       location: 'Remote',
       description: [
         {
+          projectName: 'Kayya',
+          link: 'https://kayyafinancial.com',
+          details: 'Fintech platform for businesses that provide services on loan.',
+          contributions: [
+            'Lead development as the lead developer for the entire app',
+            'Built the entire frontend of the web apps using Nextjs and Tailwind, integrated with backend APIs',
+            'Built backend APIs using NestJS and Nodejs, integrated with third-party services like Stripe, Didit, CRS, and more',
+          ],
+        },
+        {
           projectName: 'FltrLnk (mobile app)',
           link: 'https://play.google.com/store/apps/details?id=com.strivio.app',
           details: 'Interview Prepping module',
@@ -91,6 +101,36 @@ export const resumeData: ResumeData = {
       period: 'Apr 2021 - Present',
       location: 'Hybrid',
       description: [
+        {
+          projectName: 'Sivi',
+          details:
+            'Sivi is an open-source CV builder that keeps the entire experience local to the browser. It is built around privacy, fast iteration, and a polished resume-building flow without account walls or backend dependency.',
+          link: 'https://sivi.knoctal.com/',
+          features: [
+            'Local-First: All resume data is stored locally in the user’s browser, ensuring privacy and security without the need for account creation or backend storage.',
+            'Customizable Templates: Offers a variety of professionally designed resume templates that users can customize to fit their personal style and industry standards.',
+            'Real-Time Preview: Provides a live preview of the resume as users make edits, allowing for immediate feedback and adjustments.',
+          ],
+        },
+        {
+          projectName: 'Spider Solitaire (Clone)',
+          details: 'A clone of the popular Spider Solitaire (from Windows XP) card game.',
+          link: 'https://najmiter.github.io/spider-solitaire-clone/',
+          features: [
+            'Authentic Game Rules: Implements the complete rules of Spider Solitaire.',
+            'Responsive Design: Works seamlessly on both desktop and mobile devices.',
+          ],
+        },
+        {
+          projectName: 'PdfRizz',
+          details:
+            'PdfRizz is a web app designed to simplify working with PDF files. Users can insert PDFs, convert them to PNG or JPEG images, merge multiple PDF files into a single document, split PDFs into separate pages or sections, and remove specific pages from PDF files.',
+          link: 'https://pdfrizz.knoctal.com/',
+          features: [
+            'Customizable Templates: Offers a variety of professionally designed resume templates that users can customize to fit their personal style and industry standards.',
+            'Real-Time Preview: Provides a live preview of the resume as users make edits, allowing for immediate feedback and adjustments.',
+          ],
+        },
         {
           projectName: 'PdfRizz',
           details:
