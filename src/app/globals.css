@@ -51,6 +51,8 @@
   }
 
   html {
+    cursor: default;
+    scrollbar-width: thin;
     scrollbar-color: hsl(var(--theme) / 0.6) hsl(223 12% 9%);
   }
 
@@ -263,6 +265,7 @@
   }
 
   @keyframes loadingDot {
+
     0%,
     80%,
     100% {
