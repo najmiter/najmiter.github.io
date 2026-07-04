@@ -7,6 +7,7 @@ import LoadingContent from '@/components/loading-content';
 import StatusBar from '@/components/status-bar';
 import { defaultMetadata } from '@/lib/metadata';
 import LdJson from '@/components/ld-json';
+import NavigationLoader from '@/components/navigation-loader';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -20,10 +21,7 @@ export const metadata = defaultMetadata;
 
 export const revalidate = false;
 
-export default async function RootLayout({
-  children,
-  modal,
-}: React.PropsWithChildren<{ modal: React.ReactNode }>) {
+export default async function RootLayout({ children, modal }: React.PropsWithChildren<{ modal: React.ReactNode }>) {
   return (
     <html lang="en" className="dark" dir="ltr" suppressHydrationWarning>
       <head>
@@ -36,6 +34,7 @@ export default async function RootLayout({
           {modal}
           {/* grown ups? */}
           <StatusBar />
+          <NavigationLoader />
         </Suspense>
       </body>
     </html>

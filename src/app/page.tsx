@@ -128,7 +128,7 @@ export default async function MainPage() {
                         <h4 className="text-lg mb-2">
                           <Link
                             href={`/${project.id}`}
-                            className="font-display font-medium text-foreground hover:text-theme transition-colors inline-flex items-baseline gap-2">
+                            className="font-display cursor-pointer font-medium text-foreground hover:text-theme transition-colors inline-flex items-baseline gap-2">
                             {project.projectName}
                             <span
                               aria-hidden

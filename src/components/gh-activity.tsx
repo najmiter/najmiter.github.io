@@ -111,11 +111,11 @@ function GithubActivity() {
         </CardHeader>
         <CardContent className="px-2 p-3 space-y-3 h-[180px]">
           <div className="flex items-center justify-between w-full">
-            <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
-            <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
-            <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
-            <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
-            <div className="h-3 w-10 rounded bg-muted animate-pulse"></div>
+            <div className="h-3 w-10 rounded bg-muted animate-pulse" />
+            <div className="h-3 w-10 rounded bg-muted animate-pulse" />
+            <div className="h-3 w-10 rounded bg-muted animate-pulse" />
+            <div className="h-3 w-10 rounded bg-muted animate-pulse" />
+            <div className="h-3 w-10 rounded bg-muted animate-pulse" />
           </div>
           <div className="flex justify-between items-end gap-2 overflow-auto pb-5">
             {Array.from({ length: 52 }).map((_, weekIndex) => (
