@@ -65,10 +65,10 @@ function GithubActivity() {
                     <TooltipTrigger asChild>
                       <div
                         data-contributions={day.contributionCount}
-                        className={cn('h-2.5 w-2.5 rounded bg-green-500 border border-green-200/10', {
+                        className={cn('h-2.5 w-2.5 rounded-sm bg-[#618fff] border border-[#618fff]/10', {
                           'bg-opacity-100': !day.contributionCount,
                           'border-none': new Date() < new Date(day.date),
-                          'bg-[#303030]/90 border-[#303030]/10':
+                          'bg-[#242c3d]/90 border-[#242c3d]/10':
                             !day.contributionCount && new Date() >= new Date(day.date),
                         })}
                         style={
@@ -127,7 +127,7 @@ function GithubActivity() {
             ))}
           </div>
         </CardContent>
-        <footer className="py-5 sm:px-6 px-2 bg-gradient-to-t from-[#181818] to-[#222]">
+        <footer className="py-5 sm:px-6 px-2 border-t border-line bg-[#1a1f2b]">
           <div className="relative z-30 flex flex-1 flex-col items-center justify-center gap-1">
             <div className="h-4 w-1/4 rounded bg-muted animate-pulse"></div>
             <div className="h-8 w-1/3 rounded bg-muted animate-pulse mt-1"></div>
@@ -148,7 +148,7 @@ function GithubActivity() {
             <a
               target="_blank"
               href="https://github.com/najmiter"
-              className="text-blue-500 hover:text-blue-600 font-semibold transition-colors underline underline-offset-1">
+              className="font-mono text-theme hover:opacity-80 font-medium transition-opacity">
               @najmiter
             </a>
           </CardTitle>
@@ -156,7 +156,7 @@ function GithubActivity() {
         </div>
         <div className="flex items-center sm:justify-center pb-2 px-6">
           <Select defaultValue={year.toString()} onValueChange={(y) => setYear(+y)}>
-            <SelectTrigger aria-label="Select year" className="w-40 bg-gradient-to-b to-[#171717] from-[#242424]">
+            <SelectTrigger aria-label="Select year" className="w-40 font-mono text-xs bg-[#1d2432] border-line">
               <SelectValue placeholder="Year" />
             </SelectTrigger>
             <SelectContent>
@@ -183,10 +183,12 @@ function GithubActivity() {
           {content}
         </div>
       </CardContent>
-      <footer className="py-5 sm:px-6 px-2 bg-gradient-to-t from-[#181818] to-[#222]">
+      <footer className="py-5 sm:px-6 px-2 border-t border-line bg-[#1a1f2b]">
         <div className="relative z-30 flex flex-1 flex-col items-center justify-center gap-1">
-          <span className="text-xs text-muted-foreground">Total in {year}</span>
-          <span className="text-lg font-bold leading-none sm:text-3xl">{Intl.NumberFormat('en-us').format(total)}</span>
+          <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">Total in {year}</span>
+          <span className="font-display text-lg font-light leading-none sm:text-3xl">
+            {Intl.NumberFormat('en-us').format(total)}
+          </span>
         </div>
       </footer>
     </Card>

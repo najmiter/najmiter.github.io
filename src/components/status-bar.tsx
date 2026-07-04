@@ -1,14 +1,19 @@
+'use client';
+
+import React from 'react';
 import { Icons } from './ui/icons';
 import WhatsHot from './whats-hot';
 
 const itemClasses = 'flex items-center gap-1 px-2 h-full text-xs text-gray-400 hover:opacity-90 transition-all';
 
-export default async function StatusBar() {
+export default function StatusBar() {
+  const [today] = React.useState(() => new Date().toLocaleDateString('en-us'));
+
   return (
     <div
       aria-label="status bar"
       aria-roledescription="status bar at the bottom"
-      className="fixed fade-in y px-10 hidden sm:flex justify-between bottom-0 h-6 w-full border border-t-[#303030] bg-[#212121]">
+      className="fixed fade-in y z-50 px-10 hidden sm:flex justify-between bottom-0 h-6 w-full border-t border-line bg-[#1a1f2b]/95 backdrop-blur">
       <section>
         <a type="button" href="https://github.com/najmiter/najmiter.github.io" target="_blank" className={itemClasses}>
           <Icons.Git size={14} />
@@ -23,7 +28,7 @@ export default async function StatusBar() {
         <div className={itemClasses} title="Last updated">
           <Icons.Sync size={14} />
           <span className="text-xs">
-            <time dateTime={new Date().toLocaleDateString('en-us')}>{new Date().toLocaleDateString('en-us')}</time>
+            <time dateTime={today}>{today}</time>
           </span>
         </div>
         <WhatsHot />

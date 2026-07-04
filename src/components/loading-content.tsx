@@ -5,7 +5,7 @@ export default function LoadingContent() {
     <div
       aria-hidden
       role="presentation"
-      className="fixed inset-0 bg-[#111] flex items-center justify-center"
+      className="fixed inset-0 bg-background flex items-center justify-center"
     >
       <div className="flex flex-col items-center gap-4">
         {/* <div className="relative">
@@ -29,7 +29,7 @@ export default function LoadingContent() {
           className="rounded-xl overflow-hidden"
         />
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-white mb-2 loading-text">
+          <h2 className="font-display text-2xl font-light mb-2 loading-text">
             Be right there...
           </h2>
           <div className="loading-dots">

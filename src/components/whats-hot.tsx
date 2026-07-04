@@ -43,26 +43,26 @@ export default function WhatsHot() {
           type="button"
           aria-label="Toggle whats hot"
           onClick={() => setIsOpen((b) => !b)}
-          className="text-xl active:scale-95 text-gray-400 hover:opacity-90 transition-all active:opacity-90"
+          className="text-xl active:scale-95 text-muted-foreground hover:text-theme transition-all active:opacity-90"
         >
           <Icons.Bell size={14} />
         </button>
         <div
           className={cn(
-            'bg-gradient-to-tr from-stone-800 to-stone-950 z-40 absolute bottom-8 right-2 min-w-[85vw] md:min-w-96 max-w-full text-white p-4 rounded-lg shadow-md',
+            'bg-[#1a1f2b] border border-line z-40 absolute bottom-8 right-2 min-w-[85vw] md:min-w-96 max-w-full text-foreground p-4 rounded-md shadow-xl',
             { 'come-in': isOpen },
             { 'go-out pointer-events-none': !isOpen }
           )}
         >
           <div className="grid gap-1">
             <p className="text-sm">{whatsHot.text}</p>
-            <span className="text-xs text-muted-foreground">Updated: {whatsHot.date.toLocaleDateString()}</span>
+            <span className="font-mono text-[11px] text-muted-foreground">Updated: {whatsHot.date.toLocaleDateString()}</span>
           </div>
           <a
             target="_blank"
             rel="noopener noreferrer"
             href={whatsHot.action.href}
-            className="text-blue-400 hover:underline mt-2 inline-block"
+            className="font-mono text-xs text-theme hover:underline mt-2 inline-block"
           >
             {whatsHot.action.text}
           </a>
