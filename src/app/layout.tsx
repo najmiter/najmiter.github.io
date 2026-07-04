@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import React, { Suspense } from 'react';
 import LoadingContent from '@/components/loading-content';
 import StatusBar from '@/components/status-bar';
-import { metadata } from '@/lib/metadata';
+import { defaultMetadata } from '@/lib/metadata';
 import LdJson from '@/components/ld-json';
 
 const fraunces = Fraunces({
@@ -16,7 +16,7 @@ const fraunces = Fraunces({
 const instrumentSans = Instrument_Sans({ subsets: ['latin'], variable: '--font-sans' });
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
-export { metadata };
+export const metadata = defaultMetadata;
 
 export const revalidate = false;
 

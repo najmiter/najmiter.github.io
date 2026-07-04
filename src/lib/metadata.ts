@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
+export const defaultMetadata: Metadata = {
   metadataBase: new URL('https://www.najmiter.dev/'),
   title: {
-    default: 'Najam ul Hassan — Full Stack Software Developer',
+    default: 'Najam ul Hassan (najmiter) — Full Stack Software Developer',
     template: '%s | Najam ul Hassan',
   },
   description:
