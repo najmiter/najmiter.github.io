@@ -13,8 +13,14 @@ export default function ProjectModal({ projectId, children }: React.PropsWithChi
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
-    if (isActive && !dialog.open) dialog.showModal();
-    if (!isActive && dialog.open) dialog.close();
+    if (isActive && !dialog.open) {
+      dialog.showModal();
+      document.body.style.overflow = 'hidden';
+    }
+    if (!isActive && dialog.open) {
+      dialog.close();
+      document.body.style.overflow = 'auto';
+    }
   }, [isActive]);
 
   const onClose = () => {
