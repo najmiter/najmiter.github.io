@@ -52,12 +52,35 @@ export default function NavigationLoader() {
       }, 100);
     };
 
+    const reset = () => {
+      if (ungaBungaTimer.current) {
+        clearInterval(ungaBungaTimer.current);
+        ungaBungaTimer.current = null;
+      }
+      setIsNavigating(false);
+      setUngaBungaProgress(0);
+      document.body.style.overflow = 'auto';
+      document.body.inert = false;
+    };
+
+    const handlePageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) reset();
+    };
+
     document.addEventListener('click', handler);
+    window.addEventListener('pageshow', handlePageShow);
+    window.addEventListener('popstate', reset);
 
     return () => {
       document.removeEventListener('click', handler);
+      window.removeEventListener('pageshow', handlePageShow);
+      window.removeEventListener('popstate', reset);
       document.body.style.overflow = 'auto';
       document.body.inert = false;
+      if (ungaBungaTimer.current) {
+        clearInterval(ungaBungaTimer.current);
+        ungaBungaTimer.current = null;
+      }
     };
   }, []);
 
