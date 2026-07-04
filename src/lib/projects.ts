@@ -110,8 +110,7 @@ const PROJECT_META: Record<string, ProjectMeta> = {
     status: 'live',
     audience: 'Job seekers at all levels, including those needing ATS-compatible resumes',
     stack: ['React', 'TypeScript'],
-    highlights: [{ label: 'Source', value: 'Open source' }],
-    repo: 'https://github.com/najmiter/sivi',
+    highlights: [{ label: 'Templates', value: '15+' }],
   },
   'spider-solitaire': {
     tagline: 'Windows XP Spider Solitaire, in your browser.',
@@ -133,6 +132,8 @@ const PROJECT_META: Record<string, ProjectMeta> = {
     status: 'live',
     audience: 'Anyone needing quick, free PDF tasks without desktop software',
     stack: ['Vite', 'TypeScript'],
+    highlights: [{ label: 'Source', value: 'Open Source' }],
+    repo: 'https://github.com/najmiter/pdf',
   },
   quvik: {
     tagline: 'The exam preparation companion for students in Pakistan.',
@@ -172,6 +173,8 @@ const PROJECT_META: Record<string, ProjectMeta> = {
     status: 'live',
     audience: 'Animation designers and developers working with Lottie',
     stack: ['React', 'TypeScript'],
+    highlights: [{ label: 'Source', value: 'Open Source' }],
+    repo: 'https://github.com/najmiter/looto',
   },
   doburji: {
     tagline: 'A digital home for the Doburji Welfare Society.',
@@ -217,6 +220,7 @@ const PROJECT_META: Record<string, ProjectMeta> = {
     audience: 'Power users with too many tabs',
     stack: ['JavaScript', 'Chrome APIs'],
     highlights: [{ label: 'Rating', value: '5.0 ★' }],
+    repo: 'https://github.com/najmiter/turboin',
   },
   neutrabize: {
     tagline: 'Your new tab, your rules.',
@@ -228,6 +232,7 @@ const PROJECT_META: Record<string, ProjectMeta> = {
     audience: 'Chrome users who want a personalized new tab',
     stack: ['JavaScript', 'Chrome APIs', 'open-meteo API'],
     highlights: [{ label: 'Rating', value: '5.0 ★' }],
+    repo: 'https://github.com/najmiter/neutrabize',
   },
   chitter: {
     tagline: 'Rich, copyable syntax highlighting for assembly code.',
