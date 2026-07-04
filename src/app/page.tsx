@@ -1,11 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { resumeData } from '@/lib/data';
 
 import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import type { AnimateInViewProps, Contribution, FadeInCharsProps, WorkExperience } from '@/types';
-import { cn } from '@/lib/utils';
+import FadeInChars from '@/components/fade-in-chars';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
@@ -13,23 +14,6 @@ export const revalidate = false;
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({ children }) => {
   return <div className={'come-into-view'}>{children}</div>;
-};
-
-const FadeInChars: React.FC<FadeInCharsProps> = ({ title, isLong, ltr, className }) => {
-  return title.split('').map((char, index, self) => (
-    <span
-      key={index}
-      data-nth={index + 1}
-      style={
-        {
-          '--nth': Math.abs(index + 1 - (ltr ? self.length : 0)),
-          '--is-long': String(!!isLong),
-        } as React.CSSProperties
-      }
-      className={cn('fade-in-char inline-block', className, { ltr })}>
-      {char === ' ' ? <span>&nbsp;</span> : char}
-    </span>
-  ));
 };
 
 const SectionHeading = ({ index, title }: { index: string; title: string }) => (
@@ -142,17 +126,16 @@ export default async function MainPage() {
                           className="absolute -left-px top-2 h-5 w-px bg-theme transition-all group-hover:h-9"
                         />
                         <h4 className="text-lg mb-2">
-                          <a
-                            target="_blank"
-                            href={project.link}
+                          <Link
+                            href={`/${project.id}`}
                             className="font-display font-medium text-foreground hover:text-theme transition-colors inline-flex items-baseline gap-2">
                             {project.projectName}
                             <span
                               aria-hidden
-                              className="font-mono text-xs text-theme opacity-0 -translate-x-1 translate-y-1 transition-all group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0">
-                              ↗
+                              className="font-mono text-xs text-theme opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">
+                              →
                             </span>
-                          </a>
+                          </Link>
                         </h4>
                         <p className="text-foreground/75 group-hover:text-foreground leading-relaxed mb-4 max-w-2xl">
                           {project.details}

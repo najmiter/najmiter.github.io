@@ -76,6 +76,44 @@
     background: hsl(var(--theme));
     color: hsl(224 18% 6%);
   }
+
+  dialog.project-dialog {
+    margin: auto;
+    width: min(760px, 92vw);
+    max-height: 85dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    background: hsl(var(--card));
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(var(--line));
+    border-radius: var(--radius);
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      overlay 0.25s ease allow-discrete,
+      display 0.25s ease allow-discrete;
+  }
+
+  dialog.project-dialog[open] {
+    opacity: 1;
+    transform: none;
+
+    @starting-style {
+      opacity: 0;
+      transform: translateY(24px) scale(0.98);
+    }
+  }
+
+  dialog.project-dialog::backdrop {
+    background: hsl(224 18% 6% / 0.75);
+    backdrop-filter: blur(6px);
+    transition:
+      background 0.25s ease,
+      backdrop-filter 0.25s ease;
+  }
 }
 
 @layer utilities {
@@ -102,7 +140,7 @@
   }
 
   .animate-underline {
-    animation-timeline: view(70vh 0%);
+    animation-timeline: view(70% 0%);
     animation-name: underline;
     animation-timing-function: linear;
     @apply h-px w-full origin-left;
@@ -129,7 +167,7 @@
   .fade-in-char {
     /* could have done with the class here as well but just wanted to use the `if` thing */
     --factor: if(style(--is-long: true): 0.3; else: 0.4);
-    --start: calc(100vh - var(--nth) * var(--factor) * 30px);
+    --start: calc(100% - var(--nth) * var(--factor) * 30px);
     animation-timeline: view(var(--start) -5%);
     animation-name: fadeInChar;
     animation-timing-function: linear;

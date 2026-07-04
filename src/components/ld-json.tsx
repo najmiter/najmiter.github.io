@@ -1,10 +1,7 @@
 import { resumeData } from '@/lib/data';
+import { projects } from '@/lib/projects';
 
 const BUILD_DATE = new Date().toISOString().split('T')[0];
-
-const projects = resumeData.workExperience
-  .flatMap((work) => work.description)
-  .filter((project, index, all) => all.findIndex((p) => p.link === project.link) === index);
 
 export default function LdJson() {
   return (
@@ -76,8 +73,11 @@ export default function LdJson() {
               item: {
                 '@type': 'SoftwareApplication',
                 name: project.projectName,
-                url: project.link,
-                description: project.details,
+                url: `https://www.najmiter.dev/${project.id}`,
+                sameAs: project.link,
+                applicationCategory: project.meta.category,
+                operatingSystem: project.meta.platform,
+                description: project.meta.about ?? project.details,
                 author: {
                   '@type': 'Person',
                   name: resumeData.personalInfo.name,

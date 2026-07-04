@@ -25,6 +25,7 @@ export interface FadeInCharsProps {
 }
 
 export interface Contribution {
+  id: string;
   projectName: string;
   details: string;
   link: string;

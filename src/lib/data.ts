@@ -1,4 +1,5 @@
 export interface ProjectDescription {
+  id: string;
   projectName: string;
   link: string;
   details: string;
@@ -53,6 +54,7 @@ export const resumeData: ResumeData = {
       location: 'Remote',
       description: [
         {
+          id: 'kayya',
           projectName: 'Kayya',
           link: 'https://kayyafinancial.com',
           details: 'Fintech platform for businesses that provide services on loan.',
@@ -63,12 +65,14 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'fltrlnk',
           projectName: 'FltrLnk (mobile app)',
-          link: 'https://play.google.com/store/apps/details?id=com.strivio.app',
+          link: 'https://play.google.com/store/apps/details?id=com.gorkemyagci.ftrlnkmobileapp',
           details: 'Interview Prepping module',
           contributions: ['Implemented UI and APIs for the interview preparation feature'],
         },
         {
+          id: 'strivio',
           projectName: 'Strivio (web app)',
           link: 'https://strivio.ai/',
           details:
@@ -83,12 +87,14 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'strivio-mobile',
           projectName: 'Strivio (mobile app)',
           link: 'https://play.google.com/store/apps/details?id=com.strivio.app',
           details: 'Interview Prepping module',
           contributions: ['Implemented UI and APIs for the interview preparation feature'],
         },
         {
+          id: 'intelliquarck',
           projectName: 'Company Website',
           link: 'https://intelliquarck.com/',
           details: 'Developed the entire redesigned company website with animations using framer motion in Nextjs',
@@ -102,6 +108,7 @@ export const resumeData: ResumeData = {
       location: 'Hybrid',
       description: [
         {
+          id: 'sivi',
           projectName: 'Sivi',
           details:
             'Sivi is an open-source CV builder that keeps the entire experience local to the browser. It is built around privacy, fast iteration, and a polished resume-building flow without account walls or backend dependency.',
@@ -113,6 +120,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'spider-solitaire',
           projectName: 'Spider Solitaire (Clone)',
           details: 'A clone of the popular Spider Solitaire (from Windows XP) card game.',
           link: 'https://najmiter.github.io/spider-solitaire-clone/',
@@ -122,16 +130,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
-          projectName: 'PdfRizz',
-          details:
-            'PdfRizz is a web app designed to simplify working with PDF files. Users can insert PDFs, convert them to PNG or JPEG images, merge multiple PDF files into a single document, split PDFs into separate pages or sections, and remove specific pages from PDF files.',
-          link: 'https://pdfrizz.knoctal.com/',
-          features: [
-            'Customizable Templates: Offers a variety of professionally designed resume templates that users can customize to fit their personal style and industry standards.',
-            'Real-Time Preview: Provides a live preview of the resume as users make edits, allowing for immediate feedback and adjustments.',
-          ],
-        },
-        {
+          id: 'pdfrizz',
           projectName: 'PdfRizz',
           details:
             'PdfRizz is a web app designed to simplify working with PDF files. Users can insert PDFs, convert them to PNG or JPEG images, merge multiple PDF files into a single document, split PDFs into separate pages or sections, and remove specific pages from PDF files.',
@@ -145,6 +144,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'quvik',
           projectName: 'Quvik',
           link: 'https://play.google.com/store/apps/details?id=com.najmiter.quvik',
           details: 'A study app built for matric & intermediate students',
@@ -158,6 +158,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'clipmac',
           projectName: 'ClipMac',
           link: 'https://github.com/najmiter/clipmac',
           details: 'A small app for MacOS to keep track of the clipboard',
@@ -171,6 +172,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'lootie',
           projectName: 'Lootie',
           link: 'https://lottie.knoctal.com/',
           details: 'Free online lottie json editor',
@@ -182,6 +184,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'doburji',
           projectName: 'DoBurji Welfare Society (web app)',
           link: 'https://www.doburji.com/',
           details: 'A town welfare society web app using Nextjs',
@@ -193,6 +196,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'beutron',
           projectName: 'Beutron',
           link: 'https://beutron.vercel.app/',
           details: 'An inventory management system using Next.js',
@@ -202,28 +206,33 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'fontit',
           projectName: 'FontIt',
           link: 'https://marketplace.visualstudio.com/items?itemName=najmiter.fontit',
           details: 'A VS Code extension that allows users to change the editor font family using the command palette',
         },
         {
+          id: 'turboin',
           projectName: 'Turboin',
           link: 'https://chromewebstore.google.com/detail/turboin/gnonhllejnghekflninibgaohfbbmekc?authuser=0&hl=en',
           details:
             'A Chrome extension that allows users to switch tabs similar to IDEs using a command palette, with special commands like calendar viewing',
         },
         {
+          id: 'neutrabize',
           projectName: 'Neutrabize',
           link: 'https://chromewebstore.google.com/detail/neutrabize/ppknddihdfnhmdfloaeamelpinalhppe',
           details:
             "A Chrome extension for a customized homepage with integrated weather API based on user's geolocation",
         },
         {
+          id: 'chitter',
           projectName: 'Chitter',
           link: 'https://najmiter.github.io/Chitter/',
           details: 'An assembly language syntax highlighter written in Rust, compiled into WASM for web',
         },
         {
+          id: 'uog-lms-beauty-parlor',
           projectName: 'UOG LMS Beauty Parlor',
           link: 'https://github.com/najmiter/darkcircles',
           details: "A Chrome extension for custom dark mode on UOG's LMS",
@@ -233,6 +242,7 @@ export const resumeData: ResumeData = {
           ],
         },
         {
+          id: 'nutnut',
           projectName: 'NutNut',
           link: 'https://github.com/najmiter/nutnut',
           details:

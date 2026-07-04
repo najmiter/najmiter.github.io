@@ -20,7 +20,10 @@ export const metadata = defaultMetadata;
 
 export const revalidate = false;
 
-export default async function RootLayout({ children }: React.PropsWithChildren) {
+export default async function RootLayout({
+  children,
+  modal,
+}: React.PropsWithChildren<{ modal: React.ReactNode }>) {
   return (
     <html lang="en" className="dark" dir="ltr" suppressHydrationWarning>
       <head>
@@ -30,6 +33,7 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
         <Suspense fallback={<LoadingContent />}>
           {/* kids */}
           {children}
+          {modal}
           {/* grown ups? */}
           <StatusBar />
         </Suspense>
