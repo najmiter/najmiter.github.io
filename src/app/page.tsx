@@ -36,7 +36,7 @@ const SectionHeading = ({ index, title }: { index: string; title: string }) => (
   <div className="mb-10">
     <h2 className="sr-only">{title}</h2>
     <div aria-hidden className="flex items-baseline gap-4">
-      <span className="font-mono text-xs text-theme/80 tracking-widest">{index}</span>
+      <span className="font-mono text-xs text-theme/80 select-none tracking-widest">{index}</span>
       <h2 className="font-display text-3xl md:text-4xl font-light tracking-tight">
         <FadeInChars title={title} />
       </h2>

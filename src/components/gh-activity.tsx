@@ -61,7 +61,7 @@ function GithubActivity() {
             {c.contributionDays.map(
               (day, j) =>
                 new Date() >= new Date(day.date) && (
-                  <Tooltip delayDuration={100} key={day.date + j}>
+                  <Tooltip delayDuration={0} disableHoverableContent key={day.date + j}>
                     <TooltipTrigger asChild>
                       <div
                         data-contributions={day.contributionCount}
@@ -75,7 +75,7 @@ function GithubActivity() {
                           {
                             '--tw-bg-opacity': Math.max(
                               0.3,
-                              1.0 - (maxContribution - day.contributionCount) / maxContribution
+                              1.0 - (maxContribution - day.contributionCount) / maxContribution,
                             ),
                           } as React.CSSProperties
                         }
@@ -92,7 +92,7 @@ function GithubActivity() {
                       </p>
                     </TooltipContent>
                   </Tooltip>
-                )
+                ),
             )}
           </div>
         ))}
@@ -135,7 +135,7 @@ function GithubActivity() {
         </footer>
       </Card>
     ),
-    []
+    [],
   );
 
   if (isLoading) return loadingContent;
