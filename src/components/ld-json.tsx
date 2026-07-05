@@ -1,7 +1,7 @@
 import { resumeData } from '@/lib/data';
 import { projects } from '@/lib/projects';
 
-const BUILD_DATE = new Date().toISOString().split('T')[0];
+const BUILD_DATE = new Date().toISOString();
 
 export default function LdJson() {
   return (
