@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --slide-triggered {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0;
+}
+
 @layer base {
   :root {
     --background: 224 18% 6%;
@@ -129,6 +135,41 @@
 
     @media (width > 640px) {
       animation-timeline: view(90vh -100%);
+    }
+  }
+
+  .slide-into-view {
+    animation-name: --slide-trigger;
+    animation-timing-function: steps(1, jump-start);
+    animation-timeline: view();
+    animation-range: entry 10%;
+    animation-fill-mode: both;
+
+    @media (width > 640px) {
+      animation-range: entry 30%;
+    }
+  }
+
+  @supports (animation-timeline: view()) {
+    .slide-into-view>* {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  @container style(--slide-triggered: 1) {
+    .slide-into-view>* {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes --slide-trigger {
+    to {
+      --slide-triggered: 1;
     }
   }
 

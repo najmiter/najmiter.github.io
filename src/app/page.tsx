@@ -7,6 +7,7 @@ import Footer from '@/components/footer';
 import GithubActivity from '@/components/gh-activity';
 import type { AnimateInViewProps, Contribution, FadeInCharsProps, WorkExperience } from '@/types';
 import FadeInChars from '@/components/fade-in-chars';
+import SlideIntoView from '@/components/slide-into-view';
 
 const ViewProfile = dynamic(() => import('@/components/view-profile'));
 
@@ -119,7 +120,7 @@ export default async function MainPage() {
 
                 <div className="mt-8 border-l border-line space-y-8">
                   {job.description.map((project: Contribution, pIndex: number) => (
-                    <AnimateInView key={pIndex}>
+                    <SlideIntoView key={pIndex}>
                       <article className="group relative pl-6 sm:pl-8">
                         <span
                           aria-hidden
@@ -164,7 +165,7 @@ export default async function MainPage() {
                           </ul>
                         )}
                       </article>
-                    </AnimateInView>
+                    </SlideIntoView>
                   ))}
                 </div>
               </div>

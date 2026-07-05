@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 import type { Project } from '@/lib/projects';
 import FadeInChars from './fade-in-chars';
+import SlideIntoView from './slide-into-view';
 
 export default function ProjectDetails({ project, inModal = false }: { project: Project; inModal?: boolean }) {
   const { meta } = project;
@@ -113,7 +114,7 @@ export default function ProjectDetails({ project, inModal = false }: { project: 
         {sections.map((section, index) => (
           <section key={section.title}>
             <SectionLabel index={String(index + 1).padStart(2, '0')} title={section.title} />
-            {section.body}
+            <SlideIntoView>{section.body}</SlideIntoView>
           </section>
         ))}
       </div>
