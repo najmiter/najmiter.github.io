@@ -33,9 +33,9 @@ export default async function RootLayout({ children, modal }: React.PropsWithChi
           {children}
           {modal}
           {/* grown ups? */}
-          <StatusBar />
           <NavigationLoader />
         </Suspense>
+        <StatusBar />
       </body>
     </html>
   );

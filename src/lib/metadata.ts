@@ -29,13 +29,7 @@ export const defaultMetadata: Metadata = {
     address: false,
     telephone: true,
   },
-  icons: [
-    {
-      rel: 'icon',
-      url: '/logo.png',
-      type: 'image/png',
-    },
-  ],
+  icons: [{ rel: 'icon', url: '/logo.png', type: 'image/png' }],
   openGraph: {
     title: 'Najam ul Hassan — Full Stack Software Developer',
     description:
@@ -51,7 +45,7 @@ export const defaultMetadata: Metadata = {
     title: 'Najam ul Hassan — Full Stack Software Developer',
     description:
       'Portfolio of Najam ul Hassan (najmiter), a full stack software developer building web and mobile apps with React, Next.js, Node.js, and TypeScript.',
-    creator: '@najmiter',
+    creator: '@najmiterer',
   },
   alternates: {
     canonical: 'https://www.najmiter.dev/',

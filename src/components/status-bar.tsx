@@ -1,14 +1,12 @@
-'use client';
-
 import React from 'react';
 import { Icons } from './ui/icons';
 import WhatsHot from './whats-hot';
 
 const itemClasses = 'flex items-center gap-1 px-2 h-full text-xs text-gray-400 hover:opacity-90 transition-all';
 
-export default function StatusBar() {
-  const [today] = React.useState(() => new Date().toLocaleDateString('en-us'));
+const lastUpdatedAt = new Date().toLocaleDateString('en-us');
 
+export default async function StatusBar() {
   return (
     <div
       aria-label="status bar"
@@ -28,10 +26,12 @@ export default function StatusBar() {
         <div className={itemClasses} title="Last updated">
           <Icons.Sync size={14} />
           <span className="text-xs">
-            <time dateTime={today}>{today}</time>
+            <time dateTime={lastUpdatedAt}>{lastUpdatedAt}</time>
           </span>
         </div>
-        <WhatsHot />
+        <React.Suspense>
+          <WhatsHot />
+        </React.Suspense>
       </section>
     </div>
   );
