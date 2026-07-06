@@ -92,7 +92,7 @@ export default async function MainPage() {
           </section>
         </AnimateInView>
 
-        <section className="mb-24">
+        <section className="mb-24" aria-live="polite">
           <SectionHeading index="01" title="GitHub Activity" />
           <GithubActivity />
         </section>

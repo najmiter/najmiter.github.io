@@ -28,10 +28,10 @@ export default async function RootLayout({ children, modal }: React.PropsWithChi
         <LdJson />
       </head>
       <body className={cn(instrumentSans.variable, fraunces.variable, jetbrainsMono.variable, 'font-sans')}>
+        {/* kids */}
+        {children}
+        {modal}
         <Suspense fallback={<LoadingContent />}>
-          {/* kids */}
-          {children}
-          {modal}
           {/* grown ups? */}
           <NavigationLoader />
         </Suspense>
