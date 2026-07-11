@@ -108,6 +108,16 @@ export const resumeData: ResumeData = {
       location: 'Hybrid',
       description: [
         {
+          id: 'world-map',
+          projectName: 'World Map',
+          details:
+            'An interactive world map designed for educational purposes, allowing users to explore different countries, their capitals, and population.',
+          link: 'https://world-map.knoctal.com/',
+          features: [
+            'Interactive Map: Users can click on countries to view detailed information, like continent, flag, and population.',
+          ],
+        },
+        {
           id: 'sivi',
           projectName: 'Sivi',
           details:

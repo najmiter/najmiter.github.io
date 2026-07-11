@@ -272,6 +272,17 @@ const PROJECT_META: Record<string, ProjectMeta> = {
     ],
     repo: 'https://github.com/najmiter/nutnut',
   },
+  'world-map': {
+    tagline: 'An educational interactive world map.',
+    about:
+      'An interactive world map designed for educational purposes, allowing users to explore different countries, their capitals, and cultural information.',
+    category: 'Web App',
+    platform: 'Web',
+    status: 'live',
+    audience: 'Students and educators looking for an interactive learning tool',
+    stack: ['React', 'Typescript', 'D3.js'],
+    repo: 'https://github.com/najmiter/world-map',
+  },
 };
 
 const FALLBACK_META: ProjectMeta = {
