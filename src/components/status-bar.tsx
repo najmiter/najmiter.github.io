@@ -4,7 +4,7 @@ import WhatsHot from './whats-hot';
 
 const itemClasses = 'flex items-center gap-1 px-2 h-full text-xs text-gray-400 hover:opacity-90 transition-all';
 
-const lastUpdatedAt = new Date().toLocaleDateString('en-us');
+const lastUpdatedAt = new Date().toLocaleDateString('en-us', { month: 'short', day: 'numeric', year: 'numeric' });
 
 export default async function StatusBar() {
   return (
