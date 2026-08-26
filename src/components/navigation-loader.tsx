@@ -59,7 +59,7 @@ export default function NavigationLoader() {
       }
       setIsNavigating(false);
       setUngaBungaProgress(0);
-      document.body.style.overflow = 'auto';
+      document.body.style.removeProperty('overflow');
       document.body.inert = false;
     };
 
@@ -75,7 +75,7 @@ export default function NavigationLoader() {
       document.removeEventListener('click', handler);
       window.removeEventListener('pageshow', handlePageShow);
       window.removeEventListener('popstate', reset);
-      document.body.style.overflow = 'auto';
+      document.body.style.removeProperty('overflow');
       document.body.inert = false;
       if (ungaBungaTimer.current) {
         clearInterval(ungaBungaTimer.current);
@@ -97,7 +97,7 @@ export default function NavigationLoader() {
 
     const timeout = setTimeout(() => {
       setIsNavigating(false);
-      document.body.style.overflow = 'auto';
+      document.body.style.removeProperty('overflow');
       document.body.inert = false;
       setUngaBungaProgress(0);
     }, 100);

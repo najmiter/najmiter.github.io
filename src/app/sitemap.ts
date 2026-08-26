@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `https://www.najmiter.dev/${project.id}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.9,
     })),
   ];
 }

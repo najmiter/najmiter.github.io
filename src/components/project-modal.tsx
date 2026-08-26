@@ -13,16 +13,23 @@ export default function ProjectModal({ projectId, children }: React.PropsWithChi
   useEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog) return;
-    if (isActive && !dialog.open) {
-      dialog.showModal();
-      document.documentElement.style.overflow = 'hidden';
-    }
+    if (isActive && !dialog.open) dialog.showModal();
     if (!isActive && dialog.open) dialog.close();
+  }, [isActive]);
+
+  useEffect(() => {
+    if (!isActive) return;
+    // `hidden` while the dialog is up, then *removed* — never restored to `auto`.
+    // an explicit overflow on <html> stops the body/viewport propagation, which would
+    // turn <body> into a real scroll container and kill every `view()` timeline under it
+    document.documentElement.style.overflow = 'hidden';
+    return () => {
+      document.documentElement.style.removeProperty('overflow');
+    };
   }, [isActive]);
 
   const onClose = () => {
     if (window.location.pathname === `/${projectId}`) router.back();
-    document.documentElement.style.overflow = 'auto';
   };
 
   return (
